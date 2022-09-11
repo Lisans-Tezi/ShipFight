@@ -8,6 +8,5 @@ public class SinglePlayerBtn : MonoBehaviour
     public void PlayerSingle()
     {
         SceneManager.LoadScene("Scenes/SinglePlayer");
-
     }
 }
