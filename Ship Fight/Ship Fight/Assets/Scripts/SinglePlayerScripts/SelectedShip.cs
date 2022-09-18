@@ -6,24 +6,26 @@ using TMPro;
 
 public class SelectedShip : MonoBehaviour
 {
+    public Image Ship1;
+    public Image Ship2;
+    public Image Ship3;
+    public Image Ship4;
+    public Image Ship5;
+
     public Image Map;
     public TextMeshProUGUI Text;
     public List<Image> Ships;
-
-    public int piece;
 
     GameObject[,] map = new GameObject[10, 10];
 
     Color whiteColor = new Color32(255, 255, 255, 100);
     Color greenColor = new Color32(0, 255, 0, 200);
+    Color orangeColor = new Color32(255, 165, 0, 255);
 
     bool isSelected;
-
     private void Start()
     {
         Create();
-
-
     }
 
     void Create()
@@ -69,14 +71,60 @@ public class SelectedShip : MonoBehaviour
             gameObject.GetComponent<Button>().enabled = true;
             Text.color = Color.red;
             FindSelectedShip();
-            piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-            Debug.Log("SelectedShip ::::: " + PlayerPrefs.GetString("SelectedShip"));
+
+            if (Ship1.gameObject.activeSelf==false)
+            {
+                Ship1.gameObject.SetActive(true);
+                Ship1.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+                Ship1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text= gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            }
+            else if (Ship2.gameObject.activeSelf == false)
+            {
+                Ship2.gameObject.SetActive(true);
+                Ship2.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+                Ship2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            }
+            else if (Ship3.gameObject.activeSelf == false)
+            {
+                Ship3.gameObject.SetActive(true);
+                Ship3.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+                Ship3.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            }
+            else if (Ship4.gameObject.activeSelf == false)
+            {
+                Ship4.gameObject.SetActive(true);
+                Ship4.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+                Ship4.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            }
+            else
+            {
+                Ship5.gameObject.SetActive(true);
+                Ship5.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+                Ship5.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            }
 
         }
         else
         {
             Text.color = Color.black;
             ButtonEnabledChange(true);
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue || map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
+                    {
+                        map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                    }                           
+                }
+            }
+
+
+            Ship1.gameObject.SetActive(false);
+            Ship2.gameObject.SetActive(false);
+            Ship3.gameObject.SetActive(false);
+            Ship4.gameObject.SetActive(false);
+            Ship5.gameObject.SetActive(false);
         }
     }
     void FindSelectedShip()
