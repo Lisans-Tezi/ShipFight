@@ -13,8 +13,6 @@ public class PlacingShip : MonoBehaviour
     Color greenColor = new Color32(0, 255, 0, 200);
     Color orangeColor = new Color32(255, 165, 0, 255);
 
-    int placedSecondShipSize = 0;
-
     void Start()
     {
         Create();
@@ -29,160 +27,113 @@ public class PlacingShip : MonoBehaviour
                 map[i, j] = Map.transform.GetChild(k).gameObject;
                 k++;
             }
-
-    }
-    bool Control()
-    {
-        for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
-                if (map[i, j].gameObject.GetComponent<Image>().color != greenColor)
-                    return false;
-        return true;
-    }
-    int FindShipSize(string shipName)
-    {
-        if (shipName == "MoneyMaker")
-            return 2;
-        else if (shipName == "Tank")
-            return 3;
-        else if (shipName == "SideStep")
-            return 3;
-        else if (shipName == "Faker")
-            return 4;
-        else if (shipName == "Healer")
-            return 4;
-        else if (shipName == "LightBomber")
-            return 4;
-        else if (shipName == "BombCatcher")
-            return 5;
-        else if (shipName == "Bomber")
-            return 5;
-        else if (shipName == "Boomer")
-            return 6;
-        else if (shipName == "FlameThrower")
-            return 7;
-        else
-            return 0;
     }
     public void ShipPlacing()
     {
-        if (Control())
+        if (PlayerPrefs.GetString("SelectedShip") == "Tank")
         {
-            PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), FindShipSize(PlayerPrefs.GetString("SelectedShip")));
-        }
-        int piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-
-
-        if (FindShipSize(PlayerPrefs.GetString("SelectedShip")) == piece)
-        {
-            if (gameObject.GetComponent<Image>().color == greenColor && piece > 0)
+            if (PlayerPrefs.GetInt("Tank") == 0)
             {
-                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
-                gameObject.GetComponent<Image>().color = Color.blue;
+                if (gameObject.GetComponent<Image>().color == greenColor)
+                {
+                    gameObject.GetComponent<Image>().color = Color.blue;
+                    defaultPlacedShip();
+                    PlayerPrefs.SetInt("Tank", 1);
+                }
             }
-        }
-        else
-        {
-            if (gameObject.GetComponent<Image>().color == orangeColor && piece > 0)
+            else if (PlayerPrefs.GetInt("Tank") == 1)
             {
-                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
-                gameObject.GetComponent<Image>().color = Color.blue;
-            }
-        }
-
-
-        if(PlayerPrefs.GetString("SelectedShip") == "Tank")
-        {
-            if(placedSecondShipSize < 2)
-            {
-                defaultPlacedShip(); 
-                placedSecondShipSize++;
-            }
-            else
-            {
-                deleteOrangeMap();
-
-                for (int i = 0; i < 10; i++)
-                    for (int j = 0; j < 10; j++)
+                if (gameObject.GetComponent<Image>().color == orangeColor)
+                {
+                    gameObject.GetComponent<Image>().color = Color.blue;
+                    deleteOrangeMap();
+                    for (int i = 0; i < 10; i++)
                     {
-                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                        for (int j = 0; j < 10; j++)
                         {
-                            if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                            if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                             {
-                                map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                                map[i + 2, j].gameObject.GetComponent<Image>().color = orangeColor;
+                                if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                                {
+                                    map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
+                                    map[i + 2, j].gameObject.GetComponent<Image>().color = orangeColor;
+                                }
+                                if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                {
+                                    map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
+                                    map[i, j + 2].gameObject.GetComponent<Image>().color = orangeColor;
+                                }
+                                break;
                             }
-                            if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                        }
+                        PlayerPrefs.SetInt("Tank", 2);
+                    }
+                }
+            }
+            else if (PlayerPrefs.GetInt("Tank") == 2)
+            {
+                if (gameObject.GetComponent<Image>().color == orangeColor)
+                {
+                    gameObject.GetComponent<Image>().color = Color.blue;
+                }
+                deleteOrangeMap();
+                GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
+            }
+        }
+
+        void deleteOrangeMap()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
+                    {
+                        map[i, j].gameObject.GetComponent<Image>().color = greenColor;
+                    }
+                }
+            }
+        }
+
+        void defaultPlacedShip()
+        {
+            for (int i = 0; i < 10; i++)
+                for (int j = 0; j < 10; j++)
+                    if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                    {
+                        if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                        {
+                            if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue)
                             {
                                 map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                                map[i, j + 2].gameObject.GetComponent<Image>().color = orangeColor;
+                            }
+                        }
+
+                        if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.black)
+                        {
+                            if (map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
+                            {
+                                map[i, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
+                            }
+                        }
+
+                        if (i != 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                        {
+                            if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                            {
+                                map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
+                            }
+                        }
+
+                        if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                        {
+                            if (map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                            {
+                                map[i + 1, j].gameObject.GetComponent<Image>().color = orangeColor;
                             }
                         }
                     }
-            }
-            
         }
-
-        
-        piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-        if (piece == 0)
-        {
-            deleteOrangeMap();
-            GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
-        }
-    }
-
-    void deleteOrangeMap()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            for (int j = 0; j < 10; j++)
-            {
-                if (map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
-                {
-                    map[i, j].gameObject.GetComponent<Image>().color = greenColor;
-                }
-            }
-        }
-    }
-
-    void defaultPlacedShip()
-    {
-        for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
-                if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
-                {
-                    if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue)
-                        {
-                            map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
-                    }
-
-                    if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        if (map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
-                        {
-                            map[i, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
-                    }
-
-                    if (i != 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue)
-                        {
-                            map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
-                    }
-
-                    if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        if (map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue)
-                        {
-                            map[i + 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
-                    }
-                }
     }
 }
+

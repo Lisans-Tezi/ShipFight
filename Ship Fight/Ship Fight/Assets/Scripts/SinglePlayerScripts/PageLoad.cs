@@ -22,16 +22,16 @@ public class PageLoad : MonoBehaviour
         Ship5.gameObject.SetActive(false);
 
 
-        PlayerPrefs.SetInt("MoneyMaker", 2);
-        PlayerPrefs.SetInt("Tank", 3);
-        PlayerPrefs.SetInt("SideStep", 3);
-        PlayerPrefs.SetInt("Faker", 4);
-        PlayerPrefs.SetInt("Healer", 4);
-        PlayerPrefs.SetInt("LightBomber", 4);
-        PlayerPrefs.SetInt("BombCatcher", 5);
-        PlayerPrefs.SetInt("Bomber", 5);
-        PlayerPrefs.SetInt("Boomer", 6);
-        PlayerPrefs.SetInt("FlameThrower", 7);
+        PlayerPrefs.SetInt("MoneyMaker", 0);
+        PlayerPrefs.SetInt("Tank", 0);
+        PlayerPrefs.SetInt("SideStep", 0);
+        PlayerPrefs.SetInt("Faker", 0);
+        PlayerPrefs.SetInt("Healer", 0);
+        PlayerPrefs.SetInt("LightBomber", 0);
+        PlayerPrefs.SetInt("BombCatcher", 0);
+        PlayerPrefs.SetInt("Bomber", 0);
+        PlayerPrefs.SetInt("Boomer", 0);
+        PlayerPrefs.SetInt("FlameThrower", 0);
     }
 
 }
