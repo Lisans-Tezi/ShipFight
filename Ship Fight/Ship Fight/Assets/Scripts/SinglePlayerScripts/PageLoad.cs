@@ -18,6 +18,18 @@ public class PageLoad : MonoBehaviour
         Ship3.gameObject.SetActive(false);
         Ship4.gameObject.SetActive(false);
         Ship5.gameObject.SetActive(false);
+
+
+        PlayerPrefs.SetInt("MoneyMaker", 2);
+        PlayerPrefs.SetInt("Tank", 3);
+        PlayerPrefs.SetInt("SideStep", 3);
+        PlayerPrefs.SetInt("Faker", 4);
+        PlayerPrefs.SetInt("Healer", 4);
+        PlayerPrefs.SetInt("LightBomber", 4);
+        PlayerPrefs.SetInt("BombCatcher", 5);
+        PlayerPrefs.SetInt("Bomber", 5);
+        PlayerPrefs.SetInt("Boomer", 6);
+        PlayerPrefs.SetInt("FlameThrower", 7);
     }
 
 }

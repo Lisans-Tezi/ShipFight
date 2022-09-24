@@ -23,7 +23,7 @@ public class SelectedShip : MonoBehaviour
     Color orangeColor = new Color32(255, 165, 0, 255);
 
     bool isSelected;
-    private void Start()
+    void Start()
     {
         Create();
     }
@@ -41,16 +41,6 @@ public class SelectedShip : MonoBehaviour
             }
         }
 
-        PlayerPrefs.SetInt("MoneyMaker", 2);
-        PlayerPrefs.SetInt("Tank", 3);
-        PlayerPrefs.SetInt("SideStep", 3);
-        PlayerPrefs.SetInt("Faker", 4);
-        PlayerPrefs.SetInt("Healer", 4);
-        PlayerPrefs.SetInt("LightBomber", 4);
-        PlayerPrefs.SetInt("BombCatcher", 5);
-        PlayerPrefs.SetInt("Bomber", 5);
-        PlayerPrefs.SetInt("Boomer", 6);
-        PlayerPrefs.SetInt("FlameThrower", 7);
     }
 
     public void ShipPlacing()
@@ -71,38 +61,7 @@ public class SelectedShip : MonoBehaviour
             gameObject.GetComponent<Button>().enabled = true;
             Text.color = Color.red;
             FindSelectedShip();
-
-            if (Ship1.gameObject.activeSelf==false)
-            {
-                Ship1.gameObject.SetActive(true);
-                Ship1.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-                Ship1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text= gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
-            }
-            else if (Ship2.gameObject.activeSelf == false)
-            {
-                Ship2.gameObject.SetActive(true);
-                Ship2.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-                Ship2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
-            }
-            else if (Ship3.gameObject.activeSelf == false)
-            {
-                Ship3.gameObject.SetActive(true);
-                Ship3.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-                Ship3.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
-            }
-            else if (Ship4.gameObject.activeSelf == false)
-            {
-                Ship4.gameObject.SetActive(true);
-                Ship4.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-                Ship4.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
-            }
-            else
-            {
-                Ship5.gameObject.SetActive(true);
-                Ship5.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-                Ship5.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
-            }
-
+            InformationPanelOpen();
         }
         else
         {
@@ -115,16 +74,10 @@ public class SelectedShip : MonoBehaviour
                     if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue || map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
                     {
                         map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
-                    }                           
+                    }
                 }
             }
-
-
-            Ship1.gameObject.SetActive(false);
-            Ship2.gameObject.SetActive(false);
-            Ship3.gameObject.SetActive(false);
-            Ship4.gameObject.SetActive(false);
-            Ship5.gameObject.SetActive(false);
+            InformationPanelClose();
         }
     }
     void FindSelectedShip()
@@ -155,5 +108,50 @@ public class SelectedShip : MonoBehaviour
         foreach (Image ship in Ships)
             ship.gameObject.GetComponent<Button>().enabled = enabled;
     }
-
+    void InformationPanelOpen()
+    {
+        if (Ship1.gameObject.activeSelf == false)
+        {
+            Ship1.gameObject.SetActive(true);
+            Ship1.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        }
+        else if (Ship2.gameObject.activeSelf == false)
+        {
+            Ship2.gameObject.SetActive(true);
+            Ship2.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        }
+        else if (Ship3.gameObject.activeSelf == false)
+        {
+            Ship3.gameObject.SetActive(true);
+            Ship3.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship3.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        }
+        else if (Ship4.gameObject.activeSelf == false)
+        {
+            Ship4.gameObject.SetActive(true);
+            Ship4.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship4.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        }
+        else
+        {
+            Ship5.gameObject.SetActive(true);
+            Ship5.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship5.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
+        }
+    }
+    void InformationPanelClose()
+    {
+        if (Ship5.gameObject.activeSelf == true)
+            Ship5.gameObject.SetActive(false);
+        else if (Ship4.gameObject.activeSelf == true)
+            Ship4.gameObject.SetActive(false);
+        else if (Ship3.gameObject.activeSelf == true)
+            Ship3.gameObject.SetActive(false);
+        else if (Ship2.gameObject.activeSelf == true)
+            Ship2.gameObject.SetActive(false);
+        else
+            Ship1.gameObject.SetActive(false);
+    }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,18 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &19418383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,8 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &34441370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 34441367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34441369}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &50822177
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,8 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &50822182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +757,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50822179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 50822181}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &75837020
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,8 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &89180769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,7 +979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 89180766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89180768}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &117489691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,11 +1139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 1371429832}
   Ships:
@@ -1224,8 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &122673385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122673382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 122673384}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &132870882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,8 +1474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &142963050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1486,7 +1518,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142963047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 142963049}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &147597047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,8 +1772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &169888277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,7 +1816,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 169888274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 169888276}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &200498222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,8 +2069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &219707597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,7 +2113,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 219707594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 219707596}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &241022424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,8 +2426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &250476725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2405,7 +2470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 250476722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250476724}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &262459891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,18 +2572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &262459896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2728,8 +2794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &278720306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,7 +2838,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 278720303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 278720305}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &281563742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,8 +3086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &302229786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3054,7 +3130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 302229783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 302229785}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &315913182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,11 +3290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 947644860}
   Ships:
@@ -3367,11 +3455,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 1052382145}
   Ships:
@@ -3474,18 +3562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &335393290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3631,8 +3708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &377420859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3676,7 +3752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 377420856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 377420858}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &381958912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,8 +4141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &393661557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4098,7 +4185,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 393661554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393661556}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &403033011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,8 +4421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &403351634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4367,7 +4465,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403351631}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 403351633}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &424541623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,8 +4567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &424541628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4502,7 +4611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424541625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424541627}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &440493321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,11 +4881,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 10015111}
   Ships:
@@ -4867,8 +4988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &457179201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4912,7 +5032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 457179198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 457179200}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &461829674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,8 +5134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &461829679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5047,7 +5178,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 461829676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 461829678}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &511737614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5271,8 +5414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &513130147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,7 +5458,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 513130144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 513130146}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &520698216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,8 +5560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &520698221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5451,7 +5604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 520698218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 520698220}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &538933801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,8 +5918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &560679575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5798,7 +5962,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 560679572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 560679574}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &573556462
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,8 +6140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &578086761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6009,7 +6184,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 578086758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578086760}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &582283901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6099,8 +6286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &582283906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6144,7 +6330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582283903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 582283905}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &596232602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,8 +6432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &596232607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6279,7 +6476,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596232604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 596232606}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &612493935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6369,18 +6578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &612493940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6526,8 +6724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &620289657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6571,7 +6768,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 620289654}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 620289656}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &637477571
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,8 +6870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &637477576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6706,7 +6914,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637477573}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637477575}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &656289772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6796,18 +7016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &656289777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6953,8 +7162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &700102453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6998,7 +7206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700102450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 700102452}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &707347780
 GameObject:
   m_ObjectHideFlags: 0
@@ -7088,8 +7308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &707347785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7133,7 +7352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 707347782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 707347784}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &719516028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7223,8 +7454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &719516033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7268,7 +7498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 719516030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 719516032}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &792057464
 GameObject:
   m_ObjectHideFlags: 0
@@ -7358,8 +7600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &792057469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7403,7 +7644,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792057466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 792057468}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &796973951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7493,8 +7746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &796973956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7538,7 +7790,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 796973953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 796973955}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &804516279
 GameObject:
   m_ObjectHideFlags: 0
@@ -7628,8 +7892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &804516284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7673,7 +7936,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804516281}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 804516283}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &820535965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7897,8 +8172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &838374875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7942,7 +8216,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 838374872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838374874}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &850280507
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,8 +8318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &850280512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,7 +8362,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 850280509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 850280511}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &866103144
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,8 +8464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &866103149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8212,7 +8508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 866103146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 866103148}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &869015889
 GameObject:
   m_ObjectHideFlags: 0
@@ -8302,8 +8610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &869015894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8347,7 +8654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869015891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 869015893}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &880598178
 GameObject:
   m_ObjectHideFlags: 0
@@ -8437,8 +8756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &880598183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8482,7 +8800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880598180}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 880598182}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &881370343
 GameObject:
   m_ObjectHideFlags: 0
@@ -8630,11 +8960,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 403033013}
   Ships:
@@ -8737,8 +9067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &885332707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8782,7 +9111,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885332704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 885332706}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &888781444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8872,8 +9213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &888781449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8917,7 +9257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 888781446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 888781448}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &910320984
 GameObject:
   m_ObjectHideFlags: 0
@@ -9007,8 +9359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &910320989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9052,7 +9403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 910320986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910320988}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &933428945
 GameObject:
   m_ObjectHideFlags: 0
@@ -9278,8 +9641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &937262751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9323,7 +9685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 937262748}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 937262750}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &943675439
 GameObject:
   m_ObjectHideFlags: 0
@@ -9470,18 +9844,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6deb76c14540abe4c8766e89ad41919b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
+  Ships:
+  - {fileID: 1462557107}
+  - {fileID: 1668440375}
+  - {fileID: 1558474789}
+  - {fileID: 881370345}
+  - {fileID: 452108614}
+  - {fileID: 323443076}
+  - {fileID: 2084902609}
+  - {fileID: 1844469972}
+  - {fileID: 117489693}
+  - {fileID: 315913184}
+  Texts:
+  - {fileID: 511737616}
+  - {fileID: 1714672535}
+  - {fileID: 1443431629}
+  - {fileID: 403033013}
+  - {fileID: 10015111}
+  - {fileID: 1052382145}
+  - {fileID: 1381473367}
+  - {fileID: 1069864133}
+  - {fileID: 1371429832}
+  - {fileID: 947644860}
 --- !u!1 &947644858
 GameObject:
   m_ObjectHideFlags: 0
@@ -9705,8 +10090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &957713136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9750,7 +10134,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 957713133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957713135}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &968464913
 GameObject:
   m_ObjectHideFlags: 0
@@ -9840,8 +10236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &968464918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9885,7 +10280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 968464915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 968464917}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &968907089
 GameObject:
   m_ObjectHideFlags: 0
@@ -10058,18 +10465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &983776916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10634,8 +11030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1115616047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10679,7 +11074,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1115616044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1115616046}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1130289947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10769,8 +11176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1130289952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10814,7 +11220,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1130289949}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1130289951}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1136748993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10904,8 +11322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1136748998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10949,7 +11366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1136748995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1136748997}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1152842437
 GameObject:
   m_ObjectHideFlags: 0
@@ -11039,8 +11468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1152842442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11084,7 +11512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1152842439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1152842441}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1153992824
 GameObject:
   m_ObjectHideFlags: 0
@@ -11174,8 +11614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1153992829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11219,7 +11658,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1153992826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1153992828}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1160897439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11309,8 +11760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1160897444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11354,7 +11804,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1160897441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160897443}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1163759459
 GameObject:
   m_ObjectHideFlags: 0
@@ -11519,8 +11981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1164565897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11564,7 +12025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164565894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1164565896}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1166069998
 GameObject:
   m_ObjectHideFlags: 0
@@ -11654,8 +12127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1166070003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11699,7 +12171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1166070000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1166070002}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1174150842
 GameObject:
   m_ObjectHideFlags: 0
@@ -11789,18 +12273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1174150847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11946,8 +12419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1175524349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11991,7 +12463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1175524346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1175524348}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1200174042
 GameObject:
   m_ObjectHideFlags: 0
@@ -12081,8 +12565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1200174047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12126,7 +12609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1200174044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1200174046}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1203254658
 GameObject:
   m_ObjectHideFlags: 0
@@ -12291,8 +12786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1220437581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12336,7 +12830,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1220437578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1220437580}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1241009207
 GameObject:
   m_ObjectHideFlags: 0
@@ -12502,8 +13008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1262108611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12547,7 +13052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1262108608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1262108610}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1268056673
 GameObject:
   m_ObjectHideFlags: 0
@@ -12637,8 +13154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1268056678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12682,7 +13198,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1268056675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1268056677}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1290961322
 GameObject:
   m_ObjectHideFlags: 0
@@ -12772,18 +13300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1290961327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12929,8 +13446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1295887284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12974,7 +13490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295887281}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1295887283}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1300026343
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,18 +13592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1300026348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13221,8 +13738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1304654840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13266,7 +13782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1304654837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1304654839}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1305661743
 GameObject:
   m_ObjectHideFlags: 0
@@ -13356,8 +13884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1305661748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13401,7 +13928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1305661745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1305661747}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1320113577
 GameObject:
   m_ObjectHideFlags: 0
@@ -13491,8 +14030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1320113582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13536,7 +14074,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1320113579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1320113581}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1355731722
 GameObject:
   m_ObjectHideFlags: 0
@@ -13969,8 +14519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1400937371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14014,7 +14563,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400937368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1400937370}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1409072160
 GameObject:
   m_ObjectHideFlags: 0
@@ -14256,8 +14817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1432746597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14301,7 +14861,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1432746594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1432746596}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1443431627
 GameObject:
   m_ObjectHideFlags: 0
@@ -14525,8 +15097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1447855986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14570,7 +15141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447855983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1447855985}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1462260559
 GameObject:
   m_ObjectHideFlags: 0
@@ -14660,8 +15243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1462260564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14705,7 +15287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462260561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1462260563}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1462557105
 GameObject:
   m_ObjectHideFlags: 0
@@ -14960,8 +15554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1466567494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15005,7 +15598,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1466567491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1466567493}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1479147348
 GameObject:
   m_ObjectHideFlags: 0
@@ -15095,8 +15700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1479147353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15140,7 +15744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1479147350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1479147352}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1511830865
 GameObject:
   m_ObjectHideFlags: 0
@@ -15305,8 +15921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1516549187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15350,7 +15965,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1516549184}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1516549186}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1522427812
 GameObject:
   m_ObjectHideFlags: 0
@@ -15533,8 +16160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1527892079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15578,7 +16204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1527892076}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527892078}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1528354453
 GameObject:
   m_ObjectHideFlags: 0
@@ -15668,8 +16306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1528354458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15713,7 +16350,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528354455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1528354457}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1540608637
 GameObject:
   m_ObjectHideFlags: 0
@@ -15803,8 +16452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1540608642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15848,7 +16496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1540608639}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1540608641}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1542093857
 GameObject:
   m_ObjectHideFlags: 0
@@ -16073,11 +16733,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 1443431629}
   Ships:
@@ -16180,8 +16840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1568382268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16225,7 +16884,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1568382265}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1568382267}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1571456168
 GameObject:
   m_ObjectHideFlags: 0
@@ -17030,8 +17701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1681757526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17075,7 +17745,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1681757523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1681757525}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1694093817
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,8 +17847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1694093822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17210,7 +17891,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694093819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1694093821}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1704900675
 GameObject:
   m_ObjectHideFlags: 0
@@ -17300,8 +17993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1704900680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17345,7 +18037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1704900677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1704900679}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1708557272
 GameObject:
   m_ObjectHideFlags: 0
@@ -17435,8 +18139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1708557277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17480,7 +18183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1708557274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1708557276}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1714672533
 GameObject:
   m_ObjectHideFlags: 0
@@ -17838,8 +18553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1721196193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17883,7 +18597,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721196190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721196192}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1743758881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17973,8 +18699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1743758886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18018,7 +18743,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743758883}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743758885}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1783725588
 GameObject:
   m_ObjectHideFlags: 0
@@ -18319,8 +19056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1838724042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18364,7 +19100,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838724039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1838724041}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1844469970
 GameObject:
   m_ObjectHideFlags: 0
@@ -18512,11 +19260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 1069864133}
   Ships:
@@ -18619,18 +19367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map:
-  - {fileID: 19418380}
-  - {fileID: 1851548666}
-  - {fileID: 262459893}
-  - {fileID: 1290961324}
-  - {fileID: 656289774}
-  - {fileID: 612493937}
-  - {fileID: 1174150844}
-  - {fileID: 1300026345}
-  - {fileID: 983776913}
-  - {fileID: 335393287}
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1851548669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18776,8 +19513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1852475074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18821,7 +19557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1852475071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1852475073}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1853066848
 GameObject:
   m_ObjectHideFlags: 0
@@ -18911,8 +19659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1853066853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18956,7 +19703,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853066850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1853066852}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1865838252
 GameObject:
   m_ObjectHideFlags: 0
@@ -19046,8 +19805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1865838257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19091,7 +19849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1865838254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1865838256}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1868847426
 GameObject:
   m_ObjectHideFlags: 0
@@ -19181,8 +19951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1868847431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19226,7 +19995,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868847428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1868847430}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1870829399
 GameObject:
   m_ObjectHideFlags: 0
@@ -19467,8 +20248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1943386688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19512,7 +20292,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1943386685}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1943386687}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1951360271
 GameObject:
   m_ObjectHideFlags: 0
@@ -19755,8 +20547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &1990228730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19800,7 +20591,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1990228727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990228729}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1998959923
 GameObject:
   m_ObjectHideFlags: 0
@@ -19965,8 +20768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2004470920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20010,7 +20812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2004470917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2004470919}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2018325884
 GameObject:
   m_ObjectHideFlags: 0
@@ -20100,8 +20914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2018325889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20145,7 +20958,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2018325886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2018325888}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2021765563
 GameObject:
   m_ObjectHideFlags: 0
@@ -20312,8 +21137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2045396304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20357,7 +21181,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2045396301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2045396303}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2069467303
 GameObject:
   m_ObjectHideFlags: 0
@@ -20447,8 +21283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2069467308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20492,7 +21327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2069467305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2069467307}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2084902607
 GameObject:
   m_ObjectHideFlags: 0
@@ -20640,11 +21487,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc06fe0cf6f719429b4e135e5180805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ship1: {fileID: 0}
-  Ship2: {fileID: 0}
-  Ship3: {fileID: 0}
-  Ship4: {fileID: 0}
-  Ship5: {fileID: 0}
+  Ship1: {fileID: 1973707554}
+  Ship2: {fileID: 1542093859}
+  Ship3: {fileID: 155135262}
+  Ship4: {fileID: 2021765565}
+  Ship5: {fileID: 1412754528}
   Map: {fileID: 1621867186}
   Text: {fileID: 1381473367}
   Ships:
@@ -20747,8 +21594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2096346903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20792,7 +21638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2096346900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2096346902}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2099220653
 GameObject:
   m_ObjectHideFlags: 0
@@ -20882,8 +21740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2099220658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20927,7 +21784,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2099220655}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099220657}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2107646656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21017,8 +21886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2107646661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21062,7 +21930,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2107646658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2107646660}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2121046290
 GameObject:
   m_ObjectHideFlags: 0
@@ -21152,8 +22032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75f99cf39878647ad4260fdd6c460e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  First50Map: []
-  Second50Map: []
+  Map: {fileID: 1621867186}
 --- !u!114 &2121046295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21197,4 +22076,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2121046292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121046294}
+        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
+        m_MethodName: ShipPlacing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

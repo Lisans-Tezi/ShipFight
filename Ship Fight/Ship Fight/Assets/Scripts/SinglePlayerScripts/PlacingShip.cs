@@ -6,109 +6,38 @@ using UnityEngine.UI;
 
 public class PlacingShip : MonoBehaviour
 {
-    public List<Image> First50Map;
-    public List<Image> Second50Map;
+    public Image Map;
+
+    GameObject[,] map = new GameObject[10, 10];
 
     Color greenColor = new Color32(0, 255, 0, 200);
-    Color whiteColor = new Color32(255, 255, 255, 100);
     Color orangeColor = new Color32(255, 165, 0, 255);
 
-    int moneyMaker = 2;
-    int tank = 3;
-    int sideStep = 3;
-    int faker = 4;
-    int healer = 4;
-    int lightBomber = 4;
-    int bombCatcher = 5;
-    int bomber = 5;
-    int boomer = 6;
-    int flameThrower = 7;
-
-
-    bool Control(List<Image> map)
+    void Start()
     {
-        bool control = true;
-        map.ForEach(x =>
-        {
-            if (x.gameObject.GetComponent<Image>().color != greenColor)
-                control = false;
-        });
-        return control;
+        Create();
     }
 
-    public void ShipPlacing()
+    void Create()
     {
-        if (Control(First50Map) && Control(Second50Map))
-        {
-            PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), FindShipName(PlayerPrefs.GetString("SelectedShip")));
-        }
-        int piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-        
-       
-        if (FindShipName(PlayerPrefs.GetString("SelectedShip"))==piece)
-        {
-            if (gameObject.GetComponent<Image>().color == greenColor && piece > 0)
+        int k = 0;
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
             {
-                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
-                gameObject.GetComponent<Image>().color = Color.blue;
+                map[i, j] = Map.transform.GetChild(k).gameObject;
+                k++;
             }
-        }
-        else
-        {
-            if(gameObject.GetComponent<Image>().color == orangeColor && piece>0)
-            {
-                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
-                gameObject.GetComponent<Image>().color = Color.blue;
-            }
-        }
 
-        int count = 0;
-        First50Map.ForEach(x =>
-        {
-            if (x.gameObject.GetComponent<Image>().color == Color.blue)
-            {
-                if (First50Map[count-1].gameObject.GetComponent<Image>().color != Color.black)
-                {
-                    if(First50Map[count-1].gameObject.GetComponent<Image>().color != Color.blue)
-                    {
-                        First50Map[count-1].gameObject.GetComponent<Image>().color = orangeColor;
-                    }                           
-                }
-            }
-            count++;
-        });
-        int count1 = 0;
-        First50Map.ForEach(x =>
-        {
-            if (x.gameObject.GetComponent<Image>().color == Color.blue)
-            {                       
-                if (First50Map[count1+1].gameObject.GetComponent<Image>().color != Color.black)
-                {
-                    if (First50Map[count1+1].gameObject.GetComponent<Image>().color != Color.blue)
-                    {
-                        First50Map[count1+1].gameObject.GetComponent<Image>().color = orangeColor;
-                    }
-                }
-            }
-            count1++;
-        });
-
-        piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-        if (piece == 0)
-        {
-            First50Map.ForEach(x =>
-            {
-                if (x.gameObject.GetComponent<Image>().color == orangeColor)
-                {
-                    x.gameObject.GetComponent<Image>().color = greenColor;
-                }
-            });
-
-            GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
-        }
     }
-
-    int FindShipName(string shipName)
+    bool Control()
+    {
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+                if (map[i, j].gameObject.GetComponent<Image>().color != greenColor)
+                    return false;
+        return true;
+    }
+    int FindShipSize(string shipName)
     {
         if (shipName == "MoneyMaker")
             return 2;
@@ -132,5 +61,83 @@ public class PlacingShip : MonoBehaviour
             return 7;
         else
             return 0;
+    }
+    public void ShipPlacing()
+    {
+        if (Control())
+        {
+            PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), FindShipSize(PlayerPrefs.GetString("SelectedShip")));
+        }
+        int piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
+
+
+        if (FindShipSize(PlayerPrefs.GetString("SelectedShip")) == piece)
+        {
+            if (gameObject.GetComponent<Image>().color == greenColor && piece > 0)
+            {
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
+                gameObject.GetComponent<Image>().color = Color.blue;
+            }
+        }
+        else
+        {
+            if (gameObject.GetComponent<Image>().color == orangeColor && piece > 0)
+            {
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip")) - 1);
+                gameObject.GetComponent<Image>().color = Color.blue;
+            }
+        }
+
+        for (int i = 0; i < 10; i++) 
+            for (int j = 0; j < 10; j++) 
+                if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                {
+                    if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                    {
+                        if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue)
+                        {
+                            map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
+                        }
+                    }
+
+                    if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.black)
+                    {
+                        if (map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
+                        {
+                            map[i, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
+                        }
+                    }
+
+                    if (i != 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                    {
+                        if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                        {
+                            map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
+                        }
+                    }
+
+                    if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                    {
+                        if (map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                        {
+                            map[i + 1, j].gameObject.GetComponent<Image>().color = orangeColor;
+                        }
+                    }
+                }
+        piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
+        if (piece == 0)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
+                    {
+                        map[i, j].gameObject.GetComponent<Image>().color = greenColor;
+                    }
+                }
+            }
+            GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
+        }
     }
 }
