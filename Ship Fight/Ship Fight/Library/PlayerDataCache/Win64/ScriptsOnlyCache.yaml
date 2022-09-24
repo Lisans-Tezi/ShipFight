@@ -3,9 +3,15 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CreditsBtn
     - ExitBtn
+    - MapFunctions
+    - MapReadyButton
     - MultiPlayerBtn
     - Music
+    - PageLoad
+    - PlacingShip
+    - SelectedShip
     - SettingsBtn
+    - ShipReady
     - SinglePlayerBtn
     - Sound
     Unity.Rider.Editor.dll:
@@ -17,11 +23,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -33,10 +34,66 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/GameScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1464}
+    - Class: 114
+      Script: {instanceID: 1748}
+    - Class: 114
+      Script: {instanceID: 2348}
+    - Class: 114
+      Script: {instanceID: 2464}
+    - Class: 114
+      Script: {instanceID: 2506}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 2820}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 4518}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -65,49 +122,49 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1462}
+      Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1908}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 2188}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2198}
+      Script: {instanceID: 2042}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2256}
     - Class: 114
-      Script: {instanceID: 2492}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2348}
     - Class: 114
-      Script: {instanceID: 2650}
+      Script: {instanceID: 2464}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2972}
+      Script: {instanceID: 2820}
     - Class: 114
-      Script: {instanceID: 3050}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 3582}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3898}
+      Script: {instanceID: 3450}
     - Class: 114
-      Script: {instanceID: 4010}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 4018}
+      Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 4232}
+      Script: {instanceID: 3892}
     - Class: 114
-      Script: {instanceID: 4276}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4282}
+      Script: {instanceID: 4156}
     - Class: 114
-      Script: {instanceID: 4474}
+      Script: {instanceID: 4162}
     - Class: 114
-      Script: {instanceID: 17788}
+      Script: {instanceID: 4168}
     - Class: 114
-      Script: {instanceID: 33044}
+      Script: {instanceID: 4358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,9 +202,51 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1464}
+    - Class: 114
+      Script: {instanceID: 1748}
+    - Class: 114
+      Script: {instanceID: 1802}
+    - Class: 114
+      Script: {instanceID: 1944}
+    - Class: 114
+      Script: {instanceID: 2234}
+    - Class: 114
+      Script: {instanceID: 2348}
+    - Class: 114
+      Script: {instanceID: 2464}
+    - Class: 114
+      Script: {instanceID: 2506}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 2820}
+    - Class: 114
+      Script: {instanceID: 2844}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 4518}
+    - Class: 114
+      Script: {instanceID: 4534}
+    - Class: 114
+      Script: {instanceID: 4546}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -244,8 +343,20 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MapFunctions
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro
     className: TMP_DigitValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 0ddae82eb292bd4f382c68c46c029cf9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectedShip
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -266,7 +377,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
+      Hash: 91d258529db2b5060a913f2afcea1a21
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -276,6 +387,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: b7ef89fbaac1096c7f1d8afbf099233c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShipReady
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SinglePlayerBtn
   - hash:
       serializedVersion: 2
       Hash: 4f60ff347d4efee4ef8cc7f627735018
@@ -408,6 +531,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MapReadyButton
   - hash:
       serializedVersion: 2
       Hash: 0784d4fd5b93bd75440d01eb2fac4233
@@ -710,6 +839,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 0b5178e63b19f4cf7f5a962e821301c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sound
+  - hash:
+      serializedVersion: 2
       Hash: e80c1450883443c68d6c2dade213536f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -800,24 +935,25 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 36567f17816c9651d5aaa328e0276ec5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlacingShip
+  - hash:
+      serializedVersion: 2
+      Hash: 394fc5de9cbafc90561a1a5df1287105
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PageLoad
+  - hash:
+      serializedVersion: 2
       Hash: dd7520b7d4e690e8c593273e7b9fbe80
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SinglePlayerBtn
-  - hash:
-      serializedVersion: 2
-      Hash: 0b5178e63b19f4cf7f5a962e821301c6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Sound
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SinglePlayer.unity
-  playerPath: C:/Users/sekov/Desktop/ShipFight/Ship Fight.exe
+  - Assets/Scenes/GameScene.unity
+  playerPath: "C:/Users/sekov/OneDrive/Masa\xFCst\xFC/ShipFightDebug/Ship Fight.exe"

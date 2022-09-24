@@ -40,44 +40,46 @@ public class SelectedShip : MonoBehaviour
                 k++;
             }
         }
-
     }
 
     public void ShipPlacing()
     {
-        for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
-                if (map[i, j].gameObject.GetComponent<Image>().color == whiteColor)
-                    map[i, j].gameObject.GetComponent<Image>().color = greenColor;
-                else if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
-                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
-
-        ButtonEnabledChange(false);
-
-        isSelected = (isSelected == true) ? false : true;
-
-        if(isSelected)
+        if(Text.color == Color.black)
         {
-            gameObject.GetComponent<Button>().enabled = true;
-            Text.color = Color.red;
-            FindSelectedShip();
-            InformationPanelOpen();
-        }
-        else
-        {
-            Text.color = Color.black;
-            ButtonEnabledChange(true);
             for (int i = 0; i < 10; i++)
-            {
                 for (int j = 0; j < 10; j++)
-                {
-                    if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue || map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
-                    {
+                    if (map[i, j].gameObject.GetComponent<Image>().color == whiteColor)
+                        map[i, j].gameObject.GetComponent<Image>().color = greenColor;
+                    else if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
                         map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+
+            ButtonEnabledChange(false);
+
+            isSelected = (isSelected == true) ? false : true;
+
+            if (isSelected)
+            {
+                gameObject.GetComponent<Button>().enabled = true;
+                Text.color = Color.red;
+                FindSelectedShip();
+                InformationPanelOpen();
+            }
+            else
+            {
+                Text.color = Color.black;
+                ButtonEnabledChange(true);
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue || map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
+                        {
+                            map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                        }
                     }
                 }
+                InformationPanelClose();
             }
-            InformationPanelClose();
         }
     }
     void FindSelectedShip()

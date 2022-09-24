@@ -10,7 +10,9 @@ public class PageLoad : MonoBehaviour
     public Image Ship3;
     public Image Ship4;
     public Image Ship5;
-    // Start is called before the first frame update
+
+
+
     void Start()
     {
         Ship1.gameObject.SetActive(false);

@@ -13,6 +13,8 @@ public class PlacingShip : MonoBehaviour
     Color greenColor = new Color32(0, 255, 0, 200);
     Color orangeColor = new Color32(255, 165, 0, 255);
 
+    int placedSecondShipSize = 0;
+
     void Start()
     {
         Create();
@@ -88,8 +90,66 @@ public class PlacingShip : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < 10; i++) 
-            for (int j = 0; j < 10; j++) 
+
+        if(PlayerPrefs.GetString("SelectedShip") == "Tank")
+        {
+            if(placedSecondShipSize < 2)
+            {
+                defaultPlacedShip(); 
+                placedSecondShipSize++;
+            }
+            else
+            {
+                deleteOrangeMap();
+
+                for (int i = 0; i < 10; i++)
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                        {
+                            if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
+                                map[i + 2, j].gameObject.GetComponent<Image>().color = orangeColor;
+                            }
+                            if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
+                                map[i, j + 2].gameObject.GetComponent<Image>().color = orangeColor;
+                            }
+                        }
+                    }
+            }
+            
+        }
+
+        
+        piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
+        if (piece == 0)
+        {
+            deleteOrangeMap();
+            GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
+        }
+    }
+
+    void deleteOrangeMap()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                if (map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
+                {
+                    map[i, j].gameObject.GetComponent<Image>().color = greenColor;
+                }
+            }
+        }
+    }
+
+    void defaultPlacedShip()
+    {
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
                 if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                 {
                     if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
@@ -124,20 +184,5 @@ public class PlacingShip : MonoBehaviour
                         }
                     }
                 }
-        piece = PlayerPrefs.GetInt(PlayerPrefs.GetString("SelectedShip"));
-        if (piece == 0)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    if (map[i, j].gameObject.GetComponent<Image>().color == orangeColor)
-                    {
-                        map[i, j].gameObject.GetComponent<Image>().color = greenColor;
-                    }
-                }
-            }
-            GameObject.Find("ShipReadyButton").gameObject.GetComponent<Button>().enabled = true;
-        }
     }
 }
