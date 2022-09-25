@@ -27,7 +27,6 @@ public class SelectedShip : MonoBehaviour
     {
         Create();
     }
-
     void Create()
     {
         int k = 0;
@@ -44,7 +43,7 @@ public class SelectedShip : MonoBehaviour
 
     public void ShipPlacing()
     {
-        if(Text.color == Color.black)
+        if(Text.color == Color.black || Text.color == Color.red)
         {
             for (int i = 0; i < 10; i++)
                 for (int j = 0; j < 10; j++)
@@ -66,6 +65,7 @@ public class SelectedShip : MonoBehaviour
             }
             else
             {
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("SelectedShip"), 0);
                 Text.color = Color.black;
                 ButtonEnabledChange(true);
                 for (int i = 0; i < 10; i++)
