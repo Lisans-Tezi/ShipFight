@@ -37,7 +37,4 @@ public class GameController : MonoBehaviour
             shipReady.enabled = false;
         }
     }
-
-
-
 }

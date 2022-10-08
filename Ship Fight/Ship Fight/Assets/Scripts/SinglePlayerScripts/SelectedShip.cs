@@ -23,10 +23,12 @@ public class SelectedShip : MonoBehaviour
     Color orangeColor = new Color32(255, 165, 0, 255);
 
     bool isSelected;
+
     void Start()
     {
         Create();
     }
+
     void Create()
     {
         int k = 0;
@@ -36,6 +38,8 @@ public class SelectedShip : MonoBehaviour
             {
                 map[i, j] = Map.transform.GetChild(k).gameObject;
                 map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                if (i == 5 && j == 5)
+                    map[i, j].gameObject.GetComponent<Image>().color = Color.black;
                 k++;
             }
         }

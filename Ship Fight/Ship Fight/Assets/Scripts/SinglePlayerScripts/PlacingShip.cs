@@ -49,8 +49,8 @@ public class PlacingShip : MonoBehaviour
         if (PlayerPrefs.GetString("SelectedShip") == "Boomer")
             PlacedBoomer();
         if (PlayerPrefs.GetString("SelectedShip") == "FlameThrower")
-            PlacedFlameThrower();              
-    }           
+            PlacedFlameThrower();
+    }
 
     void PlaceMoneyMaker()
     {
@@ -80,32 +80,29 @@ public class PlacingShip : MonoBehaviour
                 defaultPlacedShip();
                 PlayerPrefs.SetInt("SideStep", 2);
             }
+            bool control = false;
             for (int i = 0; i < 10; i++)
-            {
+            { 
                 for (int j = 0; j < 10; j++)
                 {
                     if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                     {
                         if (j == 0)
-                        {
                             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
-                        }
+                                if(map[i, j + 2].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
                         if (j == 8)
-                        {
                             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
-                        }
+                                if(map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
                         if (i == 0)
-                        {
                             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
-                        }
+                                if (map[i + 2, j].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
                         if (i == 8)
-                        {
                             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
-                        }
+                                if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
                         if ((j != 0) || (j != 8) || (i != 0) || (i != 8))
                         {
                             if (i == 9)
@@ -113,9 +110,11 @@ public class PlacingShip : MonoBehaviour
                                 if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
                                     if ((j - 1) >= 0 && map[i, j - 1].gameObject.GetComponent<Image>().color == orangeColor)
-                                        map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
+                                        if(map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                                            map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
                                     if ((j + 2) <= 9 && map[i, j + 2].gameObject.GetComponent<Image>().color == orangeColor)
-                                        map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
+                                        if(map[i, j + 2].gameObject.GetComponent<Image>().color != Color.black)
+                                            map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
                                 }
                             }
                             else if (j == 9)
@@ -123,28 +122,37 @@ public class PlacingShip : MonoBehaviour
                                 if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
                                     if ((i - 1) >= 0 && map[i - 1, j].gameObject.GetComponent<Image>().color == orangeColor)
-                                        map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
+                                        if(map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                                            map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
                                     if ((i + 2) <= 9 && map[i + 2, j].gameObject.GetComponent<Image>().color == orangeColor)
-                                        map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
+                                        if(map[i + 2, j].gameObject.GetComponent<Image>().color != Color.black)
+                                            map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
                                 }
                             }
                             else
                             {
                                 if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
-                                    map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
+                                    if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                                        map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
+                                    if (j < 8 && map[i, j + 2].gameObject.GetComponent<Image>().color != Color.black)
+                                        map[i, j + 2].gameObject.GetComponent<Image>().color = greenColor;
                                 }
                                 if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
-                                    map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
+                                    if (i != 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                                        map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
+                                    if (i < 8 && map[i + 2, j].gameObject.GetComponent<Image>().color != Color.black)
+                                        map[i + 2, j].gameObject.GetComponent<Image>().color = greenColor;
                                 }
                             }
                         }
+                        control = true;
                         break;
                     }
                 }
+                if (control)
+                    break;
             }
         }
         else if (PlayerPrefs.GetInt("SideStep") == 2)
@@ -206,7 +214,6 @@ public class PlacingShip : MonoBehaviour
 
     }
 
-
     void FirstPlacement(string shipName)
     {
         if (gameObject.GetComponent<Image>().color == greenColor)
@@ -230,35 +237,31 @@ public class PlacingShip : MonoBehaviour
                     if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                     {
                         if (j == 0)
-                        {
                             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i, j + pieces].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
+                                if(map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i, j + pieces].gameObject.GetComponent<Image>().color = orangeColor;
                         if (j == (10-pieces))
-                        {
                             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
+                                if(map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
                         if (i == 0)
-                        {
                             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i + pieces, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
+                                if(map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i + pieces, j].gameObject.GetComponent<Image>().color = orangeColor;
                         if (i == (10 - pieces))
-                        {
                             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        }
+                                if(map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
+                                    map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
                         if ((j != 0) || (j != (10 - pieces)) || (i != 0) || (i != (10 - pieces)))
                         {
                             if (i == 9)
-                                Horizantal(i,j);
+                                Horizantal(i, j);
                             else if (j == 9)
                                 Vertical(i, j);
                             else
                             {
                                 Horizantal(i, j);
-                                Vertical(i,j);
+                                Vertical(i, j);
                             }
                         }
                         control = true;
@@ -270,27 +273,28 @@ public class PlacingShip : MonoBehaviour
             }
             PlayerPrefs.SetInt(shipName, pieces);
         }
-        void Horizantal(int i,int j)
+        void Horizantal(int i, int j)
         {
             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
             {
-                if ((j - 1) >= 0)
+                if ((j - 1) >= 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
                     map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                if ((j + pieces) <= 9)
+                if ((j + pieces) <= 9 && map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
                     map[i, j + pieces].gameObject.GetComponent<Image>().color = orangeColor;
             }
         }
-        void Vertical(int i,int j)
+        void Vertical(int i, int j)
         {
             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
             {
-                if ((i - 1) >= 0)
+                if ((i - 1) >= 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
                     map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                if (i + pieces <= 9)
+                if (i + pieces <= 9 && map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
                     map[i + pieces, j].gameObject.GetComponent<Image>().color = orangeColor;
             }
         }
     }
+   
     void LastPlacement(string shipName,int pieces)
     {
         if (gameObject.GetComponent<Image>().color == orangeColor)

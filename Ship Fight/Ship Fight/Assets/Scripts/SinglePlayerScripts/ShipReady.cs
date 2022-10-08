@@ -26,6 +26,7 @@ public class ShipReady : MonoBehaviour
             for (int j = 0; j < 10; j++)
                 Coordinats[i, j] = 0;
 
+        PlayerPrefs.SetInt("PlacedShipCount", 0);
         PlacedShipNames = new List<string>();
         gameObject.GetComponent<Button>().enabled = false;
         Create();
@@ -62,16 +63,23 @@ public class ShipReady : MonoBehaviour
                     map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
             }
 
+        PlayerPrefs.SetInt("PlacedShipCount", PlayerPrefs.GetInt("PlacedShipCount") + 1);
+        gameObject.GetComponent<Button>().enabled = false;
 
         foreach (Image ship in Ships)
         {
-            ship.GetComponent<Button>().enabled = true;
+            if(PlayerPrefs.GetInt("PlacedShipCount") != 5)
+                ship.GetComponent<Button>().enabled = true;
             if (ship.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().color == Color.red)
             {
                 ship.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.green;
                 ship.GetComponent<Button>().enabled = false;
                 PlacedShipNames.Add(ship.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text);
             }
+        }
+        if(PlayerPrefs.GetInt("PlacedShipCount") == 5)
+        {
+            GameObject.Find("MapReadyButton").gameObject.GetComponent<Button>().enabled = true;
         }
     }
 }
