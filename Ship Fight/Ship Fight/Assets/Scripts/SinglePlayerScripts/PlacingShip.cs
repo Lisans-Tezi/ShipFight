@@ -118,38 +118,30 @@ public class PlacingShip : MonoBehaviour
                     {
                         if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                         {
-                            if (j + 1 <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                            if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
                             {
-                                if(i + 1 <= 9 && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((i + 1) <= 9 && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    if(i - 1 >= 0)
-                                        map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                                    if(j + 2 <= 9)
-                                        map[i + 1, j + 2].gameObject.GetComponent<Image>().color = orangeColor;
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1);
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 1, jcontrol: '+', jnumber: 2);
                                 }
-                                if(i + 1 <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((i + 1) <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    if(i - 1 >= 0)
-                                        map[i - 1, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
-                                    if(j - 1 >= 0)
-                                        map[i + 1, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1, jcontrol: '+', jnumber: 1);
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 1, jcontrol: '-', jnumber: 1);
                                 }
                             }
-                            else if(i + 1 <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                            else if ((i + 1) <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
                             {
-                                if (j + 1 <= 9 && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((j + 1) <= 9 && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    if(j - 1 >= 0)
-                                        map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                                    if(i + 2 <= 9)
-                                        map[i + 2, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
+                                    DoControlAndPlacement(i: i, j: j, jcontrol: '-', jnumber: 1);
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2, jcontrol: '+', jnumber: 1);
                                 }
-                                if(j - 1 >= 0 && map[i + 1, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((j - 1) >= 0 && map[i + 1, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
                                 {
-                                    if(j + 1 <= 9)
-                                        map[i, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
-                                    if(i + 2 <= 9)
-                                        map[i + 2, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
+                                    DoControlAndPlacement(i: i, j: j, jcontrol: '+', jnumber: 1);
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2, jcontrol: '-', jnumber: 1);
                                 }
                             }
                             control = true;
@@ -159,7 +151,7 @@ public class PlacingShip : MonoBehaviour
                     if (control)
                         break;
                 }
-               
+
             }
             PlayerPrefs.SetInt("LightBomber", 3);
         }
@@ -200,31 +192,35 @@ public class PlacingShip : MonoBehaviour
                     {
                         if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                         {
-                            if (map[i, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                            if ((i + 1) <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
                             {
-                                if (map[i - 1, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
-                                    map[i + 1, j + 2].gameObject.GetComponent<Image>().color = orangeColor;/*
-                                else if (map[i + 1, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
-                                    map[i - 1, j + 2].gameObject.GetComponent<Image>().color = orangeColor;*/
+                                if ((i + 2) <= 9 && map[i + 2, j].gameObject.GetComponent<Image>().color != Color.blue)
+                                {
+                                    if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2);
+                                    else if ((i - 1) >= 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1);
+                                }
+                                else if ((i + 2) <= 9 && map[i + 2, j].gameObject.GetComponent<Image>().color == Color.blue)
+                                {
+                                    if ((j - 1) >= 0 && map[i + 2, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2, jcontrol:'+', jnumber:1);
+                                    else if ((j + 1) <= 9 && map[i + 2, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2,jcontrol:'-', jnumber:1);
+                                }
                             }
-                            if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                            {
-                                if (map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                    map[i, j + 2].gameObject.GetComponent<Image>().color = orangeColor;
-                                else if (map[i, j + 2].gameObject.GetComponent<Image>().color != Color.blue)
-                                    map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                            }
-                            else if(map[i + 2, j].gameObject.GetComponent<Image>().color == Color.blue)
-                            {
-                                if(map[i + 2, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                    map[i + 2, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
-                                else if(map[i + 2, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                    map[i + 2, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                            }
+                            if ((j + 2) <= 9 && map[i, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((i + 1) <= 9 && map[i + 1, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1, jcontrol:'+',jnumber:2);
 
-                            
-
-
+                            if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((j + 2) <= 9 && map[i, j + 2].gameObject.GetComponent<Image>().color != Color.blue)
+                                {
+                                    if ((i + 1) <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, jcontrol: '+', jnumber: 2);
+                                    else if ((j - 1) >= 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, jcontrol: '-', jnumber: 1);
+                                }
                             control = true;
                             break;
                         }
@@ -257,9 +253,206 @@ public class PlacingShip : MonoBehaviour
     }
     void PlacedFlameThrower()
     {
-       
-    }
+        if (PlayerPrefs.GetInt("FlameThrower") == 0)
+            FirstPlacement("FlameThrower");
+        else if (PlayerPrefs.GetInt("FlameThrower") == 1)
+            MiddlePlacement("FlameThrower", 2);
+        else if (PlayerPrefs.GetInt("FlameThrower") == 2)
+            SideMiddlePlacement("FlameThrower", 3, true);
+        else if (PlayerPrefs.GetInt("FlameThrower") == 3)
+        {
+            if (gameObject.GetComponent<Image>().color == orangeColor)
+            {
+                gameObject.GetComponent<Image>().color = Color.blue;
+                deleteOrangeMap();
+                bool control = false;
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                        {
+                            if ((i+1)<=9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                if((i + 2) <= 9 && map[i + 2, j].gameObject.GetComponent<Image>().color != Color.blue)
+                                {
+                                    if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                        DoControlAndPlacement(i:i, j:j, icontrol:'+', inumber:2);
+                                    else if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
+                                        DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1);
+                                }
+                                if (i+2 > 9)
+                                    DoControlAndPlacement(i: i, j: j, icontrol: '-', inumber: 1);                                 
+                            }                                              
+                            else if ((j+2)<=9 && (i+1)<=9 && map[i + 1, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2,jcontrol:'+',jnumber:2);
 
+                            if ((j + 1) <= 9 && map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                if ((i + 1) <= 9 && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                    DoControlAndPlacement(i: i, j: j, jcontrol: '-', jnumber: 1);
+                                else if ((i + 1) <= 9 && map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue && (j + 2) <= 9 && map[i, j + 2].gameObject.GetComponent<Image>().color != Color.blue)
+                                    DoControlAndPlacement(i: i, j: j, jcontrol: '+', jnumber: 2);
+                            }
+                            else if ((i + 2) <= 9 && (j - 1) >= 0 && map[i + 2, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2, jcontrol:'-', jnumber:2);
+                            else if ((i + 2) <= 9 && (j + 1) <= 9 && map[i + 2, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                DoControlAndPlacement(i: i, j: j, icontrol: '+', inumber: 2, jcontrol:'+', jnumber:2);
+
+                            control = true;
+                            break;
+                        }
+                    }
+                    if (control)
+                        break;
+                }
+                PlayerPrefs.SetInt("FlameThrower", 4);
+            }
+        }
+        else if (PlayerPrefs.GetInt("FlameThrower") == 4)
+        {
+            if (gameObject.GetComponent<Image>().color == orangeColor)
+            {
+                gameObject.GetComponent<Image>().color = Color.blue;
+                deleteOrangeMap();
+                bool control = false;
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                        {
+                            if ((i+2)<=9 && (j+2)<=9 && map[i + 2, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
+                                {
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 1);
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 2, inumber: 1, icontrol: '+');
+                                }
+                                else
+                                {
+                                    DoControlAndPlacement(i, j, icontrol: '+', inumber: 1);
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 1, icontrol: '+', inumber: 2);
+                                }
+                                    
+                            }                                     
+                            else if ((i+2)<=9 && (j-2)>=0 && map[i + 2, j - 2].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                DoControlAndPlacement(i, j, jcontrol: '-', jnumber: 1);
+                                DoControlAndPlacement(i, j, jcontrol: '-', jnumber: 2, icontrol:'+',inumber:1);
+                            }
+
+                            else if ((i+2)<=9 && map[i + 2, j].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                if ((j+2)<=9 && map[i, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                {
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 1, icontrol: '+', inumber: 2);
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 2, inumber: 1, icontrol: '+');
+                                }                                      
+                            }  
+                            control = true;
+                            break;
+                        }
+                    }
+                    if (control)
+                        break;
+                }
+                PlayerPrefs.SetInt("FlameThrower", 5);
+            }
+        }
+        else if (PlayerPrefs.GetInt("FlameThrower") == 5)
+        {
+            if (gameObject.GetComponent<Image>().color == orangeColor)
+            {
+                gameObject.GetComponent<Image>().color = Color.blue;
+                deleteOrangeMap();
+                bool control = false;
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
+                        {
+                            if ((i + 2) <= 9 && (j + 2) <= 9 && map[i + 2, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                            {
+                                if(map[i, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                    DoControlAndPlacement(i, j, icontrol: '+', inumber: 2);
+                                else
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 2);
+
+                            }                                       
+                            else if ((i + 2) <= 9 && (j - 2) >= 0 && map[i + 2, j - 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                DoControlAndPlacement(i, j, jcontrol: '-', jnumber: 2);
+                            else if ((i + 2) <= 9 && (j - 1) >= 0 && map[i + 2, j - 1].gameObject.GetComponent<Image>().color == Color.blue)
+                                DoControlAndPlacement(i, j, jcontrol: '-', jnumber: 1);
+                            else if ((j + 2) <= 9 && map[i, j + 2].gameObject.GetComponent<Image>().color == Color.blue)
+                                if ((i+2)<=9 && map[i + 2, j].gameObject.GetComponent<Image>().color == Color.blue)
+                                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: 2, icontrol:'+', inumber:2);
+                                
+                            control = true;
+                            break;
+                        }
+                    }
+                    if (control)
+                        break;
+                }
+                PlayerPrefs.SetInt("FlameThrower", 6);
+            }
+        }
+        else if (PlayerPrefs.GetInt("FlameThrower") == 6)
+            LastPlacement("FlameThrower", 7);
+    }
+    void DoControlAndPlacement(int i, int j, char icontrol='+', char jcontrol='+', int inumber=0, int jnumber=0, bool orange=true)
+    {
+        if (icontrol == '+' && jcontrol == '+')
+        {
+            if ((i + inumber) <= 9 && (j + jnumber) <= 9 && map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black)
+                if (!orange)
+                {
+                    map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color = greenColor;
+                }
+                else
+                {
+                    map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color = orangeColor;
+                }                    
+        }
+        else if(icontrol == '+' && jcontrol == '-')
+        {
+            if ((i + inumber) <= 9 && (j - jnumber) >= 0 && map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black)
+                if (!orange)
+                {
+                    map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color = greenColor;
+                }
+                else
+                {
+                    map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color = orangeColor;
+                }               
+        }
+        else if (icontrol == '-' && jcontrol == '+')
+        {
+            if ((i - inumber) >= 0 && (j + jnumber) <= 9 && map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black)
+                if (!orange)
+                {
+                    map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color = greenColor;
+                }
+                else
+                {
+                    map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color = orangeColor;
+                }               
+        }
+        else if (icontrol == '-' && jcontrol == '-')
+        {
+            if ((i - inumber) >= 0 && (j - jnumber) >= 0 && map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black)
+                if (!orange)
+                {
+                    map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color = greenColor;
+                }
+                else
+                {
+                    map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color = orangeColor;
+                }                 
+        }
+    }
     void FirstPlacement(string shipName)
     {
         if (gameObject.GetComponent<Image>().color == greenColor)
@@ -269,7 +462,7 @@ public class PlacingShip : MonoBehaviour
             PlayerPrefs.SetInt(shipName, 1);
         }
     }
-    void MiddlePlacement(string shipName,int pieces)
+    void MiddlePlacement(string shipName, int pieces)
     {
         if (gameObject.GetComponent<Image>().color == orangeColor)
         {
@@ -282,23 +475,6 @@ public class PlacingShip : MonoBehaviour
                 {
                     if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                     {
-                        if (j == 0)
-                            if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                if(map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i, j + pieces].gameObject.GetComponent<Image>().color = orangeColor;
-                        if (j == (10-pieces))
-                            if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                if(map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                        if (i == 0)
-                            if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                if(map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i + pieces, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        if (i == (10 - pieces))
-                            if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                if(map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                        if ((j != 0) || (j != (10 - pieces)) || (i != 0) || (i != (10 - pieces)))
                         {
                             if (i == 9)
                                 Horizantal(i, j);
@@ -323,24 +499,19 @@ public class PlacingShip : MonoBehaviour
         {
             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
             {
-                if ((j - 1) >= 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
-                if ((j + pieces) <= 9 && map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i, j + pieces].gameObject.GetComponent<Image>().color = orangeColor;
+                DoControlAndPlacement(i, j, jcontrol:'-',jnumber:1);
+                DoControlAndPlacement(i, j, jcontrol: '+', jnumber: pieces);
             }
         }
         void Vertical(int i, int j)
         {
             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
             {
-                if ((i - 1) >= 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
-                if (i + pieces <= 9 && map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i + pieces, j].gameObject.GetComponent<Image>().color = orangeColor;
+                DoControlAndPlacement(i, j, icontrol: '-', inumber: 1);
+                DoControlAndPlacement(i, j, icontrol: '+', inumber: pieces);
             }
         }
     }
-
     void SideMiddlePlacement(string shipName, int pieces, bool middleControl)
     {
         if (gameObject.GetComponent<Image>().color == orangeColor)
@@ -355,33 +526,14 @@ public class PlacingShip : MonoBehaviour
                 {
                     if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                     {
-                        if (j == 0)
-                            if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                if (map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i, j + pieces].gameObject.GetComponent<Image>().color = greenColor;
-                        if (j == 10 - pieces)
-                            if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
-                                if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
-                        if (i == 0)
-                            if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                if (map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i + pieces, j].gameObject.GetComponent<Image>().color = greenColor;
-                        if (i == 10 - pieces)
-                            if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
-                                if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                                    map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
-                        if ((j != 0) || (j != 10 - pieces) || (i != 0) || (i != 10 - pieces))
+                        if (i == 9)
+                            DownController(i, j);
+                        else if (j == 9)
+                            RightController(i, j);
+                        else
                         {
-                            if (i == 9)
-                                DownController(i, j);
-                            else if (j == 9)
-                                RightController(i, j);
-                            else
-                            {
-                                DownController(i, j);
-                                RightController(i, j);
-                            }
+                            DownController(i, j);
+                            RightController(i, j);
                         }
                         control = true;
                         break;
@@ -397,11 +549,9 @@ public class PlacingShip : MonoBehaviour
             if (map[i, j + 1].gameObject.GetComponent<Image>().color == Color.blue)
             {
                 if ((j - 1) >= 0 && map[i, j - 1].gameObject.GetComponent<Image>().color == orangeColor)
-                    if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                        map[i, j - 1].gameObject.GetComponent<Image>().color = greenColor;
+                    DoControlAndPlacement(i, j, jcontrol: '-', jnumber: 1, orange:false);
                 if ((j + pieces) <= 9 && map[i, j + pieces].gameObject.GetComponent<Image>().color == orangeColor)
-                    if (map[i, j + pieces].gameObject.GetComponent<Image>().color != Color.black)
-                        map[i, j + pieces].gameObject.GetComponent<Image>().color = greenColor;
+                    DoControlAndPlacement(i, j, jcontrol: '+', jnumber: pieces, orange: false);
                 if (middleControl)
                     VerticalController(i, j);
             }
@@ -412,11 +562,9 @@ public class PlacingShip : MonoBehaviour
             if (map[i + 1, j].gameObject.GetComponent<Image>().color == Color.blue)
             {
                 if ((i - 1) >= 0 && map[i - 1, j].gameObject.GetComponent<Image>().color == orangeColor)
-                    if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                        map[i - 1, j].gameObject.GetComponent<Image>().color = greenColor;
+                    DoControlAndPlacement(i, j, icontrol: '-', inumber: 1, orange: false);
                 if ((i + pieces) <= 9 && map[i + pieces, j].gameObject.GetComponent<Image>().color == orangeColor)
-                    if (map[i + pieces, j].gameObject.GetComponent<Image>().color != Color.black)
-                        map[i + pieces, j].gameObject.GetComponent<Image>().color = greenColor;
+                    DoControlAndPlacement(i, j, icontrol: '+', inumber: pieces, orange: false);
                 if (middleControl)
                     HorizontalController(i, j);
             }
@@ -425,25 +573,20 @@ public class PlacingShip : MonoBehaviour
         void VerticalController(int i, int j)
         {
             if ((i != 9 && j != 9) && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == orangeColor)
-                if (map[i + 1, j + 1].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i + 1, j + 1].gameObject.GetComponent<Image>().color = greenColor;
+                DoControlAndPlacement(i, j, icontrol: '+', inumber: 1, jcontrol:'+', jnumber:1 ,orange: false);
             if ((i != 0 && j != 9) && map[i - 1, j + 1].gameObject.GetComponent<Image>().color == orangeColor)
-                if (map[i - 1, j + 1].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i - 1, j + 1].gameObject.GetComponent<Image>().color = greenColor;
+                DoControlAndPlacement(i, j, icontrol: '-', inumber: 1, jcontrol: '+', jnumber: 1, orange: false);
         }
 
         void HorizontalController(int i, int j)
         {
             if ((i != 9 && j != 0) && map[i + 1, j - 1].gameObject.GetComponent<Image>().color == orangeColor)
-                if (map[i + 1, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i + 1, j - 1].gameObject.GetComponent<Image>().color = greenColor;
+                DoControlAndPlacement(i, j, icontrol: '+', inumber: 1, jcontrol: '-', jnumber: 1, orange: false);
             if ((i != 9 && j != 9) && map[i + 1, j + 1].gameObject.GetComponent<Image>().color == orangeColor)
-                if (map[i + 1, j + 1].gameObject.GetComponent<Image>().color != Color.black)
-                    map[i + 1, j + 1].gameObject.GetComponent<Image>().color = greenColor;
+                DoControlAndPlacement(i, j, icontrol: '+', inumber: 1, jcontrol: '+', jnumber: 1, orange: false);
         }
     }
-
-    void LastPlacement(string shipName,int pieces)
+    void LastPlacement(string shipName, int pieces)
     {
         if (gameObject.GetComponent<Image>().color == orangeColor)
         {
