@@ -96,7 +96,7 @@ public class ShipReady : MonoBehaviour
             mm.SecondPieceJ = jPieces[1];
             mm.PassiveAttribute = "";
             mm.ActiveAttribute = "";
-            mm.ActiveAttributeCost = 10;
+            mm.ActiveAttributeCost = 2;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "Tank")
         {
@@ -112,7 +112,7 @@ public class ShipReady : MonoBehaviour
             t.ThirdPieceJ = jPieces[2];
             t.PassiveAttribute = "";
             t.ActiveAttribute = "";
-            t.ActiveAttributeCost = 10;
+            t.ActiveAttributeCost = 3;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "SideStep")
         {
@@ -128,7 +128,7 @@ public class ShipReady : MonoBehaviour
             ss.ThirdPieceJ = jPieces[2];
             ss.PassiveAttribute = "";
             ss.ActiveAttribute = "";
-            ss.ActiveAttributeCost = 10;
+            ss.ActiveAttributeCost = 3;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "Faker")
         {
@@ -146,7 +146,7 @@ public class ShipReady : MonoBehaviour
             f.FourthPieceJ = jPieces[3];
             f.PassiveAttribute = "";
             f.ActiveAttribute = "";
-            f.ActiveAttributeCost = 10;
+            f.ActiveAttributeCost = 4;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "Healer")
         {
@@ -164,7 +164,7 @@ public class ShipReady : MonoBehaviour
             h.FourthPieceJ = jPieces[3];
             h.PassiveAttribute = "";
             h.ActiveAttribute = "";
-            h.ActiveAttributeCost = 10;
+            h.ActiveAttributeCost = 4;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "LightBomber")
         {
@@ -182,7 +182,7 @@ public class ShipReady : MonoBehaviour
             lb.FourthPieceJ = jPieces[3];
             lb.PassiveAttribute = "";
             lb.ActiveAttribute = "";
-            lb.ActiveAttributeCost = 10;
+            lb.ActiveAttributeCost = 4;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "BombCatcher")
         {
@@ -202,7 +202,7 @@ public class ShipReady : MonoBehaviour
             bc.FifthPieceJ = jPieces[4];
             bc.PassiveAttribute = "";
             bc.ActiveAttribute = "";
-            bc.ActiveAttributeCost = 10;
+            bc.ActiveAttributeCost = 5;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "Bomber")
         {
@@ -222,7 +222,7 @@ public class ShipReady : MonoBehaviour
             b.FifthPieceJ = jPieces[4];
             b.PassiveAttribute = "";
             b.ActiveAttribute = "";
-            b.ActiveAttributeCost = 10;
+            b.ActiveAttributeCost = 5;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "Boomer")
         {
@@ -244,7 +244,7 @@ public class ShipReady : MonoBehaviour
             b.SixthPieceJ = jPieces[5];
             b.PassiveAttribute = "";
             b.ActiveAttribute = "";
-            b.ActiveAttributeCost = 10;
+            b.ActiveAttributeCost = 6;
         }
         if (PlayerPrefs.GetString("SelectedShip") == "FlameThrower")
         {
@@ -268,7 +268,7 @@ public class ShipReady : MonoBehaviour
             b.SeventhPieceJ = jPieces[6];
             b.PassiveAttribute = "";
             b.ActiveAttribute = "";
-            b.ActiveAttributeCost = 10;
+            b.ActiveAttributeCost = 7;
         }          
         
         
