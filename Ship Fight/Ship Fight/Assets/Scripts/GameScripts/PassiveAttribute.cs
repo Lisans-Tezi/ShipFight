@@ -10,7 +10,6 @@ public class PassiveAttribute : MonoBehaviour
     public TextMeshProUGUI Text;
     public TextMeshProUGUI ShipNameText;
     public List<Button> PassiveButtons;
-    public List<Button> ActiveButtons;
 
     Color whiteColor = new Color32(255, 255, 255, 100);
     Color greenColor = new Color32(0, 255, 0, 200);
@@ -55,19 +54,20 @@ public class PassiveAttribute : MonoBehaviour
                 gameObject.GetComponent<Button>().enabled = true;
                 Text.color = Color.red;
                 FindShootingShip();
+                PlayerPrefs.SetString("AttackType","Passive");
+                GameObject.Find("InfoPanelText").GetComponent<TextManager>().ChoseTile();
             }
             else
             {
                 Text.color = Color.white;
                 ButtonEnabledChange(true);
+                GameObject.Find("InfoPanelText").GetComponent<TextManager>().ChoseShip();
             }
         }
     }
 
     void ButtonEnabledChange(bool enabled)
     {
-        foreach (Button activeBtn in ActiveButtons)
-            activeBtn.enabled = enabled;
         foreach (Button passiveBtn in PassiveButtons)
             passiveBtn.enabled = enabled;
     }

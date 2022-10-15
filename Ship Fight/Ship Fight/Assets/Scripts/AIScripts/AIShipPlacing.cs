@@ -4,120 +4,118 @@ using UnityEngine;
 
 public class AIShipPlacing : MonoBehaviour
 {
+    public MoneyMaker AIMoneyMaker;
+    public Tank AITank;
+    public SideStep AISideStep;
+    public Faker AIFaker;
+    public Healer AIHealer;
+    public LightBomber AILightBomber;
+    public BombCatcher AIBombCatcher;
+    public Bomber AIBomber;
+    public Boomer AIBoomer;
+    public FlameThrower AIFlameThrower;
     void Start()
     {
-        int rnd = Random.Range(0, 2);
+        //int rnd = Random.Range(0, 2);
 
-        switch (rnd)
-        {
-            case 0:
-                AIFirst();
-                break;
-            case 1:
-                AISecond();
-                break;
-        }
-
+        //switch (rnd)
+        //{
+        //    case 0:
+        //        AIFirst();
+        //        break;
+        //    case 1:
+        //        AISecond();
+        //        break;
+        //}
+        AIFirst();
     }
 
     void AIFirst()
     {
-        MoneyMaker mm;
-        mm = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();
-        mm.Name = "MoneyMaker";
-        mm.Piece = 2;
-        mm.HittedPiece = 0;
-        mm.FirstPieceI = 7;
-        mm.FirstPieceJ = 3;
-        mm.SecondPieceI = 7;
-        mm.SecondPieceJ = 4;
-        mm.PassiveAttribute = "";
-        mm.ActiveAttribute = "";
-        mm.ActiveAttributeCost = 2;
+        AIMoneyMaker.Name = "MoneyMaker";
+        AIMoneyMaker.Piece = 2;
+        AIMoneyMaker.HittedPiece = 0;
+        AIMoneyMaker.FirstPieceI = 7;
+        AIMoneyMaker.FirstPieceJ = 3;
+        AIMoneyMaker.SecondPieceI = 7;
+        AIMoneyMaker.SecondPieceJ = 4;
+        AIMoneyMaker.PassiveAttribute = "";
+        AIMoneyMaker.ActiveAttribute = "";
+        AIMoneyMaker.ActiveAttributeCost = 2;
 
-        Tank t;
-        t = GameObject.Find("Tank").GetComponent<Tank>();
-        t.Name = "Tank";
-        t.Piece = 3;
-        t.HittedPiece = 0;
-        t.FirstPieceI = 3;
-        t.FirstPieceJ = 2;
-        t.SecondPieceI = 3;
-        t.SecondPieceJ = 3;
-        t.ThirdPieceI = 3;
-        t.ThirdPieceJ = 4;
-        t.PassiveAttribute = "";
-        t.ActiveAttribute = "";
-        t.ActiveAttributeCost = 3;
+        AITank.Name = "Tank";
+        AITank.Piece = 3;
+        AITank.HittedPiece = 0;
+        AITank.FirstPieceI = 3;
+        AITank.FirstPieceJ = 2;
+        AITank.SecondPieceI = 3;
+        AITank.SecondPieceJ = 3;
+        AITank.ThirdPieceI = 3;
+        AITank.ThirdPieceJ = 4;
+        AITank.PassiveAttribute = "";
+        AITank.ActiveAttribute = "";
+        AITank.ActiveAttributeCost = 3;
 
-        Faker f;
-        f = GameObject.Find("Faker").GetComponent<Faker>();
-        f.Name = "Faker";
-        f.Piece = 4;
-        f.HittedPiece = 0;
-        f.FirstPieceI = 0;
-        f.FirstPieceJ = 0;
-        f.SecondPieceI = 1;
-        f.SecondPieceJ = 0;
-        f.ThirdPieceI = 2;
-        f.ThirdPieceJ = 0;
-        f.FourthPieceI = 3;
-        f.FourthPieceJ = 0;
-        f.PassiveAttribute = "";
-        f.ActiveAttribute = "";
-        f.ActiveAttributeCost = 4;
+        AIFaker.Name = "Faker";
+        AIFaker.Piece = 4;
+        AIFaker.HittedPiece = 0;
+        AIFaker.FirstPieceI = 0;
+        AIFaker.FirstPieceJ = 0;
+        AIFaker.SecondPieceI = 1;
+        AIFaker.SecondPieceJ = 0;
+        AIFaker.ThirdPieceI = 2;
+        AIFaker.ThirdPieceJ = 0;
+        AIFaker.FourthPieceI = 3;
+        AIFaker.FourthPieceJ = 0;
+        AIFaker.PassiveAttribute = "";
+        AIFaker.ActiveAttribute = "";
+        AIFaker.ActiveAttributeCost = 4;
 
-        LightBomber lb;
-        lb = GameObject.Find("LightBomber").GetComponent<LightBomber>();
-        lb.Name = "LightBomber";
-        lb.Piece = 4;
-        lb.HittedPiece = 0;
-        lb.FirstPieceI = 9;
-        lb.FirstPieceJ = 7;
-        lb.SecondPieceI = 8;
-        lb.SecondPieceJ = 8;
-        lb.ThirdPieceI = 9;
-        lb.ThirdPieceJ = 8;
-        lb.FourthPieceI = 8;
-        lb.FourthPieceJ = 9;
-        lb.PassiveAttribute = "";
-        lb.ActiveAttribute = "";
-        lb.ActiveAttributeCost = 4;
+        AILightBomber.Name = "LightBomber";
+        AILightBomber.Piece = 4;
+        AILightBomber.HittedPiece = 0;
+        AILightBomber.FirstPieceI = 9;
+        AILightBomber.FirstPieceJ = 7;
+        AILightBomber.SecondPieceI = 8;
+        AILightBomber.SecondPieceJ = 8;
+        AILightBomber.ThirdPieceI = 9;
+        AILightBomber.ThirdPieceJ = 8;
+        AILightBomber.FourthPieceI = 8;
+        AILightBomber.FourthPieceJ = 9;
+        AILightBomber.PassiveAttribute = "";
+        AILightBomber.ActiveAttribute = "";
+        AILightBomber.ActiveAttributeCost = 4;
 
-        Bomber b;
-        b = GameObject.Find("Bomber").GetComponent<Bomber>();
-        b.Name = "Bomber";
-        b.Piece = 5;
-        b.HittedPiece = 0;
-        b.FirstPieceI = 6;
-        b.FirstPieceJ = 1;
-        b.SecondPieceI = 7;
-        b.SecondPieceJ = 1;
-        b.ThirdPieceI = 7;
-        b.ThirdPieceJ = 2;
-        b.FourthPieceI = 7;
-        b.FourthPieceJ = 3;
-        b.FifthPieceI = 8;
-        b.FifthPieceJ = 1;
-        b.PassiveAttribute = "";
-        b.ActiveAttribute = "";
-        b.ActiveAttributeCost = 5;
+        AIBomber.Name = "Bomber";
+        AIBomber.Piece = 5;
+        AIBomber.HittedPiece = 0;
+        AIBomber.FirstPieceI = 6;
+        AIBomber.FirstPieceJ = 1;
+        AIBomber.SecondPieceI = 7;
+        AIBomber.SecondPieceJ = 1;
+        AIBomber.ThirdPieceI = 7;
+        AIBomber.ThirdPieceJ = 2;
+        AIBomber.FourthPieceI = 7;
+        AIBomber.FourthPieceJ = 3;
+        AIBomber.FifthPieceI = 8;
+        AIBomber.FifthPieceJ = 1;
+        AIBomber.PassiveAttribute = "";
+        AIBomber.ActiveAttribute = "";
+        AIBomber.ActiveAttributeCost = 5;
     }
 
     void AISecond()
     {
-        MoneyMaker mm;
-        mm = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();
-        mm.Name = "MoneyMaker";
-        mm.Piece = 2;
-        mm.HittedPiece = 0;
-        mm.FirstPieceI = 0;
-        mm.FirstPieceJ = 1;
-        mm.SecondPieceI = 0;
-        mm.SecondPieceJ = 2;
-        mm.PassiveAttribute = "";
-        mm.ActiveAttribute = "";
-        mm.ActiveAttributeCost = 2;
+        AIMoneyMaker.Name = "MoneyMaker";
+        AIMoneyMaker.Piece = 2;
+        AIMoneyMaker.HittedPiece = 0;
+        AIMoneyMaker.FirstPieceI = 0;
+        AIMoneyMaker.FirstPieceJ = 1;
+        AIMoneyMaker.SecondPieceI = 0;
+        AIMoneyMaker.SecondPieceJ = 2;
+        AIMoneyMaker.PassiveAttribute = "";
+        AIMoneyMaker.ActiveAttribute = "";
+        AIMoneyMaker.ActiveAttributeCost = 2;
 
         Healer h;
         h = GameObject.Find("Healer").GetComponent<Healer>();

@@ -6,6 +6,12 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject defendCamera;
+    public GameObject attackCamera;
+
+    public GameObject defendScreen;
+    public GameObject attackScreen;
+
     MoneyMaker moneyMaker;
     Tank tank;
     SideStep sideStep;
@@ -125,9 +131,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    void Update()
+    public void ChangeCamera()
     {
-        
+        defendCamera.SetActive(true);
+        defendScreen.SetActive(true);
+
+        attackCamera.SetActive(false);
+        attackScreen.SetActive(false);
     }
 }
