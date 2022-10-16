@@ -12,7 +12,7 @@ public class ShipReady : MonoBehaviour
 
     GameObject[,] map = new GameObject[10, 10];
 
-    Color whiteColor = new Color32(255, 255, 255, 100);
+    Color whiteColor = new Color32(255, 255, 255, 150);
 
     public List<string> PlacedShipNames;
 

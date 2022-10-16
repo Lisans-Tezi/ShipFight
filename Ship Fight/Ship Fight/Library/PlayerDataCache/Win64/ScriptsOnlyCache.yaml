@@ -1,11 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AIAttackManager
     - AIShipPlacing
     - BombCatcher
     - Bomber
     - Boomer
     - CreditsBtn
+    - DefendScreenManager
     - ExitBtn
     - Faker
     - FlameThrower
@@ -887,6 +889,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5126}
     - Class: 114
       Script: {instanceID: 5210}
+    - Class: 114
+      Script: {instanceID: 68162}
+    - Class: 114
+      Script: {instanceID: 99658}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1061,8 +1067,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5146}
     - Class: 114
       Script: {instanceID: 5166}
-    - Class: 114
-      Script: {instanceID: 108154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1070,8 +1074,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1552,7 +1554,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: 36567f17816c9651d5aaa328e0276ec5
+      Hash: 506e144ca0ecd36ff2a382a21d6c1f7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PassiveShotting
@@ -1582,7 +1584,7 @@ ScriptsOnlyBuild:
     className: TMP_TextEventHandler
   - hash:
       serializedVersion: 2
-      Hash: a0b6f1a52566574cbd1fa8a03fa7be11
+      Hash: a6f3e3017910160f88a2c81fa9df87fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1892,9 +1894,21 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AIShipPlacing
+  - hash:
+      serializedVersion: 2
+      Hash: d92a9a8140a37a9dd68c5c18d8d66590
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DefendScreenManager
+  - hash:
+      serializedVersion: 2
+      Hash: 36567f17816c9651d5aaa328e0276ec5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AIAttackManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SinglePlayer.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: "C:/Users/sekov/OneDrive/Masa\xFCst\xFC/ShipFightDebug/Ship Fight.exe"
+  playerPath: "C:/Users/marsl/OneDrive/Masa\xFCst\xFC/ShipFightDebug/Ship Fight.exe"

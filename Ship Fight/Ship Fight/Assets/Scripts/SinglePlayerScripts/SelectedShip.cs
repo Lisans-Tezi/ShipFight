@@ -20,7 +20,7 @@ public class SelectedShip : MonoBehaviour
 
     GameObject[,] map = new GameObject[10, 10];
 
-    Color whiteColor = new Color32(255, 255, 255, 100);
+    Color whiteColor = new Color32(255, 255, 255, 150);
     Color greenColor = new Color32(0, 255, 0, 200);
     Color orangeColor = new Color32(255, 165, 0, 255);
 

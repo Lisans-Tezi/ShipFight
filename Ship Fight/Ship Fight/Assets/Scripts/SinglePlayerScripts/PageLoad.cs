@@ -11,8 +11,6 @@ public class PageLoad : MonoBehaviour
     public Image Ship4;
     public Image Ship5;
 
-
-
     void Start()
     {
         Ship1.gameObject.SetActive(false);

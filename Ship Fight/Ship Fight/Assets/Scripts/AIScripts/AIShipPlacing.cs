@@ -15,7 +15,166 @@ public class AIShipPlacing : MonoBehaviour
     public Boomer AIBoomer;
     public FlameThrower AIFlameThrower;
 
-    void Start()
+    private void Awake()
+    {
+        AIMoneyMaker.Name = "MoneyMaker";
+        AIMoneyMaker.Piece = 2;
+        AIMoneyMaker.HittedPiece = 0;
+        AIMoneyMaker.FirstPieceI = -1;
+        AIMoneyMaker.FirstPieceJ = -1;
+        AIMoneyMaker.SecondPieceI = -1;
+        AIMoneyMaker.SecondPieceJ = -1;
+        AIMoneyMaker.PassiveAttribute = "";
+        AIMoneyMaker.ActiveAttribute = "";
+        AIMoneyMaker.ActiveAttributeCost = 10;
+
+        AITank.Name = "Tank";
+        AITank.Piece = 3;
+        AITank.HittedPiece = 0;
+        AITank.FirstPieceI = -1;
+        AITank.FirstPieceJ = -1;
+        AITank.SecondPieceI = -1;
+        AITank.SecondPieceJ = -1;
+        AITank.ThirdPieceI = -1;
+        AITank.ThirdPieceJ = -1;
+        AITank.PassiveAttribute = "";
+        AITank.ActiveAttribute = "";
+        AITank.ActiveAttributeCost = 10;
+
+        AISideStep.Name = "SideStep";
+        AISideStep.Piece = 3;
+        AISideStep.HittedPiece = 0;
+        AISideStep.FirstPieceI = -1;
+        AISideStep.FirstPieceJ = -1;
+        AISideStep.SecondPieceI = -1;
+        AISideStep.SecondPieceJ = -1;
+        AISideStep.ThirdPieceI = -1;
+        AISideStep.ThirdPieceJ = -1;
+        AISideStep.PassiveAttribute = "";
+        AISideStep.ActiveAttribute = "";
+        AISideStep.ActiveAttributeCost = 10;
+
+        AIFaker.Name = "Faker";
+        AIFaker.Piece = 4;
+        AIFaker.HittedPiece = 0;
+        AIFaker.FirstPieceI = -1;
+        AIFaker.FirstPieceJ = -1;
+        AIFaker.SecondPieceI = -1;
+        AIFaker.SecondPieceJ = -1;
+        AIFaker.ThirdPieceI = -1;
+        AIFaker.ThirdPieceJ = -1;
+        AIFaker.FourthPieceI = -1;
+        AIFaker.FourthPieceJ = -1;
+        AIFaker.PassiveAttribute = "";
+        AIFaker.ActiveAttribute = "";
+        AIFaker.ActiveAttributeCost = 10;
+
+        AIHealer.Name = "Healer";
+        AIHealer.Piece = 4;
+        AIHealer.HittedPiece = 0;
+        AIHealer.FirstPieceI = -1;
+        AIHealer.FirstPieceJ = -1;
+        AIHealer.SecondPieceI = -1;
+        AIHealer.SecondPieceJ = -1;
+        AIHealer.ThirdPieceI = -1;
+        AIHealer.ThirdPieceJ = -1;
+        AIHealer.FourthPieceI = -1;
+        AIHealer.FourthPieceJ = -1;
+        AIHealer.PassiveAttribute = "";
+        AIHealer.ActiveAttribute = "";
+        AIHealer.ActiveAttributeCost = 10;
+
+        AILightBomber.Name = "LightBomber";
+        AILightBomber.Piece = 4;
+        AILightBomber.HittedPiece = 0;
+        AILightBomber.FirstPieceI = -1;
+        AILightBomber.FirstPieceJ = -1;
+        AILightBomber.SecondPieceI = -1;
+        AILightBomber.SecondPieceJ = -1;
+        AILightBomber.ThirdPieceI = -1;
+        AILightBomber.ThirdPieceJ = -1;
+        AILightBomber.FourthPieceI = -1;
+        AILightBomber.FourthPieceJ = -1;
+        AILightBomber.PassiveAttribute = "";
+        AILightBomber.ActiveAttribute = "";
+        AILightBomber.ActiveAttributeCost = 10;
+
+        AIBombCatcher.Name = "BombCatcher";
+        AIBombCatcher.Piece = 5;
+        AIBombCatcher.HittedPiece = 0;
+        AIBombCatcher.FirstPieceI = -1;
+        AIBombCatcher.FirstPieceJ = -1;
+        AIBombCatcher.SecondPieceI = -1;
+        AIBombCatcher.SecondPieceJ = -1;
+        AIBombCatcher.ThirdPieceI = -1;
+        AIBombCatcher.ThirdPieceJ = -1;
+        AIBombCatcher.FourthPieceI = -1;
+        AIBombCatcher.FourthPieceJ = -1;
+        AIBombCatcher.FifthPieceI = -1;
+        AIBombCatcher.FifthPieceJ = -1;
+        AIBombCatcher.PassiveAttribute = "";
+        AIBombCatcher.ActiveAttribute = "";
+        AIBombCatcher.ActiveAttributeCost = 10;
+
+        AIBomber.Name = "Bomber";
+        AIBomber.Piece = 5;
+        AIBomber.HittedPiece = 0;
+        AIBomber.FirstPieceI = -1;
+        AIBomber.FirstPieceJ = -1;
+        AIBomber.SecondPieceI = -1;
+        AIBomber.SecondPieceJ = -1;
+        AIBomber.ThirdPieceI = -1;
+        AIBomber.ThirdPieceJ = -1;
+        AIBomber.FourthPieceI = -1;
+        AIBomber.FourthPieceJ = -1;
+        AIBomber.FifthPieceI = -1;
+        AIBomber.FifthPieceJ = -1;
+        AIBomber.PassiveAttribute = "";
+        AIBomber.ActiveAttribute = "";
+        AIBomber.ActiveAttributeCost = 10;
+
+        AIBoomer.Name = "Boomer";
+        AIBoomer.Piece = 6;
+        AIBoomer.HittedPiece = 0;
+        AIBoomer.FirstPieceI = -1;
+        AIBoomer.FirstPieceJ = -1;
+        AIBoomer.SecondPieceI = -1;
+        AIBoomer.SecondPieceJ = -1;
+        AIBoomer.ThirdPieceI = -1;
+        AIBoomer.ThirdPieceJ = -1;
+        AIBoomer.FourthPieceI = -1;
+        AIBoomer.FourthPieceJ = -1;
+        AIBoomer.FifthPieceI = -1;
+        AIBoomer.FifthPieceJ = -1;
+        AIBoomer.SixthPieceI = -1;
+        AIBoomer.SixthPieceJ = -1;
+        AIBoomer.PassiveAttribute = "";
+        AIBoomer.ActiveAttribute = "";
+        AIBoomer.ActiveAttributeCost = 10;
+
+        AIFlameThrower.Name = "FlameThrower";
+        AIFlameThrower.Piece = 7;
+        AIFlameThrower.HittedPiece = 0;
+        AIFlameThrower.FirstPieceI = -1;
+        AIFlameThrower.FirstPieceJ = -1;
+        AIFlameThrower.SecondPieceI = -1;
+        AIFlameThrower.SecondPieceJ = -1;
+        AIFlameThrower.ThirdPieceI = -1;
+        AIFlameThrower.ThirdPieceJ = -1;
+        AIFlameThrower.FourthPieceI = -1;
+        AIFlameThrower.FourthPieceJ = -1;
+        AIFlameThrower.FifthPieceI = -1;
+        AIFlameThrower.FifthPieceJ = -1;
+        AIFlameThrower.SixthPieceI = -1;
+        AIFlameThrower.SixthPieceJ = -1;
+        AIFlameThrower.SeventhPieceI = -1;
+        AIFlameThrower.SeventhPieceJ = -1;
+        AIFlameThrower.PassiveAttribute = "";
+        AIFlameThrower.ActiveAttribute = "";
+        AIFlameThrower.ActiveAttributeCost = 10;          
+    }
+
+    private void Start()
     {
         int rnd = Random.Range(0, 2);
 
@@ -23,38 +182,22 @@ public class AIShipPlacing : MonoBehaviour
             AIFirst();
         else if (rnd == 1)
             AISecond();
-        Debug.Log("AI : " + rnd);
     }
-
     void AIFirst()
     {
-        AIMoneyMaker.Name = "MoneyMaker";
-        AIMoneyMaker.Piece = 2;
         AIMoneyMaker.HittedPiece = 0;
         AIMoneyMaker.FirstPieceI = 3;
         AIMoneyMaker.FirstPieceJ = 7;
         AIMoneyMaker.SecondPieceI = 4;
         AIMoneyMaker.SecondPieceJ = 7;
-        AIMoneyMaker.PassiveAttribute = "";
-        AIMoneyMaker.ActiveAttribute = "";
-        AIMoneyMaker.ActiveAttributeCost = 2;
 
-        AITank.Name = "Tank";
-        AITank.Piece = 3;
-        AITank.HittedPiece = 0;
         AITank.FirstPieceI = 3;
         AITank.FirstPieceJ = 2;
         AITank.SecondPieceI = 3;
         AITank.SecondPieceJ = 3;
         AITank.ThirdPieceI = 3;
         AITank.ThirdPieceJ = 4;
-        AITank.PassiveAttribute = "";
-        AITank.ActiveAttribute = "";
-        AITank.ActiveAttributeCost = 3;
 
-        AIFaker.Name = "Faker";
-        AIFaker.Piece = 4;
-        AIFaker.HittedPiece = 0;
         AIFaker.FirstPieceI = 0;
         AIFaker.FirstPieceJ = 0;
         AIFaker.SecondPieceI = 1;
@@ -63,13 +206,7 @@ public class AIShipPlacing : MonoBehaviour
         AIFaker.ThirdPieceJ = 0;
         AIFaker.FourthPieceI = 3;
         AIFaker.FourthPieceJ = 0;
-        AIFaker.PassiveAttribute = "";
-        AIFaker.ActiveAttribute = "";
-        AIFaker.ActiveAttributeCost = 4;
 
-        AILightBomber.Name = "LightBomber";
-        AILightBomber.Piece = 4;
-        AILightBomber.HittedPiece = 0;
         AILightBomber.FirstPieceI = 9;
         AILightBomber.FirstPieceJ = 7;
         AILightBomber.SecondPieceI = 8;
@@ -78,13 +215,7 @@ public class AIShipPlacing : MonoBehaviour
         AILightBomber.ThirdPieceJ = 8;
         AILightBomber.FourthPieceI = 8;
         AILightBomber.FourthPieceJ = 9;
-        AILightBomber.PassiveAttribute = "";
-        AILightBomber.ActiveAttribute = "";
-        AILightBomber.ActiveAttributeCost = 4;
 
-        AIBomber.Name = "Bomber";
-        AIBomber.Piece = 5;
-        AIBomber.HittedPiece = 0;
         AIBomber.FirstPieceI = 6;
         AIBomber.FirstPieceJ = 1;
         AIBomber.SecondPieceI = 7;
@@ -95,27 +226,14 @@ public class AIShipPlacing : MonoBehaviour
         AIBomber.FourthPieceJ = 3;
         AIBomber.FifthPieceI = 8;
         AIBomber.FifthPieceJ = 1;
-        AIBomber.PassiveAttribute = "";
-        AIBomber.ActiveAttribute = "";
-        AIBomber.ActiveAttributeCost = 5;
     }
-
     void AISecond()
     {
-        AIMoneyMaker.Name = "MoneyMaker";
-        AIMoneyMaker.Piece = 2;
-        AIMoneyMaker.HittedPiece = 0;
         AIMoneyMaker.FirstPieceI = 0;
         AIMoneyMaker.FirstPieceJ = 1;
         AIMoneyMaker.SecondPieceI = 0;
         AIMoneyMaker.SecondPieceJ = 2;
-        AIMoneyMaker.PassiveAttribute = "";
-        AIMoneyMaker.ActiveAttribute = "";
-        AIMoneyMaker.ActiveAttributeCost = 2;
 
-        AIHealer.Name = "Healer";
-        AIHealer.Piece = 4;
-        AIHealer.HittedPiece = 0;
         AIHealer.FirstPieceI = 7;
         AIHealer.FirstPieceJ = 5;
         AIHealer.SecondPieceI = 8;
@@ -124,13 +242,7 @@ public class AIShipPlacing : MonoBehaviour
         AIHealer.ThirdPieceJ = 5;
         AIHealer.FourthPieceI = 9;
         AIHealer.FourthPieceJ = 6;
-        AIHealer.PassiveAttribute = "";
-        AIHealer.ActiveAttribute = "";
-        AIHealer.ActiveAttributeCost = 4;
 
-        AILightBomber.Name = "LightBomber";
-        AILightBomber.Piece = 4;
-        AILightBomber.HittedPiece = 0;
         AILightBomber.FirstPieceI = 8;
         AILightBomber.FirstPieceJ = 6;
         AILightBomber.SecondPieceI = 8;
@@ -139,13 +251,7 @@ public class AIShipPlacing : MonoBehaviour
         AILightBomber.ThirdPieceJ = 7;
         AILightBomber.FourthPieceI = 9;
         AILightBomber.FourthPieceJ = 8;
-        AILightBomber.PassiveAttribute = "";
-        AILightBomber.ActiveAttribute = "";
-        AILightBomber.ActiveAttributeCost = 4;
 
-        AIBoomer.Name = "Boomer";
-        AIBoomer.Piece = 6;
-        AIBoomer.HittedPiece = 0;
         AIBoomer.FirstPieceI = 2;
         AIBoomer.FirstPieceJ = 9;
         AIBoomer.SecondPieceI = 3;
@@ -158,13 +264,7 @@ public class AIShipPlacing : MonoBehaviour
         AIBoomer.FifthPieceJ = 9;
         AIBoomer.SixthPieceI = 7;
         AIBoomer.SixthPieceJ = 9;
-        AIBoomer.PassiveAttribute = "";
-        AIBoomer.ActiveAttribute = "";
-        AIBoomer.ActiveAttributeCost = 6;
 
-        AIFlameThrower.Name = "FlameThrower";
-        AIFlameThrower.Piece = 7;
-        AIFlameThrower.HittedPiece = 0;
         AIFlameThrower.FirstPieceI = 4;
         AIFlameThrower.FirstPieceJ = 1;
         AIFlameThrower.SecondPieceI = 4;
@@ -179,8 +279,5 @@ public class AIShipPlacing : MonoBehaviour
         AIFlameThrower.SixthPieceJ = 2;
         AIFlameThrower.SeventhPieceI = 6;
         AIFlameThrower.SeventhPieceJ = 3;
-        AIFlameThrower.PassiveAttribute = "";
-        AIFlameThrower.ActiveAttribute = "";
-        AIFlameThrower.ActiveAttributeCost = 7;
     }
 }

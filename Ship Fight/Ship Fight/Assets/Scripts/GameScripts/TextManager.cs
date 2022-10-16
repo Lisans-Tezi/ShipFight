@@ -7,7 +7,12 @@ public class TextManager : MonoBehaviour
 {
     private void Start()
     {
-        ChoseShip();
+        if (gameObject.name == "DefendInfoPanelText")
+        {
+            AIAttacking();
+        }
+        else
+            ChoseShip();
     }
     public void ChoseShip()
     {
@@ -32,5 +37,17 @@ public class TextManager : MonoBehaviour
     public void ToManyShot()
     {
         gameObject.GetComponent<TextMeshProUGUI>().text = "You Hit 3 Times a Row !!! Give a Chance's a Enemy";
+    }
+    public void AIAttacking()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Enemy Attacking";
+    }
+    public void AIMissed()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Enemy Missed";
+    }
+    public void AIHitted()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Enemy Hitted";
     }
 }
