@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -565,9 +565,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 31398278}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -816,8 +816,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60782658}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,9 +908,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 68404324}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1285,9 +1285,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 117195008}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1432,9 +1432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 117898372}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1832,9 +1832,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 153242655}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2008,8 +2008,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195095392}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2593,9 +2593,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 221255561}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3342,9 +3342,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 242306280}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4021,9 +4021,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 318922537}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4120,8 +4120,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332232168}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4362,9 +4362,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 346241640}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4509,9 +4509,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 358854297}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4854,9 +4854,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 378404505}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5001,9 +5001,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 380096884}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5148,9 +5148,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 387646293}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5518,9 +5518,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 407880799}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5665,9 +5665,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 415694137}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5812,9 +5812,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 419494808}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6725,9 +6725,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 460905484}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6824,8 +6824,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481505093}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7243,8 +7243,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502465784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7488,8 +7488,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532309652}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7879,9 +7879,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 566324707}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8549,8 +8549,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628112900}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8641,9 +8641,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 628649615}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8865,9 +8865,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 634535092}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10312,9 +10312,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 757393801}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10535,9 +10535,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 767456537}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11250,7 +11250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796859622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.051946, y: -2.5419283, z: 24.42496}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11476,9 +11476,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 822802137}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11623,9 +11623,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 825837866}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12002,9 +12002,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 840606543}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12149,9 +12149,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 861536010}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12507,9 +12507,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 912735419}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13426,9 +13426,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 985489323}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13573,9 +13573,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 988642045}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13720,9 +13720,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 993713693}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14166,9 +14166,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1010659047}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14460,9 +14460,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1019483473}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14762,9 +14762,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1048058597}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14861,8 +14861,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048422416}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15029,9 +15029,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1056028968}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16512,9 +16512,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1173671605}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16735,9 +16735,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1176898290}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16882,9 +16882,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1177555831}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17690,9 +17690,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1198642644}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18207,9 +18207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1213645809}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18354,9 +18354,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1221650447}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18759,9 +18759,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1238624856}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18906,9 +18906,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1247661247}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19129,9 +19129,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1251159399}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20161,8 +20161,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339894251}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20913,9 +20913,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1376396795}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21164,8 +21164,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391344728}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21492,9 +21492,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1454372208}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21639,9 +21639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1468108156}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21892,9 +21892,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1479240775}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22191,9 +22191,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1498602737}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22594,8 +22594,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534055307}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22686,9 +22686,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1537468791}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22861,8 +22861,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540193569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22905,8 +22905,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542653540}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22997,9 +22997,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1559782873}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23220,9 +23220,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1570111369}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23367,9 +23367,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1572162501}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23836,8 +23836,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589561440}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25625,9 +25625,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1707111127}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26000,9 +26000,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1733344075}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26147,9 +26147,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1735928862}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26441,9 +26441,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1771479001}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26540,8 +26540,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771642868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27069,9 +27069,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1836080100}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28107,8 +28107,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939358704}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28630,9 +28630,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 1962560689}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28729,8 +28729,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984609419}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28973,9 +28973,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 2008055575}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29219,8 +29219,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019725961}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29263,8 +29263,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022607447}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30781,8 +30781,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113819117}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.051945, y: -2.5419283, z: 24.424957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30873,9 +30873,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlacingShip, Assembly-CSharp
-        m_MethodName: ShipPlacing
+      - m_Target: {fileID: 2116415800}
+        m_TargetAssemblyTypeName: PassiveShotting, Assembly-CSharp
+        m_MethodName: Shot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -14,20 +14,16 @@ public class AIShipPlacing : MonoBehaviour
     public Bomber AIBomber;
     public Boomer AIBoomer;
     public FlameThrower AIFlameThrower;
+
     void Start()
     {
-        //int rnd = Random.Range(0, 2);
+        int rnd = Random.Range(0, 2);
 
-        //switch (rnd)
-        //{
-        //    case 0:
-        //        AIFirst();
-        //        break;
-        //    case 1:
-        //        AISecond();
-        //        break;
-        //}
-        AIFirst();
+        if (rnd == 0)
+            AIFirst();
+        else if (rnd == 1)
+            AISecond();
+        Debug.Log("AI : " + rnd);
     }
 
     void AIFirst()
@@ -35,10 +31,10 @@ public class AIShipPlacing : MonoBehaviour
         AIMoneyMaker.Name = "MoneyMaker";
         AIMoneyMaker.Piece = 2;
         AIMoneyMaker.HittedPiece = 0;
-        AIMoneyMaker.FirstPieceI = 7;
-        AIMoneyMaker.FirstPieceJ = 3;
-        AIMoneyMaker.SecondPieceI = 7;
-        AIMoneyMaker.SecondPieceJ = 4;
+        AIMoneyMaker.FirstPieceI = 3;
+        AIMoneyMaker.FirstPieceJ = 7;
+        AIMoneyMaker.SecondPieceI = 4;
+        AIMoneyMaker.SecondPieceJ = 7;
         AIMoneyMaker.PassiveAttribute = "";
         AIMoneyMaker.ActiveAttribute = "";
         AIMoneyMaker.ActiveAttributeCost = 2;
@@ -117,82 +113,74 @@ public class AIShipPlacing : MonoBehaviour
         AIMoneyMaker.ActiveAttribute = "";
         AIMoneyMaker.ActiveAttributeCost = 2;
 
-        Healer h;
-        h = GameObject.Find("Healer").GetComponent<Healer>();
-        h.Name = "Healer";
-        h.Piece = 4;
-        h.HittedPiece = 0;
-        h.FirstPieceI = 7;
-        h.FirstPieceJ = 5;
-        h.SecondPieceI = 8;
-        h.SecondPieceJ = 5;
-        h.ThirdPieceI = 9;
-        h.ThirdPieceJ = 5;
-        h.FourthPieceI = 9;
-        h.FourthPieceJ = 6;
-        h.PassiveAttribute = "";
-        h.ActiveAttribute = "";
-        h.ActiveAttributeCost = 4;
+        AIHealer.Name = "Healer";
+        AIHealer.Piece = 4;
+        AIHealer.HittedPiece = 0;
+        AIHealer.FirstPieceI = 7;
+        AIHealer.FirstPieceJ = 5;
+        AIHealer.SecondPieceI = 8;
+        AIHealer.SecondPieceJ = 5;
+        AIHealer.ThirdPieceI = 9;
+        AIHealer.ThirdPieceJ = 5;
+        AIHealer.FourthPieceI = 9;
+        AIHealer.FourthPieceJ = 6;
+        AIHealer.PassiveAttribute = "";
+        AIHealer.ActiveAttribute = "";
+        AIHealer.ActiveAttributeCost = 4;
 
-        LightBomber lb;
-        lb = GameObject.Find("LightBomber").GetComponent<LightBomber>();
-        lb.Name = "LightBomber";
-        lb.Piece = 4;
-        lb.HittedPiece = 0;
-        lb.FirstPieceI = 8;
-        lb.FirstPieceJ = 6;
-        lb.SecondPieceI = 8;
-        lb.SecondPieceJ = 7;
-        lb.ThirdPieceI = 9;
-        lb.ThirdPieceJ = 7;
-        lb.FourthPieceI = 9;
-        lb.FourthPieceJ = 8;
-        lb.PassiveAttribute = "";
-        lb.ActiveAttribute = "";
-        lb.ActiveAttributeCost = 4;
+        AILightBomber.Name = "LightBomber";
+        AILightBomber.Piece = 4;
+        AILightBomber.HittedPiece = 0;
+        AILightBomber.FirstPieceI = 8;
+        AILightBomber.FirstPieceJ = 6;
+        AILightBomber.SecondPieceI = 8;
+        AILightBomber.SecondPieceJ = 7;
+        AILightBomber.ThirdPieceI = 9;
+        AILightBomber.ThirdPieceJ = 7;
+        AILightBomber.FourthPieceI = 9;
+        AILightBomber.FourthPieceJ = 8;
+        AILightBomber.PassiveAttribute = "";
+        AILightBomber.ActiveAttribute = "";
+        AILightBomber.ActiveAttributeCost = 4;
 
-        Boomer b;
-        b = GameObject.Find("Boomer").GetComponent<Boomer>();
-        b.Name = "Boomer";
-        b.Piece = 6;
-        b.HittedPiece = 0;
-        b.FirstPieceI = 2;
-        b.FirstPieceJ = 9;
-        b.SecondPieceI = 3;
-        b.SecondPieceJ = 9;
-        b.ThirdPieceI = 4;
-        b.ThirdPieceJ = 9;
-        b.FourthPieceI = 5;
-        b.FourthPieceJ = 9;
-        b.FifthPieceI = 6;
-        b.FifthPieceJ = 9;
-        b.SixthPieceI = 7;
-        b.SixthPieceJ = 9;
-        b.PassiveAttribute = "";
-        b.ActiveAttribute = "";
-        b.ActiveAttributeCost = 6;
+        AIBoomer.Name = "Boomer";
+        AIBoomer.Piece = 6;
+        AIBoomer.HittedPiece = 0;
+        AIBoomer.FirstPieceI = 2;
+        AIBoomer.FirstPieceJ = 9;
+        AIBoomer.SecondPieceI = 3;
+        AIBoomer.SecondPieceJ = 9;
+        AIBoomer.ThirdPieceI = 4;
+        AIBoomer.ThirdPieceJ = 9;
+        AIBoomer.FourthPieceI = 5;
+        AIBoomer.FourthPieceJ = 9;
+        AIBoomer.FifthPieceI = 6;
+        AIBoomer.FifthPieceJ = 9;
+        AIBoomer.SixthPieceI = 7;
+        AIBoomer.SixthPieceJ = 9;
+        AIBoomer.PassiveAttribute = "";
+        AIBoomer.ActiveAttribute = "";
+        AIBoomer.ActiveAttributeCost = 6;
 
-        FlameThrower ft;
-        ft = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
-        ft.Name = "FlameThrower";
-        ft.Piece = 7;
-        ft.HittedPiece = 0;
-        ft.FirstPieceI = 4;
-        ft.FirstPieceJ = 1;
-        ft.SecondPieceI = 4;
-        ft.SecondPieceJ = 2;
-        ft.ThirdPieceI = 4;
-        ft.ThirdPieceJ = 3;
-        ft.FourthPieceI = 5;
-        ft.FourthPieceJ = 1;
-        ft.FifthPieceI = 6;
-        ft.FifthPieceJ = 1;
-        ft.SixthPieceI = 6;
-        ft.SixthPieceJ = 2;
-        ft.SeventhPieceI = 6;
-        ft.SeventhPieceJ = 3;
-        ft.PassiveAttribute = "";
-        ft.ActiveAttribute = "";
-        ft.ActiveAttributeCost = 7;
+        AIFlameThrower.Name = "FlameThrower";
+        AIFlameThrower.Piece = 7;
+        AIFlameThrower.HittedPiece = 0;
+        AIFlameThrower.FirstPieceI = 4;
+        AIFlameThrower.FirstPieceJ = 1;
+        AIFlameThrower.SecondPieceI = 4;
+        AIFlameThrower.SecondPieceJ = 2;
+        AIFlameThrower.ThirdPieceI = 4;
+        AIFlameThrower.ThirdPieceJ = 3;
+        AIFlameThrower.FourthPieceI = 5;
+        AIFlameThrower.FourthPieceJ = 1;
+        AIFlameThrower.FifthPieceI = 6;
+        AIFlameThrower.FifthPieceJ = 1;
+        AIFlameThrower.SixthPieceI = 6;
+        AIFlameThrower.SixthPieceJ = 2;
+        AIFlameThrower.SeventhPieceI = 6;
+        AIFlameThrower.SeventhPieceJ = 3;
+        AIFlameThrower.PassiveAttribute = "";
+        AIFlameThrower.ActiveAttribute = "";
+        AIFlameThrower.ActiveAttributeCost = 7;
     }
 }

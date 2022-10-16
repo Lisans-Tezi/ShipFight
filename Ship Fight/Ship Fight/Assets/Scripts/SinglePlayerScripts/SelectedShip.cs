@@ -12,6 +12,8 @@ public class SelectedShip : MonoBehaviour
     public Image Ship4;
     public Image Ship5;
 
+    public List<Sprite> ShipImages;
+
     public Image Map;
     public TextMeshProUGUI Text;
     public List<Image> Ships;
@@ -117,31 +119,31 @@ public class SelectedShip : MonoBehaviour
         if (Ship1.gameObject.activeSelf == false)
         {
             Ship1.gameObject.SetActive(true);
-            Ship1.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship1.transform.GetChild(0).GetComponent<Image>().sprite = FindShipImage();
             Ship1.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
         }
         else if (Ship2.gameObject.activeSelf == false)
         {
             Ship2.gameObject.SetActive(true);
-            Ship2.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship2.transform.GetChild(0).GetComponent<Image>().sprite = FindShipImage();
             Ship2.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
         }
         else if (Ship3.gameObject.activeSelf == false)
         {
             Ship3.gameObject.SetActive(true);
-            Ship3.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship3.transform.GetChild(0).GetComponent<Image>().sprite = FindShipImage();
             Ship3.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
         }
         else if (Ship4.gameObject.activeSelf == false)
         {
             Ship4.gameObject.SetActive(true);
-            Ship4.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship4.transform.GetChild(0).GetComponent<Image>().sprite = FindShipImage();
             Ship4.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
         }
         else
         {
             Ship5.gameObject.SetActive(true);
-            Ship5.transform.GetChild(0).GetComponent<Image>().sprite = gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            Ship5.transform.GetChild(0).GetComponent<Image>().sprite = FindShipImage();
             Ship5.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = gameObject.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text;
         }
     }
@@ -157,5 +159,40 @@ public class SelectedShip : MonoBehaviour
             Ship2.gameObject.SetActive(false);
         else
             Ship1.gameObject.SetActive(false);
+    }
+
+    Sprite FindShipImage()
+    {
+        if (gameObject.name == "FirstShip")
+            return ShipImages[0];
+        else if (gameObject.name == "SecondShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[1];
+        else if (gameObject.name == "ThirdShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[2];
+        else if (gameObject.name == "FourthShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[3];
+        else if (gameObject.name == "FifthShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[4];
+        else if (gameObject.name == "SixthShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[5];
+        else if (gameObject.name == "SeventhShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[6];
+        else if (gameObject.name == "EighthShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[7];
+        else if (gameObject.name == "NinethShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[8];
+        else if (gameObject.name == "TenthShip")
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+            //return ShipImages[9];
+        else
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
     }
 }

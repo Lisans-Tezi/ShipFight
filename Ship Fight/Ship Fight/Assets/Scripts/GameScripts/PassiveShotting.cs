@@ -73,6 +73,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             moneymaker.HittedPiece++;
+            Debug.Log("MoneyMaker hit");
             IncreaseScore();
         }
         else if((x == tank.FirstPieceI && y == tank.FirstPieceJ) || 
@@ -81,6 +82,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             tank.HittedPiece++;
+            Debug.Log("Tank hit");
             IncreaseScore();
         }
         else if ((x == sidestep.FirstPieceI && y == sidestep.FirstPieceJ) || 
@@ -89,6 +91,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             sidestep.HittedPiece++;
+            Debug.Log("SideStep hit");
             IncreaseScore();
         }
         else if ((x == faker.FirstPieceI && y == faker.FirstPieceJ) || 
@@ -98,6 +101,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             faker.HittedPiece++;
+            Debug.Log("Faker hit");
             IncreaseScore();
         }
         else if ((x == healer.FirstPieceI && y == healer.FirstPieceJ) ||
@@ -107,6 +111,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             healer.HittedPiece++;
+            Debug.Log("Healer hit");
             IncreaseScore();
         }
         else if ((x == lightbomber.FirstPieceI && y == lightbomber.FirstPieceJ) ||
@@ -116,6 +121,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             lightbomber.HittedPiece++;
+            Debug.Log("Light Bomber hit");
             IncreaseScore();
         }
         else if ((x == bombcatcher.FirstPieceI && y == bombcatcher.FirstPieceJ) ||
@@ -126,6 +132,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             bombcatcher.HittedPiece++;
+            Debug.Log("BombCacther hit");
             IncreaseScore();
         }
         else if ((x == bomber.FirstPieceI && y == bomber.FirstPieceJ) ||
@@ -136,6 +143,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             bomber.HittedPiece++;
+            Debug.Log("Bomber hit");
             IncreaseScore();
         }
         else if ((x == boomer.FirstPieceI && y == boomer.FirstPieceJ) ||
@@ -147,6 +155,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             boomer.HittedPiece++;
+            Debug.Log("Boomer hit");
             IncreaseScore();
         }
         else if ((x == flamethrower.FirstPieceI && y == flamethrower.FirstPieceJ) ||
@@ -159,6 +168,7 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             flamethrower.HittedPiece++;
+            Debug.Log("FlameThrower hit");
             IncreaseScore();
         }
         else
@@ -181,7 +191,7 @@ public class PassiveShotting : MonoBehaviour
         GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point.ToString();
 
         PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
-
+        
         if(PlayerPrefs.GetInt("HitPerTurn") == 0)
         {
             GameObject.Find("InfoPanelText").GetComponent<TextManager>().ToManyShot();
@@ -192,7 +202,6 @@ public class PassiveShotting : MonoBehaviour
 
             Invoke("SkipRound", 1.5f);
         }
-            
     }
 
     void SkipRound()
