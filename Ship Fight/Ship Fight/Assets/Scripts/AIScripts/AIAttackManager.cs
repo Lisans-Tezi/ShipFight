@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AIAttackManager : MonoBehaviour
 {
@@ -23,8 +24,7 @@ public class AIAttackManager : MonoBehaviour
         for (int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++)
             {
-                map[i, j] = Map.transform.GetChild(k).gameObject;
-                
+                map[i, j] = Map.transform.GetChild(k).gameObject;                
                 k++;
             }
     }       
@@ -71,12 +71,29 @@ public class AIAttackManager : MonoBehaviour
                         }
                     }
                 }
+                bool control = true;
+
+                for (int i = 0; i < 10; i++)
+                    for (int j = 0; j < 10; j++)
+                        if(map[i, j].gameObject.GetComponent<Image>().color == Color.black)
+                            control = false;
+
+                if (control)
+                {
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().Lose();
+                    Invoke("ReturnMenu",2);                        
+                }
+                    
             }   
             else
             {
                 Invoke("SkipRound",1.5f);
             }
         }                       
+    }
+    void ReturnMenu()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
     void SkipRound()
     {

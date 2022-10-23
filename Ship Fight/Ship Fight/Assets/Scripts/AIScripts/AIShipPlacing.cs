@@ -176,16 +176,19 @@ public class AIShipPlacing : MonoBehaviour
 
     private void Start()
     {
-        int rnd = Random.Range(0, 2);
+        int rnd = Random.Range(0, 4);
 
         if (rnd == 0)
             AIFirst();
         else if (rnd == 1)
             AISecond();
+        else if (rnd == 2)
+            AIThird();
+        else if(rnd == 3)
+            AIFourth();
     }
     void AIFirst()
     {
-        AIMoneyMaker.HittedPiece = 0;
         AIMoneyMaker.FirstPieceI = 3;
         AIMoneyMaker.FirstPieceJ = 7;
         AIMoneyMaker.SecondPieceI = 4;
@@ -279,5 +282,115 @@ public class AIShipPlacing : MonoBehaviour
         AIFlameThrower.SixthPieceJ = 2;
         AIFlameThrower.SeventhPieceI = 6;
         AIFlameThrower.SeventhPieceJ = 3;
+    }  
+    void AIThird()
+    {
+        AISideStep.FirstPieceI = 1;
+        AISideStep.FirstPieceJ = 1;
+        AISideStep.SecondPieceI = 2;
+        AISideStep.SecondPieceJ = 1;
+        AISideStep.ThirdPieceI = 2;
+        AISideStep.ThirdPieceJ = 2;
+
+        AIHealer.FirstPieceI = 5;
+        AIHealer.FirstPieceJ = 0;
+        AIHealer.SecondPieceI = 6;
+        AIHealer.SecondPieceJ = 0;
+        AIHealer.ThirdPieceI = 7;
+        AIHealer.ThirdPieceJ = 0;
+        AIHealer.FourthPieceI = 7;
+        AIHealer.FourthPieceJ = 1;
+
+        AILightBomber.FirstPieceI = 4;
+        AILightBomber.FirstPieceJ = 9;
+        AILightBomber.SecondPieceI = 5;
+        AILightBomber.SecondPieceJ = 9;
+        AILightBomber.ThirdPieceI = 5;
+        AILightBomber.ThirdPieceJ = 8;
+        AILightBomber.FourthPieceI = 6;
+        AILightBomber.FourthPieceJ = 8;
+
+        AIBomber.FirstPieceI = 1;
+        AIBomber.FirstPieceJ = 5;
+        AIBomber.SecondPieceI = 1;
+        AIBomber.SecondPieceJ = 6;
+        AIBomber.ThirdPieceI = 1;
+        AIBomber.ThirdPieceJ = 7;
+        AIBomber.FourthPieceI = 2;
+        AIBomber.FourthPieceJ = 6;
+        AIBomber.FifthPieceI = 3;
+        AIBomber.FifthPieceJ = 6;
+
+        AIFlameThrower.FirstPieceI = 7;
+        AIFlameThrower.FirstPieceJ = 3;
+        AIFlameThrower.SecondPieceI = 8;
+        AIFlameThrower.SecondPieceJ = 3;
+        AIFlameThrower.ThirdPieceI = 9;
+        AIFlameThrower.ThirdPieceJ = 3;
+        AIFlameThrower.FourthPieceI = 9;
+        AIFlameThrower.FourthPieceJ = 4;
+        AIFlameThrower.FifthPieceI = 9;
+        AIFlameThrower.FifthPieceJ = 5;
+        AIFlameThrower.SixthPieceI = 8;
+        AIFlameThrower.SixthPieceJ = 5;
+        AIFlameThrower.SeventhPieceI = 7;
+        AIFlameThrower.SeventhPieceJ = 5;
+    }
+    void AIFourth()
+    {
+        AISideStep.FirstPieceI = 1;
+        AISideStep.FirstPieceJ = 8;
+        AISideStep.SecondPieceI = 2;
+        AISideStep.SecondPieceJ = 7;
+        AISideStep.ThirdPieceI = 2;
+        AISideStep.ThirdPieceJ = 8;
+
+        AIHealer.FirstPieceI = 6;
+        AIHealer.FirstPieceJ = 6;
+        AIHealer.SecondPieceI = 6;
+        AIHealer.SecondPieceJ = 7;
+        AIHealer.ThirdPieceI = 6;
+        AIHealer.ThirdPieceJ = 8;
+        AIHealer.FourthPieceI = 7;
+        AIHealer.FourthPieceJ = 8;
+
+        AIBomber.FirstPieceI = 2;
+        AIBomber.FirstPieceJ = 3;
+        AIBomber.SecondPieceI = 2;
+        AIBomber.SecondPieceJ = 4;
+        AIBomber.ThirdPieceI = 2;
+        AIBomber.ThirdPieceJ = 5;
+        AIBomber.FourthPieceI = 3;
+        AIBomber.FourthPieceJ = 4;
+        AIBomber.FifthPieceI = 4;
+        AIBomber.FifthPieceJ = 4;
+
+        AIBoomer.FirstPieceI = 3;
+        AIBoomer.FirstPieceJ = 2;
+        AIBoomer.SecondPieceI = 4;
+        AIBoomer.SecondPieceJ = 2;
+        AIBoomer.ThirdPieceI = 5;
+        AIBoomer.ThirdPieceJ = 2;
+        AIBoomer.FourthPieceI = 6;
+        AIBoomer.FourthPieceJ = 2;
+        AIBoomer.FifthPieceI = 7;
+        AIBoomer.FifthPieceJ = 2;
+        AIBoomer.SixthPieceI = 8;
+        AIBoomer.SixthPieceJ = 2;
+
+        AIFlameThrower.FirstPieceI = 7;
+        AIFlameThrower.FirstPieceJ = 4;
+        AIFlameThrower.SecondPieceI = 7;
+        AIFlameThrower.SecondPieceJ = 5;
+        AIFlameThrower.ThirdPieceI = 7;
+        AIFlameThrower.ThirdPieceJ = 6;
+        AIFlameThrower.FourthPieceI = 8;
+        AIFlameThrower.FourthPieceJ = 6;
+        AIFlameThrower.FifthPieceI = 9;
+        AIFlameThrower.FifthPieceJ = 4;
+        AIFlameThrower.SixthPieceI = 9;
+        AIFlameThrower.SixthPieceJ = 5;
+        AIFlameThrower.SeventhPieceI = 9;
+        AIFlameThrower.SeventhPieceJ = 6;
     }
 }

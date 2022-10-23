@@ -50,4 +50,12 @@ public class TextManager : MonoBehaviour
     {
         gameObject.GetComponent<TextMeshProUGUI>().text = "Enemy Hitted";
     }
+    public void Win()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "You Won!!! Well Done";
+    }
+    public void Lose()
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "You Lose";
+    }
 }

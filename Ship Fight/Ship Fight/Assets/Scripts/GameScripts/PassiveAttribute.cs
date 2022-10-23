@@ -14,7 +14,7 @@ public class PassiveAttribute : MonoBehaviour
     Color whiteColor = new Color32(255, 255, 255, 150);
     Color greenColor = new Color32(0, 255, 0, 200);
 
-    bool isSelected;
+    public bool isSelected;
 
     GameObject[,] map = new GameObject[10, 10];
 
