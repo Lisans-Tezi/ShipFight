@@ -17526,6 +17526,7 @@ MonoBehaviour:
   Ship3: {fileID: 155135262}
   Ship4: {fileID: 2021765565}
   Ship5: {fileID: 1412754528}
+  Map: {fileID: 1621867186}
 --- !u!1 &1621867183
 GameObject:
   m_ObjectHideFlags: 0

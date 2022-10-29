@@ -12,6 +12,7 @@ public class PlacingShip : MonoBehaviour
 
     Color greenColor = new Color32(0, 255, 0, 200);
     Color orangeColor = new Color32(255, 165, 0, 255);
+    Color blueColor = new Color32(0, 0, 255, 0);
 
     void Start()
     {
@@ -406,7 +407,8 @@ public class PlacingShip : MonoBehaviour
     {
         if (icontrol == '+' && jcontrol == '+')
         {
-            if ((i + inumber) <= 9 && (j + jnumber) <= 9 && map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black)
+            if ((i + inumber) <= 9 && (j + jnumber) <= 9 && map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black && 
+                map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color != blueColor)
                 if (!orange)
                 {
                     map[i + inumber, j + jnumber].gameObject.GetComponent<Image>().color = greenColor;
@@ -418,7 +420,8 @@ public class PlacingShip : MonoBehaviour
         }
         else if(icontrol == '+' && jcontrol == '-')
         {
-            if ((i + inumber) <= 9 && (j - jnumber) >= 0 && map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black)
+            if ((i + inumber) <= 9 && (j - jnumber) >= 0 && map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black &&
+                map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color != blueColor)
                 if (!orange)
                 {
                     map[i + inumber, j - jnumber].gameObject.GetComponent<Image>().color = greenColor;
@@ -430,7 +433,8 @@ public class PlacingShip : MonoBehaviour
         }
         else if (icontrol == '-' && jcontrol == '+')
         {
-            if ((i - inumber) >= 0 && (j + jnumber) <= 9 && map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black)
+            if ((i - inumber) >= 0 && (j + jnumber) <= 9 && map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color != Color.black &&
+                map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color != blueColor)
                 if (!orange)
                 {
                     map[i - inumber, j + jnumber].gameObject.GetComponent<Image>().color = greenColor;
@@ -442,7 +446,8 @@ public class PlacingShip : MonoBehaviour
         }
         else if (icontrol == '-' && jcontrol == '-')
         {
-            if ((i - inumber) >= 0 && (j - jnumber) >= 0 && map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black)
+            if ((i - inumber) >= 0 && (j - jnumber) >= 0 && map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color != Color.black &&
+                map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color != blueColor)
                 if (!orange)
                 {
                     map[i - inumber, j - jnumber].gameObject.GetComponent<Image>().color = greenColor;
@@ -610,19 +615,19 @@ public class PlacingShip : MonoBehaviour
                 if (map[i, j].gameObject.GetComponent<Image>().color == Color.blue)
                 {
                     if (j != 0 && map[i, j - 1].gameObject.GetComponent<Image>().color != Color.black)
-                        if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue)
+                        if (map[i, j - 1].gameObject.GetComponent<Image>().color != Color.blue && map[i, j - 1].gameObject.GetComponent<Image>().color != blueColor)
                             map[i, j - 1].gameObject.GetComponent<Image>().color = orangeColor;
 
                     if (j != 9 && map[i, j + 1].gameObject.GetComponent<Image>().color != Color.black)
-                        if (map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue)
+                        if (map[i, j + 1].gameObject.GetComponent<Image>().color != Color.blue && map[i, j + 1].gameObject.GetComponent<Image>().color != blueColor)
                             map[i, j + 1].gameObject.GetComponent<Image>().color = orangeColor;
 
                     if (i != 0 && map[i - 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                        if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                        if (map[i - 1, j].gameObject.GetComponent<Image>().color != Color.blue && map[i - 1, j].gameObject.GetComponent<Image>().color != blueColor)
                             map[i - 1, j].gameObject.GetComponent<Image>().color = orangeColor;
 
                     if (i != 9 && map[i + 1, j].gameObject.GetComponent<Image>().color != Color.black)
-                        if (map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue)
+                        if (map[i + 1, j].gameObject.GetComponent<Image>().color != Color.blue && map[i + 1, j].gameObject.GetComponent<Image>().color != blueColor)
                             map[i + 1, j].gameObject.GetComponent<Image>().color = orangeColor;
                 }
     }

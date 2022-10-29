@@ -13,6 +13,7 @@ public class ShipReady : MonoBehaviour
     GameObject[,] map = new GameObject[10, 10];
 
     Color whiteColor = new Color32(255, 255, 255, 150);
+    Color blueColor = new Color32(0, 0, 255, 0);
 
     public List<string> PlacedShipNames;
 
@@ -65,7 +66,7 @@ public class ShipReady : MonoBehaviour
                     iPieces.Add(i);
                     jPieces.Add(j);
                 }        
-                if (map[i, j].gameObject.GetComponent<Image>().color != Color.black)
+                if (map[i, j].gameObject.GetComponent<Image>().color != Color.black && map[i, j].gameObject.GetComponent<Image>().color != blueColor)                         
                     map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
             }
 

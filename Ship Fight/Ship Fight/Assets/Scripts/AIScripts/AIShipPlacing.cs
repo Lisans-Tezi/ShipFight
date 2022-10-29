@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class AIShipPlacing : MonoBehaviour
@@ -174,223 +175,344 @@ public class AIShipPlacing : MonoBehaviour
         AIFlameThrower.ActiveAttributeCost = 10;          
     }
 
-    private void Start()
+    void Start()
     {
         int rnd = Random.Range(0, 4);
-
-        if (rnd == 0)
-            AIFirst();
-        else if (rnd == 1)
-            AISecond();
-        else if (rnd == 2)
-            AIThird();
-        else if(rnd == 3)
-            AIFourth();
+        if (PlayerPrefs.GetString("Map")=="Map1")
+        {
+            if (rnd == 0)
+                AIFirstMap1();
+            else if (rnd == 1)
+                AISecondMap1();
+            else if (rnd == 2)
+                AIThirdMap1();
+            else if (rnd == 3)
+                AIFourthMap1();
+        }
+        else if (PlayerPrefs.GetString("Map") == "Map2")
+        {
+            if (rnd == 0)
+                AIFirstMap2();
+            else if (rnd == 1)
+                AISecondMap2();
+            else if (rnd == 2)
+                AIThirdMap2();
+            else if (rnd == 3)
+                AIFourthMap2();
+        }
+        else if (PlayerPrefs.GetString("Map") == "Map3")
+        {
+            if (rnd == 0)
+                AIFirstMap3();
+            else if (rnd == 1)
+                AISecondMap3();
+            else if (rnd == 2)
+                AIThirdMap3();
+            else if (rnd == 3)
+                AIFourthMap3();
+        }
+        else if (PlayerPrefs.GetString("Map") == "Map4")
+        {
+            if (rnd == 0)
+                AIFirstMap4();
+            else if (rnd == 1)
+                AISecondMap4();
+            else if (rnd == 2)
+                AIThirdMap4();
+            else if (rnd == 3)
+                AIFourthMap4();
+        }
+        else
+        {
+            if (rnd == 0)
+                AIFirstMap0();
+            else if (rnd == 1)
+                AISecondMap0();
+            else if (rnd == 2)
+                AIThirdMap0();
+            else if (rnd == 3)
+                AIFourthMap0();
+        }              
     }
-    void AIFirst()
+    void AIFirstMap0()
     {
-        AIMoneyMaker.FirstPieceI = 3;
-        AIMoneyMaker.FirstPieceJ = 7;
-        AIMoneyMaker.SecondPieceI = 4;
-        AIMoneyMaker.SecondPieceJ = 7;
-
-        AITank.FirstPieceI = 3;
-        AITank.FirstPieceJ = 2;
-        AITank.SecondPieceI = 3;
-        AITank.SecondPieceJ = 3;
-        AITank.ThirdPieceI = 3;
-        AITank.ThirdPieceJ = 4;
-
-        AIFaker.FirstPieceI = 0;
-        AIFaker.FirstPieceJ = 0;
-        AIFaker.SecondPieceI = 1;
-        AIFaker.SecondPieceJ = 0;
-        AIFaker.ThirdPieceI = 2;
-        AIFaker.ThirdPieceJ = 0;
-        AIFaker.FourthPieceI = 3;
-        AIFaker.FourthPieceJ = 0;
-
-        AILightBomber.FirstPieceI = 9;
-        AILightBomber.FirstPieceJ = 7;
-        AILightBomber.SecondPieceI = 8;
-        AILightBomber.SecondPieceJ = 8;
-        AILightBomber.ThirdPieceI = 9;
-        AILightBomber.ThirdPieceJ = 8;
-        AILightBomber.FourthPieceI = 8;
-        AILightBomber.FourthPieceJ = 9;
-
-        AIBomber.FirstPieceI = 6;
-        AIBomber.FirstPieceJ = 1;
-        AIBomber.SecondPieceI = 7;
-        AIBomber.SecondPieceJ = 1;
-        AIBomber.ThirdPieceI = 7;
-        AIBomber.ThirdPieceJ = 2;
-        AIBomber.FourthPieceI = 7;
-        AIBomber.FourthPieceJ = 3;
-        AIBomber.FifthPieceI = 8;
-        AIBomber.FifthPieceJ = 1;
+        MoneyMaker(3,7,4,7);
+        Tank(3,2,3,3,3,4);
+        Faker(0,0,1,0,2,0,3,0);
+        LightBomber(9,7,8,8,9,8,8,9);
+        Bomber(6,1,7,1,7,2,7,3,8,1);
     }
-    void AISecond()
+    void AISecondMap0()
     {
-        AIMoneyMaker.FirstPieceI = 0;
-        AIMoneyMaker.FirstPieceJ = 1;
-        AIMoneyMaker.SecondPieceI = 0;
-        AIMoneyMaker.SecondPieceJ = 2;
-
-        AIHealer.FirstPieceI = 7;
-        AIHealer.FirstPieceJ = 5;
-        AIHealer.SecondPieceI = 8;
-        AIHealer.SecondPieceJ = 5;
-        AIHealer.ThirdPieceI = 9;
-        AIHealer.ThirdPieceJ = 5;
-        AIHealer.FourthPieceI = 9;
-        AIHealer.FourthPieceJ = 6;
-
-        AILightBomber.FirstPieceI = 8;
-        AILightBomber.FirstPieceJ = 6;
-        AILightBomber.SecondPieceI = 8;
-        AILightBomber.SecondPieceJ = 7;
-        AILightBomber.ThirdPieceI = 9;
-        AILightBomber.ThirdPieceJ = 7;
-        AILightBomber.FourthPieceI = 9;
-        AILightBomber.FourthPieceJ = 8;
-
-        AIBoomer.FirstPieceI = 2;
-        AIBoomer.FirstPieceJ = 9;
-        AIBoomer.SecondPieceI = 3;
-        AIBoomer.SecondPieceJ = 9;
-        AIBoomer.ThirdPieceI = 4;
-        AIBoomer.ThirdPieceJ = 9;
-        AIBoomer.FourthPieceI = 5;
-        AIBoomer.FourthPieceJ = 9;
-        AIBoomer.FifthPieceI = 6;
-        AIBoomer.FifthPieceJ = 9;
-        AIBoomer.SixthPieceI = 7;
-        AIBoomer.SixthPieceJ = 9;
-
-        AIFlameThrower.FirstPieceI = 4;
-        AIFlameThrower.FirstPieceJ = 1;
-        AIFlameThrower.SecondPieceI = 4;
-        AIFlameThrower.SecondPieceJ = 2;
-        AIFlameThrower.ThirdPieceI = 4;
-        AIFlameThrower.ThirdPieceJ = 3;
-        AIFlameThrower.FourthPieceI = 5;
-        AIFlameThrower.FourthPieceJ = 1;
-        AIFlameThrower.FifthPieceI = 6;
-        AIFlameThrower.FifthPieceJ = 1;
-        AIFlameThrower.SixthPieceI = 6;
-        AIFlameThrower.SixthPieceJ = 2;
-        AIFlameThrower.SeventhPieceI = 6;
-        AIFlameThrower.SeventhPieceJ = 3;
+        MoneyMaker(0, 1, 0, 2);
+        Healer(7,5,8,5,9,5,9,6);
+        LightBomber(8, 6, 8, 7, 9, 7, 9, 8);
+        Boomer(2,9,3,9,4,9,5,9,6,9,7,9);
+        FlameThrower(4,1,4,2,4,3,5,1,6,1,6,2,6,3);
     }  
-    void AIThird()
+    void AIThirdMap0()
     {
-        AISideStep.FirstPieceI = 1;
-        AISideStep.FirstPieceJ = 1;
-        AISideStep.SecondPieceI = 2;
-        AISideStep.SecondPieceJ = 1;
-        AISideStep.ThirdPieceI = 2;
-        AISideStep.ThirdPieceJ = 2;
-
-        AIHealer.FirstPieceI = 5;
-        AIHealer.FirstPieceJ = 0;
-        AIHealer.SecondPieceI = 6;
-        AIHealer.SecondPieceJ = 0;
-        AIHealer.ThirdPieceI = 7;
-        AIHealer.ThirdPieceJ = 0;
-        AIHealer.FourthPieceI = 7;
-        AIHealer.FourthPieceJ = 1;
-
-        AILightBomber.FirstPieceI = 4;
-        AILightBomber.FirstPieceJ = 9;
-        AILightBomber.SecondPieceI = 5;
-        AILightBomber.SecondPieceJ = 9;
-        AILightBomber.ThirdPieceI = 5;
-        AILightBomber.ThirdPieceJ = 8;
-        AILightBomber.FourthPieceI = 6;
-        AILightBomber.FourthPieceJ = 8;
-
-        AIBomber.FirstPieceI = 1;
-        AIBomber.FirstPieceJ = 5;
-        AIBomber.SecondPieceI = 1;
-        AIBomber.SecondPieceJ = 6;
-        AIBomber.ThirdPieceI = 1;
-        AIBomber.ThirdPieceJ = 7;
-        AIBomber.FourthPieceI = 2;
-        AIBomber.FourthPieceJ = 6;
-        AIBomber.FifthPieceI = 3;
-        AIBomber.FifthPieceJ = 6;
-
-        AIFlameThrower.FirstPieceI = 7;
-        AIFlameThrower.FirstPieceJ = 3;
-        AIFlameThrower.SecondPieceI = 8;
-        AIFlameThrower.SecondPieceJ = 3;
-        AIFlameThrower.ThirdPieceI = 9;
-        AIFlameThrower.ThirdPieceJ = 3;
-        AIFlameThrower.FourthPieceI = 9;
-        AIFlameThrower.FourthPieceJ = 4;
-        AIFlameThrower.FifthPieceI = 9;
-        AIFlameThrower.FifthPieceJ = 5;
-        AIFlameThrower.SixthPieceI = 8;
-        AIFlameThrower.SixthPieceJ = 5;
-        AIFlameThrower.SeventhPieceI = 7;
-        AIFlameThrower.SeventhPieceJ = 5;
+        SideStep(1,1,2,1,2,2);
+        Healer(5, 0, 6, 0, 7, 0, 7, 1);
+        LightBomber(4, 9, 5, 9, 4, 8, 6, 8);
+        Bomber(1, 5, 1, 6, 1, 7, 2, 6, 3, 6);
+        FlameThrower(7, 3, 8, 3, 9, 3, 9, 4, 9, 5, 8, 5, 7, 5);
     }
-    void AIFourth()
+    void AIFourthMap0()
     {
-        AISideStep.FirstPieceI = 1;
-        AISideStep.FirstPieceJ = 8;
-        AISideStep.SecondPieceI = 2;
-        AISideStep.SecondPieceJ = 7;
-        AISideStep.ThirdPieceI = 2;
-        AISideStep.ThirdPieceJ = 8;
+        SideStep(1, 8, 2, 7, 2, 8);
+        Healer(6, 6, 6, 7, 6, 8, 7, 8);
+        Bomber(2, 3, 2, 4, 2, 5, 3, 4, 4, 4);
+        Boomer(3, 2, 4, 2, 5, 2, 6, 2, 7, 2, 8, 2);
+        FlameThrower(7, 4, 7, 5, 7, 6, 8, 6, 9, 4, 9, 5, 9, 6);
+    }
 
-        AIHealer.FirstPieceI = 6;
-        AIHealer.FirstPieceJ = 6;
-        AIHealer.SecondPieceI = 6;
-        AIHealer.SecondPieceJ = 7;
-        AIHealer.ThirdPieceI = 6;
-        AIHealer.ThirdPieceJ = 8;
-        AIHealer.FourthPieceI = 7;
-        AIHealer.FourthPieceJ = 8;
+    void AIFirstMap1()
+    {
+        Tank(9, 1, 9, 2, 9, 3);
+        SideStep(0, 8, 1, 8, 1, 9);
+        LightBomber(7, 7, 8, 7, 8, 8, 9, 8);
+        Faker(1, 1, 1, 2, 1, 3, 1, 4);
+        FlameThrower(4, 7, 5, 7, 6, 7, 6, 8, 6, 9, 5, 9, 4, 9);
+    }
+    void AISecondMap1() 
+    {
+        MoneyMaker(7, 4, 7, 5);
+        SideStep(2, 2, 2, 3, 3, 2);
+        Healer(5, 2, 6, 2, 7, 2, 7, 3);
+        Bomber(5, 7, 6, 7, 8, 7, 8, 6, 8, 9);
+        FlameThrower(0, 7, 1, 7, 2, 7, 0, 8, 0, 9, 1, 9, 2, 9);
+    }
+    void AIThirdMap1()
+    {
+        MoneyMaker(8, 2, 8, 3);
+        Tank(7, 9, 8, 9, 9, 9);
+        Faker(0, 9, 1, 9, 2, 9, 3, 9);
+        BombCatcher(0, 0, 0, 1, 0, 2, 0, 3, 0, 4);
+        Boomer(3, 7, 4, 7, 5, 7, 6, 7, 7, 7, 8, 7);
+    }
+    void AIFourthMap1()
+    {
+        MoneyMaker(2, 1, 3, 1);
+        SideStep(8, 7, 9, 7, 9, 8);
+        Faker(0, 3, 0, 4, 0, 5, 0, 6);
+        BombCatcher(0, 9, 1, 9, 2, 9, 3, 9, 4, 9);
+        FlameThrower(0, 7, 0, 8, 0, 9, 1, 9, 2, 9, 2, 8, 2, 7);
+    }
+    
+    void AIFirstMap2()
+    {
+        SideStep(7, 4, 8, 4, 8, 5);
+        Healer(7, 8, 8, 8, 9, 8, 9, 9);
+        LightBomber(1, 7, 2, 7, 2, 6, 3, 6);
+        Bomber(6, 0, 6, 1, 6, 2, 7, 1, 8, 1);
+        FlameThrower(3, 1, 3, 2, 3, 3, 4, 1, 5, 1, 5, 2, 5, 3);
+    }
+    void AISecondMap2()
+    {
+        MoneyMaker(5, 4, 5, 5);
+        SideStep(2, 3, 3, 3, 3, 4);
+        LightBomber(8, 4, 8, 5, 7, 5, 7, 6);
+        BombCatcher(2, 8, 3, 8, 4, 8, 5, 8, 6, 8);
+        Boomer(2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1);
+    }
+    void AIThirdMap2()
+    {
+        Tank(7, 4, 7, 5, 7, 6);
+        SideStep(8, 0, 8, 1, 7, 1);
+        Healer(1, 1, 2, 1, 3, 1, 3, 2);
+        Faker(6, 6, 6, 7, 6, 8, 6, 9);
+        FlameThrower(2, 7, 2, 8, 2, 9, 3, 9, 4, 9, 4, 8, 4, 7);
+    }
+    void AIFourthMap2()
+    {
+        MoneyMaker(5, 1, 5, 2);
+        SideStep(1, 2, 2, 3, 2, 2);
+        LightBomber(2, 6, 2, 7, 1, 7, 1, 8);
+        BombCatcher(2, 9, 3, 9, 4, 9, 5, 9, 6, 9);
+        FlameThrower(4, 4, 4, 5, 4, 6, 5, 4, 6, 4, 6, 5, 6, 6);
+    }
 
-        AIBomber.FirstPieceI = 2;
-        AIBomber.FirstPieceJ = 3;
-        AIBomber.SecondPieceI = 2;
-        AIBomber.SecondPieceJ = 4;
-        AIBomber.ThirdPieceI = 2;
-        AIBomber.ThirdPieceJ = 5;
-        AIBomber.FourthPieceI = 3;
-        AIBomber.FourthPieceJ = 4;
-        AIBomber.FifthPieceI = 4;
-        AIBomber.FifthPieceJ = 4;
+    void AIFirstMap3()
+    {
+        MoneyMaker(0, 8, 1, 8);
+        Healer(2, 4, 3, 4, 4, 4, 4, 5);
+        LightBomber(2, 3, 3, 3, 3, 2, 4, 2);
+        Bomber(5, 8, 6, 8, 7, 8, 7, 7, 7, 9);
+        Boomer(9, 0, 9, 1, 9, 2, 9, 3, 9, 4, 9, 5);
+    }
+    void AISecondMap3()
+    {
+        MoneyMaker(2, 1, 2, 2);
+        Faker(3, 4, 4, 4, 5, 4, 6, 4);
+        BombCatcher(9, 0, 9, 1, 9, 2, 9, 3, 9, 4);
+        Boomer(0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9);
+        FlameThrower(5, 6, 6, 6, 7, 6, 7, 7, 7, 8, 6, 8, 5, 8);
+    }
+    void AIThirdMap3()
+    {
+        SideStep(8,0,9,0,9,1);
+        Tank(4,5,4,6,4,7);
+        Faker(0,5,1,5,2,5,3,5);
+        LightBomber(1,3,2,3,2,2,3,2);
+        Bomber(7,4,8,4,9,4,9,3,9,5);
+    }
+    void AIFourthMap3()
+    {
+        MoneyMaker(2,0,3,0);
+        Tank(9,2,9,3,9,4);
+        SideStep(3,5,4,5,4,6);
+        LightBomber(6,9,7,9,7,8,8,8);
+        BombCatcher(0,3,0,4,0,5,0,6,0,7);
+    }
 
-        AIBoomer.FirstPieceI = 3;
-        AIBoomer.FirstPieceJ = 2;
-        AIBoomer.SecondPieceI = 4;
-        AIBoomer.SecondPieceJ = 2;
-        AIBoomer.ThirdPieceI = 5;
-        AIBoomer.ThirdPieceJ = 2;
-        AIBoomer.FourthPieceI = 6;
-        AIBoomer.FourthPieceJ = 2;
-        AIBoomer.FifthPieceI = 7;
-        AIBoomer.FifthPieceJ = 2;
-        AIBoomer.SixthPieceI = 8;
-        AIBoomer.SixthPieceJ = 2;
+    void AIFirstMap4()
+    {
+        MoneyMaker(8,5,9,5);
+        SideStep(0,3,1,3,1,4);
+        Tank(4,0,4,1,4,2);
+        BombCatcher(1,7,2,7,3,7,4,7,5,7);
+        Bomber(4,8,5,8,6,8,6,7,6,9);
+    }
+    void AISecondMap4()
+    {
+        MoneyMaker(2,5,2,6);
+        SideStep(2,2,3,2,2,3);
+        Healer(5,7,6,7,7,7,7,6);
+        Faker(0,3,0,4,0,5,0,6);
+        Bomber(5,2,6,2,7,2,7,1,7,3);
+    }
+    void AIThirdMap4()
+    {
+        MoneyMaker(2,1,3,1);
+        Tank(5,1,6,1,7,1);
+        Faker(3,9,4,9,5,9,6,9);
+        Boomer(1,2,1,3,1,4,1,5,1,6,1,7);
+        FlameThrower(7,4,7,5,7,6,8,4,9,4,9,5,9,6);
+    }
+    void AIFourthMap4()
+    {
+        Tank(7,3,8,3,9,3);
+        Healer(7,5,8,5,9,5,9,6);
+        Faker(2,2,3,2,4,2,5,2);
+        Boomer(2,8,3,8,4,8,5,8,6,8,7,8);
+        FlameThrower(0,4,1,4,2,4,0,5,0,6,1,6,2,6);
+    }
 
-        AIFlameThrower.FirstPieceI = 7;
-        AIFlameThrower.FirstPieceJ = 4;
-        AIFlameThrower.SecondPieceI = 7;
-        AIFlameThrower.SecondPieceJ = 5;
-        AIFlameThrower.ThirdPieceI = 7;
-        AIFlameThrower.ThirdPieceJ = 6;
-        AIFlameThrower.FourthPieceI = 8;
-        AIFlameThrower.FourthPieceJ = 6;
-        AIFlameThrower.FifthPieceI = 9;
-        AIFlameThrower.FifthPieceJ = 4;
-        AIFlameThrower.SixthPieceI = 9;
-        AIFlameThrower.SixthPieceJ = 5;
-        AIFlameThrower.SeventhPieceI = 9;
-        AIFlameThrower.SeventhPieceJ = 6;
+    void MoneyMaker(int i0,int j0, int i1, int j1)
+    {
+        AIMoneyMaker.FirstPieceI = i0;
+        AIMoneyMaker.FirstPieceJ = j0;
+        AIMoneyMaker.SecondPieceI = i1;
+        AIMoneyMaker.SecondPieceJ = j1;
+    }
+    void Tank(int i0, int j0, int i1, int j1, int i2, int j2)
+    {
+        AITank.FirstPieceI = i0;
+        AITank.FirstPieceJ = j0;
+        AITank.SecondPieceI = i1;
+        AITank.SecondPieceJ = j1;
+        AITank.ThirdPieceI = i2;
+        AITank.ThirdPieceJ = j2;
+    }
+    void SideStep(int i0, int j0, int i1, int j1, int i2, int j2)
+    {
+        AISideStep.FirstPieceI = i0;
+        AISideStep.FirstPieceJ = j0;
+        AISideStep.SecondPieceI = i1;
+        AISideStep.SecondPieceJ = j1;
+        AISideStep.ThirdPieceI = i2;
+        AISideStep.ThirdPieceJ = j2;
+    }
+    void Faker(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3)
+    {
+        AIFaker.FirstPieceI = i0;
+        AIFaker.FirstPieceJ = j0;
+        AIFaker.SecondPieceI = i1;
+        AIFaker.SecondPieceJ = j1;
+        AIFaker.ThirdPieceI = i2;
+        AIFaker.ThirdPieceJ = j2;
+        AIFaker.FourthPieceI = i3;
+        AIFaker.FourthPieceJ = j3;
+    }
+    void Healer(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3)
+    {
+        AIHealer.FirstPieceI = i0;
+        AIHealer.FirstPieceJ = j0;
+        AIHealer.SecondPieceI = i1;
+        AIHealer.SecondPieceJ = j1;
+        AIHealer.ThirdPieceI = i2;
+        AIHealer.ThirdPieceJ = j2;
+        AIHealer.FourthPieceI = i3;
+        AIHealer.FourthPieceJ = j3;
+    }
+    void LightBomber(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3)
+    {
+        AILightBomber.FirstPieceI = i0;
+        AILightBomber.FirstPieceJ = j0;
+        AILightBomber.SecondPieceI = i1;
+        AILightBomber.SecondPieceJ = j1;
+        AILightBomber.ThirdPieceI = i2;
+        AILightBomber.ThirdPieceJ = j2;
+        AILightBomber.FourthPieceI = i3;
+        AILightBomber.FourthPieceJ = j3;
+    }
+    void BombCatcher(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3, int i4, int j4)
+    {
+        AIBombCatcher.FirstPieceI = i0;
+        AIBombCatcher.FirstPieceJ = j0;
+        AIBombCatcher.SecondPieceI = i1;
+        AIBombCatcher.SecondPieceJ = j1;
+        AIBombCatcher.ThirdPieceI = i2;
+        AIBombCatcher.ThirdPieceJ = j2;
+        AIBombCatcher.FourthPieceI = i3;
+        AIBombCatcher.FourthPieceJ = j3;
+        AIBombCatcher.FifthPieceI = i4;
+        AIBombCatcher.FifthPieceJ = j4;
+    }
+    void Bomber(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3, int i4, int j4)
+    {
+        AIBomber.FirstPieceI = i0;
+        AIBomber.FirstPieceJ = j0;
+        AIBomber.SecondPieceI = i1;
+        AIBomber.SecondPieceJ = j1;
+        AIBomber.ThirdPieceI = i2;
+        AIBomber.ThirdPieceJ = j2;
+        AIBomber.FourthPieceI = i3;
+        AIBomber.FourthPieceJ = j3;
+        AIBomber.FifthPieceI = i4;
+        AIBomber.FifthPieceJ = j4;
+    }
+    void Boomer(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3, int i4, int j4, int i5, int j5) 
+    {
+        AIBoomer.FirstPieceI = i0;
+        AIBoomer.FirstPieceJ = j0;
+        AIBoomer.SecondPieceI = i1;
+        AIBoomer.SecondPieceJ = j1;
+        AIBoomer.ThirdPieceI = i2;
+        AIBoomer.ThirdPieceJ = j2;
+        AIBoomer.FourthPieceI = i3;
+        AIBoomer.FourthPieceJ = j3;
+        AIBoomer.FifthPieceI = i4;
+        AIBoomer.FifthPieceJ = j4;
+        AIBoomer.SixthPieceI = i5;
+        AIBoomer.SixthPieceJ = j5;
+    }
+    void FlameThrower(int i0, int j0, int i1, int j1, int i2, int j2, int i3, int j3, int i4, int j4, int i5, int j5, int i6, int j6)
+    {
+        AIFlameThrower.FirstPieceI = i0;
+        AIFlameThrower.FirstPieceJ = j0;
+        AIFlameThrower.SecondPieceI = i1;
+        AIFlameThrower.SecondPieceJ = j1;
+        AIFlameThrower.ThirdPieceI = i2;
+        AIFlameThrower.ThirdPieceJ = j2;
+        AIFlameThrower.FourthPieceI = i3;
+        AIFlameThrower.FourthPieceJ = j3;
+        AIFlameThrower.FifthPieceI = i4;
+        AIFlameThrower.FifthPieceJ = j4;
+        AIFlameThrower.SixthPieceI = i5;
+        AIFlameThrower.SixthPieceJ = j5;
+        AIFlameThrower.SeventhPieceI = i6;
+        AIFlameThrower.SeventhPieceJ = j6;
     }
 }
