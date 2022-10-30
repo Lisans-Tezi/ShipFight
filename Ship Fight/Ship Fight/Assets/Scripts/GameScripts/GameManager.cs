@@ -12,16 +12,16 @@ public class GameManager : MonoBehaviour
     public GameObject defendScreen;
     public GameObject attackScreen;
 
-    public MoneyMaker moneyMaker;
-    public Tank tank;
-    public SideStep sideStep;
-    public Faker faker;
-    public Healer healer;
-    public LightBomber lightBomber;
-    public BombCatcher bombCatcher;
-    public Bomber bomber;
-    public Boomer boomer;
-    public FlameThrower flameThrower;
+    MoneyMaker moneyMaker;
+    Tank tank;
+    SideStep sideStep;
+    Faker faker;
+    Healer healer;
+    LightBomber lightBomber;
+    BombCatcher bombCatcher;
+    Bomber bomber;
+    Boomer boomer;
+    FlameThrower flameThrower;
 
     public Image Ship1;
     public Image Ship2;

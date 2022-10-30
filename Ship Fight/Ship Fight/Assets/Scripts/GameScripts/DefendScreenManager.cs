@@ -215,152 +215,152 @@ public class DefendScreenManager : MonoBehaviour
     {
         if (shipName == "MoneyMaker")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().moneyMaker.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().moneyMaker.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().FirstPieceI,
+               GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().moneyMaker.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().moneyMaker.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().SecondPieceI,
+               GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().SecondPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "Tank")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().tank.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().tank.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Tank").GetComponent<Tank>().FirstPieceI,
+               GameObject.Find("Tank").GetComponent<Tank>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().tank.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().tank.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Tank").GetComponent<Tank>().SecondPieceI,
+               GameObject.Find("Tank").GetComponent<Tank>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().tank.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().tank.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Tank").GetComponent<Tank>().ThirdPieceI,
+               GameObject.Find("Tank").GetComponent<Tank>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "SideStep")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("SideStep").GetComponent<SideStep>().FirstPieceI,
+               GameObject.Find("SideStep").GetComponent<SideStep>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("SideStep").GetComponent<SideStep>().SecondPieceI,
+               GameObject.Find("SideStep").GetComponent<SideStep>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().sideStep.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("SideStep").GetComponent<SideStep>().ThirdPieceI,
+               GameObject.Find("SideStep").GetComponent<SideStep>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "Faker")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().faker.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().faker.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Faker").GetComponent<Faker>().FirstPieceI,
+               GameObject.Find("Faker").GetComponent<Faker>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().faker.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().faker.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Faker").GetComponent<Faker>().SecondPieceI,
+               GameObject.Find("Faker").GetComponent<Faker>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().faker.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().faker.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Faker").GetComponent<Faker>().ThirdPieceI,
+               GameObject.Find("Faker").GetComponent<Faker>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().faker.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().faker.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Faker").GetComponent<Faker>().FourthPieceI,
+               GameObject.Find("Faker").GetComponent<Faker>().FourthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "Healer")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().healer.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().healer.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Healer").GetComponent<Healer>().FirstPieceI,
+               GameObject.Find("Healer").GetComponent<Healer>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().healer.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().healer.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Healer").GetComponent<Healer>().SecondPieceI,
+               GameObject.Find("Healer").GetComponent<Healer>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().healer.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().healer.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Healer").GetComponent<Healer>().ThirdPieceI,
+               GameObject.Find("Healer").GetComponent<Healer>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().healer.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().healer.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Healer").GetComponent<Healer>().FourthPieceI,
+               GameObject.Find("Healer").GetComponent<Healer>().FourthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "LightBomber")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("LightBomber").GetComponent<LightBomber>().FirstPieceI,
+               GameObject.Find("LightBomber").GetComponent<LightBomber>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("LightBomber").GetComponent<LightBomber>().SecondPieceI,
+               GameObject.Find("LightBomber").GetComponent<LightBomber>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("LightBomber").GetComponent<LightBomber>().ThirdPieceI,
+               GameObject.Find("LightBomber").GetComponent<LightBomber>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().lightBomber.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("LightBomber").GetComponent<LightBomber>().FourthPieceI,
+               GameObject.Find("LightBomber").GetComponent<LightBomber>().FourthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "BombCatcher")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FirstPieceI,
+               GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("BombCatcher").GetComponent<BombCatcher>().SecondPieceI,
+               GameObject.Find("BombCatcher").GetComponent<BombCatcher>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("BombCatcher").GetComponent<BombCatcher>().ThirdPieceI,
+               GameObject.Find("BombCatcher").GetComponent<BombCatcher>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FourthPieceI,
+               GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FourthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FifthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bombCatcher.FifthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FifthPieceI,
+               GameObject.Find("BombCatcher").GetComponent<BombCatcher>().FifthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "Bomber")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Bomber").GetComponent<Bomber>().FirstPieceI,
+               GameObject.Find("Bomber").GetComponent<Bomber>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bomber.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bomber.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Bomber").GetComponent<Bomber>().SecondPieceI,
+               GameObject.Find("Bomber").GetComponent<Bomber>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bomber.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bomber.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Bomber").GetComponent<Bomber>().ThirdPieceI,
+               GameObject.Find("Bomber").GetComponent<Bomber>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Bomber").GetComponent<Bomber>().FourthPieceI,
+               GameObject.Find("Bomber").GetComponent<Bomber>().FourthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FifthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().bomber.FifthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Bomber").GetComponent<Bomber>().FifthPieceI,
+               GameObject.Find("Bomber").GetComponent<Bomber>().FifthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "Boomer")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().FirstPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().SecondPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().ThirdPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().FourthPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().FourthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FifthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.FifthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().FifthPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().FifthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().boomer.SixthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().boomer.SixthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("Boomer").GetComponent<Boomer>().SixthPieceI,
+               GameObject.Find("Boomer").GetComponent<Boomer>().SixthPieceJ].GetComponent<Image>().color = Color.black;
         }
         else if (shipName == "FlameThrower")
         {
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FirstPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FirstPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FirstPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FirstPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SecondPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SecondPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SecondPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SecondPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.ThirdPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.ThirdPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().ThirdPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().ThirdPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FourthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FourthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FourthPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FourthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FifthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.FifthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FifthPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().FifthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SixthPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SixthPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SixthPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SixthPieceJ].GetComponent<Image>().color = Color.black;
 
-            map[GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SeventhPieceI,
-               GameObject.Find("GameManager").GetComponent<GameManager>().flameThrower.SeventhPieceJ].GetComponent<Image>().color = Color.black;
+            map[GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SeventhPieceI,
+               GameObject.Find("FlameThrower").GetComponent<FlameThrower>().SeventhPieceJ].GetComponent<Image>().color = Color.black;
         }
 
     }

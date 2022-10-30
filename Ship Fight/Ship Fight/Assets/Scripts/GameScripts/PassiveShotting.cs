@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PassiveShotting : MonoBehaviour 
 {
     public Image Map;
-    GameObject[,] map = new GameObject[10, 10];
+    public GameObject[,] map = new GameObject[10, 10];
 
     public Image FirstShip;
     public Image SecondShip;
@@ -26,16 +26,17 @@ public class PassiveShotting : MonoBehaviour
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
 
-    MoneyMaker moneymaker;
-    Tank tank;
-    SideStep sidestep;
-    Faker faker;
-    Healer healer;
-    LightBomber lightbomber;
-    BombCatcher bombcatcher;
-    Bomber bomber;
-    Boomer boomer;
-    FlameThrower flamethrower;
+    public MoneyMaker moneymaker;
+    public Tank tank;
+    public SideStep sidestep;
+    public Faker faker;
+    public Healer healer;
+    public LightBomber lightbomber;
+    public BombCatcher bombcatcher;
+    public Bomber bomber;
+    public Boomer boomer;
+    public FlameThrower flamethrower;
+
     private void Start()
     {
         Create();
@@ -65,7 +66,7 @@ public class PassiveShotting : MonoBehaviour
     }
     public void Shot()
     {
-        if(PlayerPrefs.GetString("AttackType") == "Passive" && gameObject.GetComponent<Image>().color == greenColor)
+        if(PlayerPrefs.GetString("AttackType") == "Passive" && (gameObject.GetComponent<Image>().color == greenColor || gameObject.GetComponent<Image>().color == Color.yellow))
         {
             string coordinat = gameObject.name;
             string[] xandy= coordinat.Split(":");
@@ -91,19 +92,77 @@ public class PassiveShotting : MonoBehaviour
             (x == tank.SecondPieceI && y == tank.SecondPieceJ) || 
             (x == tank.ThirdPieceI && y == tank.ThirdPieceJ))
         {
-            gameObject.GetComponent<Image>().color = redColor;
-            tank.HittedPiece++;
-            IncreaseScore();
-            IsFinished("Tank");
+            if (gameObject.GetComponent<Image>().color == greenColor)
+            {
+                gameObject.GetComponent<Image>().color = Color.yellow;
+                IncreaseScore();
+            }
+            else if (gameObject.GetComponent<Image>().color == Color.yellow)
+            {
+                gameObject.GetComponent<Image>().color = redColor;
+                tank.HittedPiece++;
+                IncreaseScore();
+                IsFinished("Tank");
+            }              
         }
         else if ((x == sidestep.FirstPieceI && y == sidestep.FirstPieceJ) || 
             (x == sidestep.SecondPieceI && y == sidestep.SecondPieceJ) || 
             (x == sidestep.ThirdPieceI && y == sidestep.ThirdPieceJ))
         {
-            gameObject.GetComponent<Image>().color = redColor;
-            sidestep.HittedPiece++;
-            IncreaseScore();
-            IsFinished("SideStep");
+            if (GameObject.Find("SideStep").GetComponent<sidestep>().SideStepSkill)
+            {
+                if ((x-1>=0) && (x-1 != sidestep.FirstPieceI) && (x-1 != sidestep.SecondPieceI) && (x - 1 != sidestep.ThirdPieceI))
+                {
+                    if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor && 
+                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                        FailedShot();
+                    }    
+                }
+                else if ((x + 1 <= 9) && (x + 1 != sidestep.FirstPieceI) && (x + 1 != sidestep.SecondPieceI) && (x + 1 != sidestep.ThirdPieceI))
+                {
+                    if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                       map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                        FailedShot();
+                    }
+                }
+                else if ((y - 1 >= 0) && (y - 1 != sidestep.FirstPieceJ) && (y - 1 != sidestep.SecondPieceJ) && (y - 1 != sidestep.ThirdPieceJ))
+                {
+                    if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
+                       map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
+                        FailedShot();
+                    }
+                }
+                else if ((y + 1 <= 9) && (y + 1 != sidestep.FirstPieceJ) && (y + 1 != sidestep.SecondPieceJ) && (y + 1 != sidestep.ThirdPieceJ))
+                {
+                    if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
+                       map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
+                        FailedShot();
+                    }
+                }
+                else
+                {
+                    gameObject.GetComponent<Image>().color = redColor;
+                    sidestep.HittedPiece++;
+                    IncreaseScore();
+                    IsFinished("SideStep");
+                }
+                GameObject.Find("SideStep").GetComponent<sidestep>().SideStepSkill = false;
+            }
+            else
+            {
+                gameObject.GetComponent<Image>().color = redColor;
+                sidestep.HittedPiece++;
+                IncreaseScore();
+                IsFinished("SideStep");
+            }               
         }
         else if ((x == faker.FirstPieceI && y == faker.FirstPieceJ) || 
             (x == faker.SecondPieceI && y == faker.SecondPieceJ) || 
@@ -186,19 +245,28 @@ public class PassiveShotting : MonoBehaviour
         {
             GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
             gameObject.GetComponent<Image>().color = blueColor;
-            for (int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
-                    if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
-                        map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
-            Invoke("SkipRound",1.5f);
+            FailedShot();    
         } 
+    }
+    void FailedShot()
+    {                                  
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+                if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
+                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+
+        GameObject.Find("GameManager").GetComponent<Control>().control();
+        Invoke("SkipRound", 1.5f);
     }
     void IsFinished(string Name)
     {
         if (Name=="MoneyMaker")
         {
             if (moneymaker.HittedPiece == moneymaker.Piece)
+            {
                 ImageActiveControl(0);
+                GameObject.Find("MoneyMaker").GetComponent<moneymaker>().increase=0;
+            }                               
         }                   
         else if (Name == "Tank")
         {
@@ -309,6 +377,8 @@ public class PassiveShotting : MonoBehaviour
                     if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
                         map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
 
+
+            GameObject.Find("GameManager").GetComponent<Control>().control();
             Invoke("SkipRound", 1.5f);
         }
     }

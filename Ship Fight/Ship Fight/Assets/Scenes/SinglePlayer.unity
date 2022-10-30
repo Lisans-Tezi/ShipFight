@@ -10096,6 +10096,16 @@ MonoBehaviour:
   - {fileID: 1371429832}
   - {fileID: 947644860}
   PlacedShipNames: []
+  MoneyMaker: {fileID: 1870155669}
+  Tank: {fileID: 41963999}
+  SideStep: {fileID: 1264400408}
+  Faker: {fileID: 2041991072}
+  Healer: {fileID: 1054104707}
+  LightBomber: {fileID: 1538413767}
+  BombCatcher: {fileID: 1016187152}
+  Bomber: {fileID: 934150519}
+  Boomer: {fileID: 1904382003}
+  FlameThrower: {fileID: 1089791510}
 --- !u!1 &947644858
 GameObject:
   m_ObjectHideFlags: 0
@@ -13461,6 +13471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264400409}
   - component: {fileID: 1264400408}
+  - component: {fileID: 1264400410}
   m_Layer: 0
   m_Name: SideStep
   m_TagString: Untagged
@@ -13495,6 +13506,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264400410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264400407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c706c6216a7e1449ae6888ff82547b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SideStepSkill: 0
 --- !u!1 &1268056673
 GameObject:
   m_ObjectHideFlags: 0
@@ -20541,6 +20565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870155670}
   - component: {fileID: 1870155669}
+  - component: {fileID: 1870155671}
   m_Layer: 0
   m_Name: MoneyMaker
   m_TagString: Untagged
@@ -20575,6 +20600,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870155671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870155668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579623b69843abc468ae48b3f13362a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increase: 1
 --- !u!1 &1870829399
 GameObject:
   m_ObjectHideFlags: 0

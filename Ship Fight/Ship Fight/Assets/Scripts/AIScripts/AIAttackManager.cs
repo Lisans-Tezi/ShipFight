@@ -12,9 +12,14 @@ public class AIAttackManager : MonoBehaviour
     Color whiteColor = new Color32(255, 255, 255, 150);
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
+
+    Tank Tank;
+    SideStep SideStep;
     void Start()
     {
         Create();
+        
+        SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
         PlayerPrefs.SetInt("AIAttackHitPerTurn",3);
         InvokeRepeating("Attack",2,2);
     }
@@ -35,9 +40,27 @@ public class AIAttackManager : MonoBehaviour
             if (PlayerPrefs.GetInt("AIAttackHitPerTurn") > 0)
             {
                 int x = Random.Range(0, 10);
-                int y = Random.Range(0, 10);
+                int y = Random.Range(0, 10);                         
 
                 if (map[x, y].gameObject.GetComponent<Image>().color == Color.black)
+                {
+                    if (AttackTank(x, y))
+                    {
+
+                    }
+                    else if (AttackSideStep(x, y))
+                    {
+
+                    }
+                    else
+                    {
+                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                    }                      
+
+                    PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                }
+                else if (map[x, y].gameObject.GetComponent<Image>().color == Color.yellow)
                 {
                     map[x, y].gameObject.GetComponent<Image>().color = redColor;
                     PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
@@ -57,10 +80,28 @@ public class AIAttackManager : MonoBehaviour
                         y = Random.Range(0, 10);
                         if (map[x, y].gameObject.GetComponent<Image>().color == Color.black)
                         {
-                            map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                            if (AttackTank(x, y))
+                            {
+
+                            }
+                            else if (AttackSideStep(x, y))
+                            {
+
+                            }
+                            else
+                            {
+                                map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                            }
+
                             PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
                             GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
                             break;
+                        }
+                        else if (map[x, y].gameObject.GetComponent<Image>().color == Color.yellow)
+                        {
+                            map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                            PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
+                            GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
                         }
                         else if (map[x, y].gameObject.GetComponent<Image>().color == whiteColor)
                         {
@@ -75,7 +116,7 @@ public class AIAttackManager : MonoBehaviour
 
                 for (int i = 0; i < 10; i++)
                     for (int j = 0; j < 10; j++)
-                        if(map[i, j].gameObject.GetComponent<Image>().color == Color.black)
+                        if(map[i, j].gameObject.GetComponent<Image>().color == Color.black || map[i, j].gameObject.GetComponent<Image>().color == Color.yellow)
                             control = false;
 
                 if (control)
@@ -91,6 +132,82 @@ public class AIAttackManager : MonoBehaviour
             }
         }                       
     }
+    bool AttackTank(int x, int y)
+    {
+        var Tank = GameObject.Find("Tank").GetComponent<Tank>();
+        if ((x == Tank.FirstPieceI && y == Tank.FirstPieceJ) ||
+            (x == Tank.SecondPieceI && y == Tank.SecondPieceJ) ||
+            (x == Tank.ThirdPieceI && y == Tank.ThirdPieceJ))
+        {
+            map[x, y].gameObject.GetComponent<Image>().color = Color.yellow;
+            return true;
+        }
+        return false;
+    }
+    bool AttackSideStep(int x, int y)
+    {
+        if ((x == SideStep.FirstPieceI && y == SideStep.FirstPieceJ) ||
+            (x == SideStep.SecondPieceI && y == SideStep.SecondPieceJ) ||
+            (x == SideStep.ThirdPieceI && y == SideStep.ThirdPieceJ))
+        {
+            if (GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AISideStepSkill)
+            {
+                if (x - 1 >= 0 && (x - 1 != SideStep.FirstPieceI) && (x - 1 != SideStep.SecondPieceI) && (x - 1 != SideStep.ThirdPieceI))
+                {
+                    if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        Invoke("SkipRound", 1.5f);
+                    }                       
+                }
+                else if (x + 1 <= 9 && (x + 1 != SideStep.FirstPieceI) && (x + 1 != SideStep.SecondPieceI) && (x + 1 != SideStep.ThirdPieceI))
+                {
+                    if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                        map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        Invoke("SkipRound", 1.5f);
+                    }                        
+                }
+                else if (y - 1 >= 0 && (y - 1 != SideStep.FirstPieceJ) && (y - 1 != SideStep.SecondPieceJ) && (y - 1 != SideStep.ThirdPieceJ))
+                {
+                    if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
+                        map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        Invoke("SkipRound", 1.5f);
+                    }                        
+                }
+                else if (y + 1 <= 9 && (y + 1 != SideStep.FirstPieceJ) && (y + 1 != SideStep.SecondPieceJ) && (y + 1 != SideStep.ThirdPieceJ))
+                {
+                    if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
+                        map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor)
+                    {
+                        map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        Invoke("SkipRound", 1.5f);
+                    }                    
+                }
+                else
+                {
+                    map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                }
+                GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AISideStepSkill = false;
+                return true;
+            }
+            else
+            {
+                map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                return true;
+            }
+        }
+        return false;
+    }
+
     void ReturnMenu()
     {
         SceneManager.LoadScene("Scenes/Menu");

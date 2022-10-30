@@ -503,6 +503,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &31398272
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +682,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &31604988
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &68404318
 GameObject:
@@ -1037,6 +1057,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &95626824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1466,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &117898366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1645,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &122932296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2078,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &180712230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2207,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195966601
 GameObject:
@@ -2664,6 +2724,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &221255555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2903,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &221426719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3082,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &222109328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,6 +3337,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &231011341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,6 +3749,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &253470007
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,6 +4004,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &295100425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4493,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &332232168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,7 +4545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340836235
 GameObject:
@@ -4736,6 +4866,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &358854291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4905,6 +5045,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &360963075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,6 +5422,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &380096878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,6 +5601,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &387646287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,6 +5780,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &399051337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +6035,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &407880793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6024,6 +6214,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &415694131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,6 +6393,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &419494802
 GameObject:
   m_ObjectHideFlags: 0
@@ -6362,6 +6572,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &423950442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6531,6 +6751,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &424914140
 GameObject:
   m_ObjectHideFlags: 0
@@ -7319,6 +7549,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &481505093
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,7 +7601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488921756
 GameObject:
@@ -7760,50 +8000,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
---- !u!1 &502465784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 502465786}
-  - component: {fileID: 502465785}
-  m_Layer: 0
-  m_Name: Bomber
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &502465785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502465784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab751b16f37612544958ffb1492cb5ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &502465786
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502465784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &526700459
 GameObject:
   m_ObjectHideFlags: 0
@@ -8047,7 +8253,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533843359
 GameObject:
@@ -8370,6 +8576,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &566324701
 GameObject:
   m_ObjectHideFlags: 0
@@ -8539,6 +8755,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &587539874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8786,6 +9012,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &589000894
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,50 +9368,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617434856}
   m_CullTransparentMesh: 1
---- !u!1 &628112900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 628112902}
-  - component: {fileID: 628112901}
-  m_Layer: 0
-  m_Name: FlameThrower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &628112901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628112900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f80d17cabda6814da38ded60a550d8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &628112902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628112900}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &628649609
 GameObject:
   m_ObjectHideFlags: 0
@@ -9345,6 +9537,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &633901852
 GameObject:
   m_ObjectHideFlags: 0
@@ -9591,6 +9793,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &637238664
 GameObject:
   m_ObjectHideFlags: 0
@@ -9895,6 +10107,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &658313584
 GameObject:
   m_ObjectHideFlags: 0
@@ -10909,6 +11131,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &757297235
 GameObject:
   m_ObjectHideFlags: 0
@@ -11154,6 +11386,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &758419027
 GameObject:
   m_ObjectHideFlags: 0
@@ -11399,6 +11641,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &778658527
 GameObject:
   m_ObjectHideFlags: 0
@@ -11647,6 +11899,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &783022606
 GameObject:
   m_ObjectHideFlags: 0
@@ -11816,6 +12078,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &788431687
 GameObject:
   m_ObjectHideFlags: 0
@@ -12061,6 +12333,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &796859622
 GameObject:
   m_ObjectHideFlags: 0
@@ -12071,6 +12353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796859624}
   - component: {fileID: 796859623}
+  - component: {fileID: 796859625}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12094,16 +12377,6 @@ MonoBehaviour:
   attackCamera: {fileID: 1413830930}
   defendScreen: {fileID: 122932296}
   attackScreen: {fileID: 1881113913}
-  moneyMaker: {fileID: 0}
-  tank: {fileID: 0}
-  sideStep: {fileID: 0}
-  faker: {fileID: 0}
-  healer: {fileID: 0}
-  lightBomber: {fileID: 0}
-  bombCatcher: {fileID: 0}
-  bomber: {fileID: 0}
-  boomer: {fileID: 0}
-  flameThrower: {fileID: 0}
   Ship1: {fileID: 778658529}
   Ship2: {fileID: 1804841123}
   Ship3: {fileID: 2131990745}
@@ -12134,6 +12407,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &796859625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796859622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c6d99efcd48c04ea495c44a605ffda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &808265150
 GameObject:
   m_ObjectHideFlags: 0
@@ -12438,6 +12723,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &825837860
 GameObject:
   m_ObjectHideFlags: 0
@@ -12607,6 +12902,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &836967116
 GameObject:
   m_ObjectHideFlags: 0
@@ -13009,6 +13314,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &861536004
 GameObject:
   m_ObjectHideFlags: 0
@@ -13178,6 +13493,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &873385174
 GameObject:
   m_ObjectHideFlags: 0
@@ -13558,6 +13883,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &935337909
 GameObject:
   m_ObjectHideFlags: 0
@@ -14186,7 +14521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Faker
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14576,6 +14911,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &988642039
 GameObject:
   m_ObjectHideFlags: 0
@@ -14745,6 +15090,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &993713687
 GameObject:
   m_ObjectHideFlags: 0
@@ -14914,6 +15269,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1001137368
 GameObject:
   m_ObjectHideFlags: 0
@@ -15235,6 +15600,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1010659041
 GameObject:
   m_ObjectHideFlags: 0
@@ -15404,6 +15779,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1013360516
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,6 +15958,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1019483467
 GameObject:
   m_ObjectHideFlags: 0
@@ -15742,6 +16137,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1025988106
 GameObject:
   m_ObjectHideFlags: 0
@@ -16066,6 +16471,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1048422416
 GameObject:
   m_ObjectHideFlags: 0
@@ -16108,7 +16523,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050344544
 GameObject:
@@ -16355,6 +16770,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1066471348
 GameObject:
   m_ObjectHideFlags: 0
@@ -16612,6 +17037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61dbdaa42cd77b4aac28d837912392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AISideStepSkill: 1
   AIMoneyMaker: {fileID: 60782659}
   AITank: {fileID: 1339894252}
   AISideStep: {fileID: 481505094}
@@ -16806,6 +17232,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1084377944
 GameObject:
   m_ObjectHideFlags: 0
@@ -17766,6 +18202,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1173671599
 GameObject:
   m_ObjectHideFlags: 0
@@ -17935,6 +18381,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1175687080
 GameObject:
   m_ObjectHideFlags: 0
@@ -18180,6 +18636,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1177555825
 GameObject:
   m_ObjectHideFlags: 0
@@ -18349,6 +18815,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1181197355
 GameObject:
   m_ObjectHideFlags: 0
@@ -18653,6 +19129,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1189436550
 GameObject:
   m_ObjectHideFlags: 0
@@ -18979,6 +19465,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1194383050
 GameObject:
   m_ObjectHideFlags: 0
@@ -19224,6 +19720,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1202938178
 GameObject:
   m_ObjectHideFlags: 0
@@ -19393,6 +19899,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1205639813
 GameObject:
   m_ObjectHideFlags: 0
@@ -19562,6 +20078,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1208899258
 GameObject:
   m_ObjectHideFlags: 0
@@ -19807,6 +20333,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1221650441
 GameObject:
   m_ObjectHideFlags: 0
@@ -19976,6 +20512,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1232100662
 GameObject:
   m_ObjectHideFlags: 0
@@ -20434,6 +20980,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1247661241
 GameObject:
   m_ObjectHideFlags: 0
@@ -20603,6 +21159,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1250661171
 GameObject:
   m_ObjectHideFlags: 0
@@ -20848,6 +21414,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1254422014
 GameObject:
   m_ObjectHideFlags: 0
@@ -21351,6 +21927,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1318930993
 GameObject:
   m_ObjectHideFlags: 0
@@ -21672,6 +22258,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1333122432
 GameObject:
   m_ObjectHideFlags: 0
@@ -21867,7 +22463,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340227570
 GameObject:
@@ -22297,6 +22893,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1367352052
 GameObject:
   m_ObjectHideFlags: 0
@@ -22513,7 +23119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MoneyMaker
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22751,6 +23357,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1381765903
 GameObject:
   m_ObjectHideFlags: 0
@@ -22903,50 +23519,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388147743}
   m_CullTransparentMesh: 1
---- !u!1 &1391344728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1391344730}
-  - component: {fileID: 1391344729}
-  m_Layer: 0
-  m_Name: LightBomber
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1391344729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391344728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2f67ee57b72b549a49c5a285a065ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1391344730
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391344728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1413255586
 GameObject:
   m_ObjectHideFlags: 0
@@ -23352,6 +23924,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1468108150
 GameObject:
   m_ObjectHideFlags: 0
@@ -23521,6 +24103,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1469917896
 GameObject:
   m_ObjectHideFlags: 0
@@ -23796,6 +24388,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1488404380
 GameObject:
   m_ObjectHideFlags: 0
@@ -24148,6 +24750,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1505452254
 GameObject:
   m_ObjectHideFlags: 0
@@ -24452,50 +25064,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525999795}
   m_CullTransparentMesh: 1
---- !u!1 &1534055307
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1534055309}
-  - component: {fileID: 1534055308}
-  m_Layer: 0
-  m_Name: Faker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1534055308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534055307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a67c5bd28d750f34bb6a29db6756a1bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1534055309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534055307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1537468785
 GameObject:
   m_ObjectHideFlags: 0
@@ -24665,6 +25233,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1537702154
 GameObject:
   m_ObjectHideFlags: 0
@@ -24741,50 +25319,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537702154}
   m_CullTransparentMesh: 1
---- !u!1 &1540193569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1540193571}
-  - component: {fileID: 1540193570}
-  m_Layer: 0
-  m_Name: Tank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1540193570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540193569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a80a67b58c04c4a888ad30290fb360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1540193571
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540193569}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542653540
 GameObject:
   m_ObjectHideFlags: 0
@@ -24827,7 +25361,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1559782867
 GameObject:
@@ -24998,6 +25532,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1567469602
 GameObject:
   m_ObjectHideFlags: 0
@@ -25243,6 +25787,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1572162495
 GameObject:
   m_ObjectHideFlags: 0
@@ -25412,6 +25966,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1573049516
 GameObject:
   m_ObjectHideFlags: 0
@@ -25657,6 +26221,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1588591556
 GameObject:
   m_ObjectHideFlags: 0
@@ -25826,50 +26400,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
---- !u!1 &1589561440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1589561442}
-  - component: {fileID: 1589561441}
-  m_Layer: 0
-  m_Name: Healer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1589561441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589561440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb1629d583e4b4499e49dc255e3bfa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1589561442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589561440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1591946127
 GameObject:
   m_ObjectHideFlags: 0
@@ -26237,6 +26777,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1602993208
 GameObject:
   m_ObjectHideFlags: 0
@@ -26406,6 +26956,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1614244892
 GameObject:
   m_ObjectHideFlags: 0
@@ -26575,6 +27135,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1619228731
 GameObject:
   m_ObjectHideFlags: 0
@@ -26744,6 +27314,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1619739868
 GameObject:
   m_ObjectHideFlags: 0
@@ -27602,6 +28182,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1697476722
 GameObject:
   m_ObjectHideFlags: 0
@@ -27847,6 +28437,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1717986030
 GameObject:
   m_ObjectHideFlags: 0
@@ -28244,6 +28844,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1735928856
 GameObject:
   m_ObjectHideFlags: 0
@@ -28413,6 +29023,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1736704827
 GameObject:
   m_ObjectHideFlags: 0
@@ -28582,6 +29202,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1771478995
 GameObject:
   m_ObjectHideFlags: 0
@@ -28751,6 +29381,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1771642868
 GameObject:
   m_ObjectHideFlags: 0
@@ -28793,7 +29433,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776841699
 GameObject:
@@ -28937,7 +29577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tank
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29402,6 +30042,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1836080094
 GameObject:
   m_ObjectHideFlags: 0
@@ -29571,6 +30221,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1838024776
 GameObject:
   m_ObjectHideFlags: 0
@@ -29971,6 +30631,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1865457341
 GameObject:
   m_ObjectHideFlags: 0
@@ -30309,7 +30979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boomer
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30532,50 +31202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933370127}
   m_CullTransparentMesh: 1
---- !u!1 &1939358704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939358706}
-  - component: {fileID: 1939358705}
-  m_Layer: 0
-  m_Name: MoneyMaker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1939358705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939358704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9312b12dcca27946a732543a2f2813a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1939358706
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939358704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944530773
 GameObject:
   m_ObjectHideFlags: 0
@@ -31176,50 +31802,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
---- !u!1 &1984609419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1984609421}
-  - component: {fileID: 1984609420}
-  m_Layer: 0
-  m_Name: BombCatcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1984609420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984609419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d822a848f5bf504cbb23ef18600fe1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1984609421
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984609419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &1989086250
 GameObject:
   m_ObjectHideFlags: 0
@@ -31541,6 +32133,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2019466117
 GameObject:
   m_ObjectHideFlags: 0
@@ -31710,94 +32312,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
---- !u!1 &2019725961
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2019725963}
-  - component: {fileID: 2019725962}
-  m_Layer: 0
-  m_Name: SideStep
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2019725962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019725961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f97ea55d47cdd042ad32388f5d2bd29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2019725963
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019725961}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2022607447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2022607449}
-  - component: {fileID: 2022607448}
-  m_Layer: 0
-  m_Name: Boomer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2022607448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022607447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb426bcfc6441d94d807e73b2ddd59a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2022607449
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022607447}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2024772211
 GameObject:
   m_ObjectHideFlags: 0
@@ -32119,6 +32643,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2036366116
 GameObject:
   m_ObjectHideFlags: 0
@@ -32471,6 +33005,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2052376269
 GameObject:
   m_ObjectHideFlags: 0
@@ -32869,6 +33413,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2088351369
 GameObject:
   m_ObjectHideFlags: 0
@@ -33412,7 +33966,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116415794
 GameObject:
@@ -33583,6 +34137,16 @@ MonoBehaviour:
   - {fileID: 231082022}
   - {fileID: 836967119}
   - {fileID: 1619739871}
+  moneymaker: {fileID: 0}
+  tank: {fileID: 0}
+  sidestep: {fileID: 0}
+  faker: {fileID: 0}
+  healer: {fileID: 0}
+  lightbomber: {fileID: 0}
+  bombcatcher: {fileID: 0}
+  bomber: {fileID: 0}
+  boomer: {fileID: 0}
+  flamethrower: {fileID: 0}
 --- !u!1 &2125965144
 GameObject:
   m_ObjectHideFlags: 0
@@ -33804,7 +34368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SideStep
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AIShipPlacing : MonoBehaviour
 {
+    public bool AISideStepSkill = true;
     public MoneyMaker AIMoneyMaker;
     public Tank AITank;
     public SideStep AISideStep;
@@ -177,7 +178,7 @@ public class AIShipPlacing : MonoBehaviour
 
     void Start()
     {
-        int rnd = Random.Range(0, 4);
+        int rnd = Random.Range(0, 1);
         if (PlayerPrefs.GetString("Map")=="Map1")
         {
             if (rnd == 0)
