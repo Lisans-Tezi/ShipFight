@@ -13471,7 +13471,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1264400409}
   - component: {fileID: 1264400408}
-  - component: {fileID: 1264400410}
   m_Layer: 0
   m_Name: SideStep
   m_TagString: Untagged
@@ -13491,6 +13490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f97ea55d47cdd042ad32388f5d2bd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SideStepSkill: 0
 --- !u!4 &1264400409
 Transform:
   m_ObjectHideFlags: 0
@@ -13506,19 +13506,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1264400410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264400407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c706c6216a7e1449ae6888ff82547b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SideStepSkill: 0
 --- !u!1 &1268056673
 GameObject:
   m_ObjectHideFlags: 0
@@ -20565,7 +20552,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1870155670}
   - component: {fileID: 1870155669}
-  - component: {fileID: 1870155671}
   m_Layer: 0
   m_Name: MoneyMaker
   m_TagString: Untagged
@@ -20585,6 +20571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9312b12dcca27946a732543a2f2813a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  increase: 1
 --- !u!4 &1870155670
 Transform:
   m_ObjectHideFlags: 0
@@ -20600,19 +20587,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870155671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870155668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579623b69843abc468ae48b3f13362a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increase: 1
 --- !u!1 &1870829399
 GameObject:
   m_ObjectHideFlags: 0
@@ -21736,6 +21710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67c5bd28d750f34bb6a29db6756a1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FakerSkill: 0
 --- !u!4 &2041991073
 Transform:
   m_ObjectHideFlags: 0

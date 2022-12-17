@@ -77,7 +77,6 @@ public class PassiveShotting : MonoBehaviour
             DidMatched(x, y);
         }
     }
-
     void DidMatched(int x, int y)
     {
         if((x == moneymaker.FirstPieceI && y == moneymaker.FirstPieceJ) || 
@@ -109,7 +108,7 @@ public class PassiveShotting : MonoBehaviour
             (x == sidestep.SecondPieceI && y == sidestep.SecondPieceJ) || 
             (x == sidestep.ThirdPieceI && y == sidestep.ThirdPieceJ))
         {
-            if (GameObject.Find("SideStep").GetComponent<sidestep>().SideStepSkill)
+            if (GameObject.Find("SideStep").GetComponent<SideStep>().SideStepSkill)
             {
                 if ((x-1>=0) && (x-1 != sidestep.FirstPieceI) && (x-1 != sidestep.SecondPieceI) && (x - 1 != sidestep.ThirdPieceI))
                 {
@@ -154,7 +153,7 @@ public class PassiveShotting : MonoBehaviour
                     IncreaseScore();
                     IsFinished("SideStep");
                 }
-                GameObject.Find("SideStep").GetComponent<sidestep>().SideStepSkill = false;
+                GameObject.Find("SideStep").GetComponent<SideStep>().SideStepSkill = false;
             }
             else
             {
@@ -169,10 +168,22 @@ public class PassiveShotting : MonoBehaviour
             (x == faker.ThirdPieceI && y == faker.ThirdPieceJ) || 
             (x == faker.FourthPieceI && y == faker.FourthPieceJ))
         {
-            gameObject.GetComponent<Image>().color = redColor;
-            faker.HittedPiece++;
-            IncreaseScore();
-            IsFinished("Faker");
+            if (faker.FakerSkill == false)
+            {
+                faker.PassiveSkill(faker);
+                faker.FakerSkill = true;
+                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
+                gameObject.GetComponent<Image>().color = blueColor;
+                FailedShot();
+            }
+            else
+            {
+                gameObject.GetComponent<Image>().color = redColor;
+                faker.HittedPiece++;
+                IncreaseScore();
+                IsFinished("Faker");
+            }
+            
         }
         else if ((x == healer.FirstPieceI && y == healer.FirstPieceJ) ||
             (x == healer.SecondPieceI && y == healer.SecondPieceJ) ||
@@ -265,7 +276,7 @@ public class PassiveShotting : MonoBehaviour
             if (moneymaker.HittedPiece == moneymaker.Piece)
             {
                 ImageActiveControl(0);
-                GameObject.Find("MoneyMaker").GetComponent<moneymaker>().increase=0;
+                GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().increase=0;
             }                               
         }                   
         else if (Name == "Tank")
@@ -391,6 +402,8 @@ public class PassiveShotting : MonoBehaviour
             p.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.white;
             p.GetComponent<PassiveAttribute>().isSelected = false;
         });
+
+        map=healer.PassiveSkill(map,whiteColor);
         PlayerPrefs.SetInt("HitPerTurn", 3);
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera();
     }

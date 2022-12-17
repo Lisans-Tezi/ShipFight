@@ -26,7 +26,7 @@ public class Control : MonoBehaviour
     {
         if (ship == "MoneyMaker")
         {
-            GameObject.Find("MoneyMaker").GetComponent<moneymaker>().PassiveAttribute();
+            GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().PassiveSkill();
         }
         else if (ship == "Tank")
         {

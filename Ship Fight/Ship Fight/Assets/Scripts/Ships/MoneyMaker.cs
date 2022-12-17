@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using TMPro;
 using UnityEngine;
 
 public class MoneyMaker : MonoBehaviour
@@ -19,4 +22,16 @@ public class MoneyMaker : MonoBehaviour
     public string PassiveAttribute { get; set; }
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
+
+    string point = "";
+    int Point = 0;
+    public int increase = 1;
+    public void PassiveSkill()
+    {
+        point = GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text;
+        Point = Convert.ToInt32(point);
+        Point += increase;
+        point = Point.ToString();
+        GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point;
+    }
 }

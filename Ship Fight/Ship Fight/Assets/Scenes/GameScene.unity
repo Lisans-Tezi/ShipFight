@@ -873,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9312b12dcca27946a732543a2f2813a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  increase: 1
 --- !u!4 &60782660
 Transform:
   m_ObjectHideFlags: 0
@@ -4532,6 +4533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67c5bd28d750f34bb6a29db6756a1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FakerSkill: 0
 --- !u!4 &332232170
 Transform:
   m_ObjectHideFlags: 0
@@ -7588,6 +7590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f97ea55d47cdd042ad32388f5d2bd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SideStepSkill: 0
 --- !u!4 &481505095
 Transform:
   m_ObjectHideFlags: 0
@@ -8023,7 +8026,7 @@ GameObject:
   - component: {fileID: 526700462}
   - component: {fileID: 526700461}
   m_Layer: 5
-  m_Name: Game
+  m_Name: AIGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
