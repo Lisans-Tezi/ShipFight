@@ -11,6 +11,9 @@ public class PassiveShotting : MonoBehaviour
     public Image Map;
     public GameObject[,] map = new GameObject[10, 10];
 
+    public Image AIMap;
+    public GameObject[,] AImap = new GameObject[10, 10];
+
     public Image FirstShip;
     public Image SecondShip;
     public Image ThirdShip;
@@ -63,6 +66,14 @@ public class PassiveShotting : MonoBehaviour
                 map[i, j] = Map.transform.GetChild(k).gameObject;
                 k++;
             }
+
+        k = 0;
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+            {
+                AImap[i, j] = AIMap.transform.GetChild(k).gameObject;
+                k++;
+            }
     }
     public void Shot()
     {
@@ -85,6 +96,9 @@ public class PassiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             moneymaker.HittedPiece++;             
             IncreaseScore();
+            map=flamethrower.PassiveSkill(map,"MoneyMaker");
+            PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+            IncreaseScore();
             IsFinished("MoneyMaker");
         }
         else if((x == tank.FirstPieceI && y == tank.FirstPieceJ) || 
@@ -95,11 +109,17 @@ public class PassiveShotting : MonoBehaviour
             {
                 gameObject.GetComponent<Image>().color = Color.yellow;
                 IncreaseScore();
+                map = flamethrower.PassiveSkill(map, "Tank");
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                IncreaseScore();
+                IsFinished("Tank");
+
             }
             else if (gameObject.GetComponent<Image>().color == Color.yellow)
             {
                 gameObject.GetComponent<Image>().color = redColor;
                 tank.HittedPiece++;
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
                 IncreaseScore();
                 IsFinished("Tank");
             }              
@@ -108,7 +128,7 @@ public class PassiveShotting : MonoBehaviour
             (x == sidestep.SecondPieceI && y == sidestep.SecondPieceJ) || 
             (x == sidestep.ThirdPieceI && y == sidestep.ThirdPieceJ))
         {
-            if (GameObject.Find("SideStep").GetComponent<SideStep>().SideStepSkill)
+            if (sidestep.SideStepSkill)
             {
                 if ((x-1>=0) && (x-1 != sidestep.FirstPieceI) && (x-1 != sidestep.SecondPieceI) && (x - 1 != sidestep.ThirdPieceI))
                 {
@@ -117,6 +137,7 @@ public class PassiveShotting : MonoBehaviour
                     {
                         map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         FailedShot();
+                        sidestep.PassiveSkill();
                     }    
                 }
                 else if ((x + 1 <= 9) && (x + 1 != sidestep.FirstPieceI) && (x + 1 != sidestep.SecondPieceI) && (x + 1 != sidestep.ThirdPieceI))
@@ -126,6 +147,7 @@ public class PassiveShotting : MonoBehaviour
                     {
                         map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         FailedShot();
+                        sidestep.PassiveSkill();
                     }
                 }
                 else if ((y - 1 >= 0) && (y - 1 != sidestep.FirstPieceJ) && (y - 1 != sidestep.SecondPieceJ) && (y - 1 != sidestep.ThirdPieceJ))
@@ -135,6 +157,7 @@ public class PassiveShotting : MonoBehaviour
                     {
                         map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
                         FailedShot();
+                        sidestep.PassiveSkill();
                     }
                 }
                 else if ((y + 1 <= 9) && (y + 1 != sidestep.FirstPieceJ) && (y + 1 != sidestep.SecondPieceJ) && (y + 1 != sidestep.ThirdPieceJ))
@@ -144,21 +167,26 @@ public class PassiveShotting : MonoBehaviour
                     {
                         map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
                         FailedShot();
+                        sidestep.PassiveSkill();
                     }
                 }
                 else
                 {
                     gameObject.GetComponent<Image>().color = redColor;
                     sidestep.HittedPiece++;
-                    IncreaseScore();
+                    PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                    IncreaseScore();                        
                     IsFinished("SideStep");
-                }
-                GameObject.Find("SideStep").GetComponent<SideStep>().SideStepSkill = false;
+                    sidestep.PassiveSkill();
+                }                            
             }
             else
             {
                 gameObject.GetComponent<Image>().color = redColor;
                 sidestep.HittedPiece++;
+                IncreaseScore();
+                map = flamethrower.PassiveSkill(map, "SideStep");
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
                 IncreaseScore();
                 IsFinished("SideStep");
             }               
@@ -181,9 +209,11 @@ public class PassiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 faker.HittedPiece++;
                 IncreaseScore();
+                map = flamethrower.PassiveSkill(map, "Faker");
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                IncreaseScore();
                 IsFinished("Faker");
-            }
-            
+            }             
         }
         else if ((x == healer.FirstPieceI && y == healer.FirstPieceJ) ||
             (x == healer.SecondPieceI && y == healer.SecondPieceJ) ||
@@ -192,6 +222,9 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             healer.HittedPiece++;
+            IncreaseScore();
+            map = flamethrower.PassiveSkill(map, "Healer");
+            PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
             IncreaseScore();
             IsFinished("Healer");
         }
@@ -203,6 +236,10 @@ public class PassiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             lightbomber.HittedPiece++;
             IncreaseScore();
+            map = flamethrower.PassiveSkill(map, "LightBomber");
+            PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+            IncreaseScore();
+            AImap =lightbomber.AIPassiveSkill(AImap);
             IsFinished("LightBomber");
         }
         else if ((x == bombcatcher.FirstPieceI && y == bombcatcher.FirstPieceJ) ||
@@ -213,7 +250,18 @@ public class PassiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             bombcatcher.HittedPiece++;
-            IncreaseScore();
+            IncreaseScore();               
+            if (bombcatcher.control == true)
+            {
+                map = flamethrower.PassiveSkill(map, "BombCatcher");
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                IncreaseScore();
+            }    
+            else
+            {
+                bombcatcher.PassiveSkill();
+                IncreaseScore();
+            }
             IsFinished("BombCatcher");
         }
         else if ((x == bomber.FirstPieceI && y == bomber.FirstPieceJ) ||
@@ -221,9 +269,12 @@ public class PassiveShotting : MonoBehaviour
            (x == bomber.ThirdPieceI && y == bomber.ThirdPieceJ) ||
            (x == bomber.FourthPieceI && y == bomber.FourthPieceJ) ||
            (x == bomber.FifthPieceI && y == bomber.FifthPieceJ))
-        {
+        {                         
             gameObject.GetComponent<Image>().color = redColor;
             bomber.HittedPiece++;
+            IncreaseScore();
+            map = flamethrower.PassiveSkill(map, "Bomber");
+            PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
             IncreaseScore();
             IsFinished("Bomber");
         }
@@ -237,6 +288,18 @@ public class PassiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             boomer.HittedPiece++;
             IncreaseScore();
+            boomer.PassiveSkill();
+            if (boomer.HittedPiece >= 2)
+            {
+                map = flamethrower.PassiveSkill(map, "Boomer");
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                IncreaseScore();
+            }
+            else
+            {
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                IncreaseScore();
+            }
             IsFinished("Boomer");
         }
         else if ((x == flamethrower.FirstPieceI && y == flamethrower.FirstPieceJ) ||
@@ -246,17 +309,29 @@ public class PassiveShotting : MonoBehaviour
            (x == flamethrower.FifthPieceI && y == flamethrower.FifthPieceJ) ||
            (x == flamethrower.SixthPieceI && y == flamethrower.SixthPieceJ) ||
            (x == flamethrower.SeventhPieceI && y == flamethrower.SeventhPieceJ))
-        {
+        {                              
             gameObject.GetComponent<Image>().color = redColor;
             flamethrower.HittedPiece++;
             IncreaseScore();
+            map = flamethrower.PassiveSkill(map, "FlameThrower");
+            PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+            IncreaseScore();             
             IsFinished("FlameThrower");
         }
         else
         {
-            GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
-            gameObject.GetComponent<Image>().color = blueColor;
-            FailedShot();    
+            if (PlayerPrefs.GetString("ShootingShip") == "Bomber" && bomber.control != true)
+            {
+                map = bomber.PassiveSkill(map);
+                bomber.control = true;
+                IncreaseScore();
+            }
+            else
+            {
+                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
+                gameObject.GetComponent<Image>().color = blueColor;
+                FailedShot();
+            }                  
         } 
     }
     void FailedShot()
@@ -264,7 +339,9 @@ public class PassiveShotting : MonoBehaviour
         for (int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++)
                 if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
-                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                {   
+                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;                     
+                }                     
 
         GameObject.Find("GameManager").GetComponent<Control>().control();
         Invoke("SkipRound", 1.5f);
@@ -301,7 +378,7 @@ public class PassiveShotting : MonoBehaviour
         }
         else if (Name == "LightBomber")
         {
-            if (lightbomber.HittedPiece == lightbomber.Piece)
+            if (lightbomber.HittedPiece == lightbomber.Piece+1)
                 ImageActiveControl(5);
         }
         else if (Name == "BombCatcher")
@@ -377,10 +454,8 @@ public class PassiveShotting : MonoBehaviour
         int point= Convert.ToInt32(GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text);
         point++;
         GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point.ToString();
-
-        PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
         
-        if(PlayerPrefs.GetInt("HitPerTurn") == 0)
+        if(PlayerPrefs.GetInt("HitPerTurn") <= 0)
         {
             GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().ToManyShot();
             for (int i = 0; i < 10; i++)
@@ -403,7 +478,10 @@ public class PassiveShotting : MonoBehaviour
             p.GetComponent<PassiveAttribute>().isSelected = false;
         });
 
-        map=healer.PassiveSkill(map,whiteColor);
+        if (healer.FirstPieceI>=0)
+        {
+            map = healer.PassiveSkill(map, whiteColor);
+        }           
         PlayerPrefs.SetInt("HitPerTurn", 3);
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera();
     }

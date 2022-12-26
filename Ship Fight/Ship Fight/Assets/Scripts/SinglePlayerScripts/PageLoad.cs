@@ -51,9 +51,7 @@ public class PageLoad : MonoBehaviour
 
     void ChoseMap()
     {
-        Map0();
-        /*
-        int rnd = Random.Range(1,2);
+        int rnd = Random.Range(2,3);
         if (rnd == 0)
             Map0();
         else if(rnd==1)
@@ -64,7 +62,6 @@ public class PageLoad : MonoBehaviour
             Map3();
         else
             Map4();
-        */
     }
     void Map0()
     {

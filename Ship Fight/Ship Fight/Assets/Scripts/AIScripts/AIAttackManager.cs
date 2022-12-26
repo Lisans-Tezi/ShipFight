@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class AIAttackManager : MonoBehaviour
 {
     public Image Map;
+    public Image AIMap;
     GameObject[,] map = new GameObject[10, 10];
+    GameObject[,] AImap = new GameObject[10, 10];
 
     Color whiteColor = new Color32(255, 255, 255, 150);
     Color redColor = new Color32(255, 0, 0, 150);
@@ -16,9 +18,20 @@ public class AIAttackManager : MonoBehaviour
     void Start()
     {
         Create();
+        CreateAIMap();
         
         PlayerPrefs.SetInt("AIAttackHitPerTurn",3);
         InvokeRepeating("Attack",2,2);
+    }       
+    void CreateAIMap()
+    {
+        int k = 0;
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+            {
+                AImap[i, j] = AIMap.transform.GetChild(k).gameObject;
+                k++;
+            }
     }
     void Create()
     {
@@ -37,7 +50,7 @@ public class AIAttackManager : MonoBehaviour
             if (PlayerPrefs.GetInt("AIAttackHitPerTurn") > 0)
             {
                 int x = Random.Range(0, 10);
-                int y = Random.Range(0, 10);                         
+                int y = Random.Range(0, 10);
 
                 if (map[x, y].gameObject.GetComponent<Image>().color == Color.black)
                 {
@@ -57,6 +70,16 @@ public class AIAttackManager : MonoBehaviour
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
                     }
                     else if(AttackHealer(x,y))
+                    {
+                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                    }
+                    else if (AttackLightBomber(x,y))
+                    {
+                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
+                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                    }
+                    else if (AttackBombCatcher(x, y))
                     {
                         PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
@@ -111,7 +134,8 @@ public class AIAttackManager : MonoBehaviour
             (x == Tank.ThirdPieceI && y == Tank.ThirdPieceJ))
         {
             map[x, y].gameObject.GetComponent<Image>().color = Color.yellow;
-            return true;
+            Tank.HittedPiece++;
+            return true;                 
         }
         return false;
     }
@@ -122,7 +146,7 @@ public class AIAttackManager : MonoBehaviour
             (x == SideStep.SecondPieceI && y == SideStep.SecondPieceJ) ||
             (x == SideStep.ThirdPieceI && y == SideStep.ThirdPieceJ))
         {
-            if (GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AISideStepSkill)
+            if (SideStep.SideStepSkill)
             {
                 if (x - 1 >= 0 && (x - 1 != SideStep.FirstPieceI) && (x - 1 != SideStep.SecondPieceI) && (x - 1 != SideStep.ThirdPieceI))
                 {
@@ -131,6 +155,7 @@ public class AIAttackManager : MonoBehaviour
                     {
                         map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        SideStep.PassiveSkill();
                         Invoke("SkipRound", 1.5f);
                     }                       
                 }
@@ -141,6 +166,7 @@ public class AIAttackManager : MonoBehaviour
                     {
                         map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        SideStep.PassiveSkill();
                         Invoke("SkipRound", 1.5f);
                     }                        
                 }
@@ -151,6 +177,7 @@ public class AIAttackManager : MonoBehaviour
                     {
                         map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        SideStep.PassiveSkill();
                         Invoke("SkipRound", 1.5f);
                     }                        
                 }
@@ -161,19 +188,21 @@ public class AIAttackManager : MonoBehaviour
                     {
                         map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                        SideStep.PassiveSkill();
                         Invoke("SkipRound", 1.5f);
                     }                    
                 }
                 else
                 {
                     map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                    SideStep.PassiveSkill();
                 }
-                GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AISideStepSkill = false;
                 return true;
             }
             else
             {
                 map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                SideStep.HittedPiece++;
                 return true;
             }
         }
@@ -196,6 +225,7 @@ public class AIAttackManager : MonoBehaviour
             {
                 map[x, y].gameObject.GetComponent<Image>().color = redColor;
             }
+            Faker.HittedPiece++;
             return true;
         }
         return false;
@@ -209,6 +239,38 @@ public class AIAttackManager : MonoBehaviour
           (x == Healer.FourthPieceI && y == Healer.FourthPieceJ))
         {                 
             map[x, y].gameObject.GetComponent<Image>().color = redColor;
+            Healer.HittedPiece++;
+            return true;
+        }
+        return false;
+    }
+    bool AttackLightBomber(int x, int y)
+    {
+        var LightBomber = GameObject.Find("LightBomber").GetComponent<LightBomber>();
+        if ((x == LightBomber.FirstPieceI && y == LightBomber.FirstPieceJ) ||
+          (x == LightBomber.SecondPieceI && y == LightBomber.SecondPieceJ) ||
+          (x == LightBomber.ThirdPieceI && y == LightBomber.ThirdPieceJ) ||
+          (x == LightBomber.FourthPieceI && y == LightBomber.FourthPieceJ))
+        {
+            map[x, y].gameObject.GetComponent<Image>().color = redColor;
+            LightBomber.HittedPiece++;              
+            AImap = LightBomber.AIPassiveSkill(AImap);              
+            return true;
+        }
+        return false;
+    }
+    bool AttackBombCatcher(int x, int y)
+    {
+        var BombCatcher = GameObject.Find("BombCatcher").GetComponent<BombCatcher>();
+        if ((x == BombCatcher.FirstPieceI && y == BombCatcher.FirstPieceJ) ||
+          (x == BombCatcher.SecondPieceI && y == BombCatcher.SecondPieceJ) ||
+          (x == BombCatcher.ThirdPieceI && y == BombCatcher.ThirdPieceJ) ||
+          (x == BombCatcher.FourthPieceI && y == BombCatcher.FourthPieceJ) || 
+          (x == BombCatcher.FifthPieceI && y == BombCatcher.FifthPieceJ))
+        {
+            map[x, y].gameObject.GetComponent<Image>().color = redColor;
+            BombCatcher.HittedPiece++;
+            BombCatcher.AIPassiveSkill();
             return true;
         }
         return false;
@@ -219,12 +281,17 @@ public class AIAttackManager : MonoBehaviour
     }
     void SkipRound()
     {
-        var Healer = GameObject.Find("Healer").GetComponent<Healer>(); 
-        map = Healer.PassiveSkill(map,Color.black);
+        var Healer = GameObject.Find("Healer").GetComponent<Healer>();
+        if (Healer.FirstPieceI>=0)
+        {
+            map = Healer.PassiveSkill(map, Color.black);
+        }           
 
         PlayerPrefs.SetInt("AIAttackHitPerTurn", 3);
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera(true);
     }
+
+    
 }
 
 

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class AIShipPlacing : MonoBehaviour
 {
-    public bool AISideStepSkill = true;
     public MoneyMaker AIMoneyMaker;
     public Tank AITank;
     public SideStep AISideStep;
@@ -55,6 +54,7 @@ public class AIShipPlacing : MonoBehaviour
         AISideStep.PassiveAttribute = "";
         AISideStep.ActiveAttribute = "";
         AISideStep.ActiveAttributeCost = 10;
+        AISideStep.SideStepSkill = true;
 
         AIFaker.Name = "Faker";
         AIFaker.Piece = 4;
@@ -178,8 +178,6 @@ public class AIShipPlacing : MonoBehaviour
 
     void Start()
     {
-        AISecondMap0();
-        /*
         int rnd = Random.Range(0, 1);
         if (PlayerPrefs.GetString("Map")=="Map1")
         {
@@ -235,8 +233,7 @@ public class AIShipPlacing : MonoBehaviour
                 AIThirdMap0();
             else if (rnd == 3)
                 AIFourthMap0();
-        }    
-        */
+        } 
     }
     void AIFirstMap0()
     {
@@ -300,7 +297,7 @@ public class AIShipPlacing : MonoBehaviour
         MoneyMaker(2, 1, 3, 1);
         SideStep(8, 7, 9, 7, 9, 8);
         Faker(0, 3, 0, 4, 0, 5, 0, 6);
-        BombCatcher(0, 9, 1, 9, 2, 9, 3, 9, 4, 9);
+        BombCatcher(3, 9, 4, 9, 5, 9, 6, 9, 7, 9);
         FlameThrower(0, 7, 0, 8, 0, 9, 1, 9, 2, 9, 2, 8, 2, 7);
     }
     

@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -660,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -1036,6 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -1445,6 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -1624,6 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -2057,6 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -2703,6 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -2882,6 +2889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -3061,6 +3069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -3316,6 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -3728,6 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -3983,6 +3994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -4472,6 +4484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -4846,6 +4859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -5025,6 +5039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -5402,6 +5417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -5581,6 +5597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -5760,6 +5777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -6015,6 +6033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -6194,6 +6213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -6373,6 +6393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -6552,6 +6573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -6731,6 +6753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -7529,6 +7552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -7981,6 +8005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -8557,6 +8582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -8736,6 +8762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -8993,6 +9020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -9518,6 +9546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -9774,6 +9803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -10088,6 +10118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -10399,6 +10430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 526700462}
+  AIMap: {fileID: 459485011}
 --- !u!1 &679722315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11112,6 +11144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -11367,6 +11400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -11622,6 +11656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -11880,6 +11915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -12059,6 +12095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -12314,6 +12351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -12704,6 +12742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -12883,6 +12922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -13295,6 +13335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -13474,6 +13515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -13864,6 +13906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -14892,6 +14935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -15071,6 +15115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -15250,6 +15295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -15581,6 +15627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -15760,6 +15807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -15939,6 +15987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -16118,6 +16167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -16452,6 +16502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -16751,6 +16802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -17213,6 +17265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -18183,6 +18236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -18362,6 +18416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -18617,6 +18672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -18796,6 +18852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -19110,6 +19167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -19446,6 +19504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -19701,6 +19760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -19880,6 +19940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -20059,6 +20120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -20314,6 +20376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -20493,6 +20556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -20961,6 +21025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -21140,6 +21205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -21395,6 +21461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -21908,6 +21975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -22239,6 +22307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -22874,6 +22943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -23338,6 +23408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -23905,6 +23976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -24084,6 +24156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -24369,6 +24442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -24731,6 +24805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -25214,6 +25289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -25513,6 +25589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -25768,6 +25845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -25947,6 +26025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -26202,6 +26281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -26381,6 +26461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -26758,6 +26839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -26937,6 +27019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -27116,6 +27199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -27295,6 +27379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -28163,6 +28248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -28418,6 +28504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -28825,6 +28912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -29004,6 +29092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -29183,6 +29272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -29362,6 +29452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -30023,6 +30114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -30202,6 +30294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -30612,6 +30705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -31783,6 +31877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -32114,6 +32209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -32293,6 +32389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -32624,6 +32721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -32986,6 +33084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -33394,6 +33493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}
@@ -34118,6 +34218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 459485011}
+  AIMap: {fileID: 526700462}
   FirstShip: {fileID: 1005681733}
   SecondShip: {fileID: 1084377946}
   ThirdShip: {fileID: 2138957990}

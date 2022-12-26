@@ -221,25 +221,25 @@ public class PassiveAttribute : MonoBehaviour
 
     void FindShootingShip()
     {
-        if (ShipNameText.name == "MoneyMaker")
+        if (ShipNameText.text == "MoneyMaker")
             PlayerPrefs.SetString("ShootingShip", "MoneyMaker");
-        else if (ShipNameText.name == "Tank")
+        else if (ShipNameText.text == "Tank")
             PlayerPrefs.SetString("ShootingShip", "Tank");
-        else if (ShipNameText.name == "SideStep")
+        else if (ShipNameText.text == "SideStep")
             PlayerPrefs.SetString("ShootingShip", "SideStep");
-        else if (ShipNameText.name == "Faker")
+        else if (ShipNameText.text == "Faker")
             PlayerPrefs.SetString("ShootingShip", "Faker");
-        else if (ShipNameText.name == "Healer")
+        else if (ShipNameText.text == "Healer")
             PlayerPrefs.SetString("ShootingShip", "Healer");
-        else if (ShipNameText.name == "LightBomber")
+        else if (ShipNameText.text == "LightBomber")
             PlayerPrefs.SetString("ShootingShip", "LightBomber");
-        else if (ShipNameText.name == "BombCatcher")
+        else if (ShipNameText.text == "BombCatcher")
             PlayerPrefs.SetString("ShootingShip", "BombCatcher");
-        else if (ShipNameText.name == "Bomber")
+        else if (ShipNameText.text == "Bomber")
             PlayerPrefs.SetString("ShootingShip", "Bomber");
-        else if (ShipNameText.name == "Boomer")
+        else if (ShipNameText.text == "Boomer")
             PlayerPrefs.SetString("ShootingShip", "Boomer");
-        else if (ShipNameText.name == "FlameThrower")
+        else if (ShipNameText.text == "FlameThrower")
             PlayerPrefs.SetString("ShootingShip", "FlameThrower");
     }
 }

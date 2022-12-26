@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Boomer : MonoBehaviour
@@ -26,4 +27,12 @@ public class Boomer : MonoBehaviour
     public string PassiveAttribute { get; set; }
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
+
+    public void PassiveSkill()
+    {
+        if (HittedPiece==1)
+        {
+            GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = "0";
+        }
+    }
 }

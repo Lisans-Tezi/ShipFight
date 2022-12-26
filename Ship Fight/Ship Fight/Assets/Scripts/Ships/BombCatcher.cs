@@ -24,4 +24,23 @@ public class BombCatcher : MonoBehaviour
     public string PassiveAttribute { get; set; }
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
+
+    public bool control = false;
+    bool AIcontrol = false;
+    public void PassiveSkill()
+    {
+        if (!control)
+        {
+            PlayerPrefs.SetInt("HitPerTurn", 0);
+            control = true;
+        }            
+    }
+    public void AIPassiveSkill()
+    {
+        if (!AIcontrol)
+        {
+            PlayerPrefs.SetInt("AIAttackHitPerTurn", 0);
+            AIcontrol = true;
+        }              
+    }
 }

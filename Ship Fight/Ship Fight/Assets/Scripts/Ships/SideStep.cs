@@ -21,9 +21,9 @@ public class SideStep : MonoBehaviour
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
 
-    public bool SideStepSkill;
+    public bool SideStepSkill=true;
     public void PassiveSkill()
     {
-        SideStepSkill = true;
+        SideStepSkill = false;
     }
 }
