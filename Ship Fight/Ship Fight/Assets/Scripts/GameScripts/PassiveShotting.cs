@@ -40,7 +40,7 @@ public class PassiveShotting : MonoBehaviour
     public Boomer boomer;
     public FlameThrower flamethrower;
 
-    private void Start()
+    void Start()
     {
         Create();
 
@@ -324,6 +324,7 @@ public class PassiveShotting : MonoBehaviour
             {
                 map = bomber.PassiveSkill(map);
                 bomber.control = true;
+                PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
                 IncreaseScore();
             }
             else

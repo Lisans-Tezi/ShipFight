@@ -76,11 +76,6 @@ public class GameManager : MonoBehaviour
         ship5NameText.text = Ship5.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
 
 
-        ship1ActiveBtn.GetComponent<Button>().enabled = false;
-        ship2ActiveBtn.GetComponent<Button>().enabled = false;
-        ship3ActiveBtn.GetComponent<Button>().enabled = false;
-        ship4ActiveBtn.GetComponent<Button>().enabled = false;
-        ship5ActiveBtn.GetComponent<Button>().enabled = false;
     }
 
     void Place(Image ship)

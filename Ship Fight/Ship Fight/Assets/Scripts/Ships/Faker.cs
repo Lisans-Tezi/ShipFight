@@ -36,10 +36,12 @@ public class Faker : MonoBehaviour
 
     public GameObject[,] AIPassiveSkill(GameObject[,] map)
     {
+        var faker = GameObject.Find("Faker").GetComponent<Faker>();
         if (FirstPieceI == SecondPieceI)
         {
             //yatay
-            if (map[FirstPieceI - 1, FirstPieceJ].GetComponent<Image>().color == whiteColor &&
+            if (faker.FirstPieceI - 1 > 0 &&
+                map[FirstPieceI - 1, FirstPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[SecondPieceI - 1, SecondPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[ThirdPieceI - 1, ThirdPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[FourthPieceI - 1, FourthPieceJ].GetComponent<Image>().color == whiteColor)
@@ -50,7 +52,8 @@ public class Faker : MonoBehaviour
                 ThirdPieceI--;
                 FourthPieceI--; 
             }      
-            else if(map[FirstPieceI + 1, FirstPieceJ].GetComponent<Image>().color == whiteColor &&
+            else if(faker.FirstPieceI + 1 < 9 &&
+                map[FirstPieceI + 1, FirstPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[SecondPieceI + 1, SecondPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[ThirdPieceI + 1, ThirdPieceJ].GetComponent<Image>().color == whiteColor &&
                 map[FourthPieceI + 1, FourthPieceJ].GetComponent<Image>().color == whiteColor)
@@ -65,7 +68,8 @@ public class Faker : MonoBehaviour
         else
         {
             //dikey
-            if (map[FirstPieceI, FirstPieceJ - 1].GetComponent<Image>().color == whiteColor &&
+            if (faker.FirstPieceJ - 1 > 0 && 
+               map[FirstPieceI, FirstPieceJ - 1].GetComponent<Image>().color == whiteColor &&
                map[SecondPieceI, SecondPieceJ - 1].GetComponent<Image>().color == whiteColor &&
                map[ThirdPieceI, ThirdPieceJ - 1].GetComponent<Image>().color == whiteColor &&
                map[FourthPieceI, FourthPieceJ - 1].GetComponent<Image>().color == whiteColor)
@@ -76,7 +80,8 @@ public class Faker : MonoBehaviour
                 ThirdPieceJ--;
                 FourthPieceJ--;
             }
-            else if (map[FirstPieceI, FirstPieceJ + 1].GetComponent<Image>().color == whiteColor &&
+            else if (faker.FirstPieceJ + 1 < 9 && 
+                map[FirstPieceI, FirstPieceJ + 1].GetComponent<Image>().color == whiteColor &&
                 map[SecondPieceI, SecondPieceJ + 1].GetComponent<Image>().color == whiteColor &&
                 map[ThirdPieceI, ThirdPieceJ + 1].GetComponent<Image>().color == whiteColor &&
                 map[FourthPieceI, FourthPieceJ + 1].GetComponent<Image>().color == whiteColor)

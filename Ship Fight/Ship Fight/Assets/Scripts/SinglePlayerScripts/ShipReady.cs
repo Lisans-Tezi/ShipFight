@@ -42,7 +42,7 @@ public class ShipReady : MonoBehaviour
         MoneyMaker.SecondPieceJ = -1;
         MoneyMaker.PassiveAttribute = "";
         MoneyMaker.ActiveAttribute = "";
-        MoneyMaker.ActiveAttributeCost = 10;
+        MoneyMaker.ActiveAttributeCost = 2;
 
         Tank.Name = null;
         Tank.Piece = 3;
@@ -55,7 +55,7 @@ public class ShipReady : MonoBehaviour
         Tank.ThirdPieceJ = -1;
         Tank.PassiveAttribute = "";
         Tank.ActiveAttribute = "";
-        Tank.ActiveAttributeCost = 10;
+        Tank.ActiveAttributeCost = 3;
 
         SideStep.Name = null;
         SideStep.Piece = 3;
@@ -68,7 +68,7 @@ public class ShipReady : MonoBehaviour
         SideStep.ThirdPieceJ = -1;
         SideStep.PassiveAttribute = "";
         SideStep.ActiveAttribute = "";
-        SideStep.ActiveAttributeCost = 10;
+        SideStep.ActiveAttributeCost = 4;
 
         Faker.Name = null;
         Faker.Piece = 4;
@@ -83,7 +83,7 @@ public class ShipReady : MonoBehaviour
         Faker.FourthPieceJ = -1;
         Faker.PassiveAttribute = "";
         Faker.ActiveAttribute = "";
-        Faker.ActiveAttributeCost = 10;
+        Faker.ActiveAttributeCost = 5;
 
         Healer.Name = null;
         Healer.Piece = 4;
@@ -98,7 +98,7 @@ public class ShipReady : MonoBehaviour
         Healer.FourthPieceJ = -1;
         Healer.PassiveAttribute = "";
         Healer.ActiveAttribute = "";
-        Healer.ActiveAttributeCost = 10;
+        Healer.ActiveAttributeCost = 6;
 
         LightBomber.Name = null;
         LightBomber.Piece = 4;
@@ -113,7 +113,7 @@ public class ShipReady : MonoBehaviour
         LightBomber.FourthPieceJ = -1;
         LightBomber.PassiveAttribute = "";
         LightBomber.ActiveAttribute = "";
-        LightBomber.ActiveAttributeCost = 10;
+        LightBomber.ActiveAttributeCost = 7;
 
         BombCatcher.Name = null;
         BombCatcher.Piece = 5;
@@ -130,7 +130,7 @@ public class ShipReady : MonoBehaviour
         BombCatcher.FifthPieceJ = -1;
         BombCatcher.PassiveAttribute = "";
         BombCatcher.ActiveAttribute = "";
-        BombCatcher.ActiveAttributeCost = 10;
+        BombCatcher.ActiveAttributeCost = 8;
 
         Bomber.Name = null;
         Bomber.Piece = 5;
@@ -147,7 +147,7 @@ public class ShipReady : MonoBehaviour
         Bomber.FifthPieceJ = -1;
         Bomber.PassiveAttribute = "";
         Bomber.ActiveAttribute = "";
-        Bomber.ActiveAttributeCost = 10;
+        Bomber.ActiveAttributeCost = 9;
 
         Boomer.Name = null;
         Boomer.Piece = 6;
@@ -187,7 +187,7 @@ public class ShipReady : MonoBehaviour
         FlameThrower.SeventhPieceJ = -1;
         FlameThrower.PassiveAttribute = "";
         FlameThrower.ActiveAttribute = "";
-        FlameThrower.ActiveAttributeCost = 10;
+        FlameThrower.ActiveAttributeCost = 11;
     }
 
     void Start()
