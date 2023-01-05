@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +36,14 @@ public class FlameThrower : MonoBehaviour
     Color greenColor = new Color32(0, 255, 0, 200);
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
+
+    void IncreaseScore()
+    {
+        int point = Convert.ToInt32(GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text);
+        point++;
+        GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point.ToString();
+    }
+
     public GameObject[,] PassiveSkill(GameObject[,] map, string Ship)
     {
         if (PlayerPrefs.GetString("ShootingShip")=="FlameThrower")
@@ -52,6 +62,7 @@ public class FlameThrower : MonoBehaviour
                         map[MoneyMaker.FirstPieceI, MoneyMaker.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     MoneyMaker.HittedPiece++;
+                    IncreaseScore();
                 }
             }
             if (Ship=="Tank")
@@ -72,6 +83,7 @@ public class FlameThrower : MonoBehaviour
                         map[Tank.ThirdPieceI, Tank.ThirdPieceJ].GetComponent<Image>().color = redColor;
                     }
                     Tank.HittedPiece++;
+                    IncreaseScore();
                 }
             }
             if (Ship=="SideStep")
@@ -95,6 +107,7 @@ public class FlameThrower : MonoBehaviour
                         map[SideStep.FirstPieceI, SideStep.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     SideStep.HittedPiece++;
+                    IncreaseScore();
                 }                
             }
             if (Ship == "Faker")
@@ -125,6 +138,7 @@ public class FlameThrower : MonoBehaviour
                         map[Faker.FirstPieceI, Faker.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     Faker.HittedPiece++;
+                    IncreaseScore();
                 }                   
             }
             if (Ship == "Healer")
@@ -155,6 +169,7 @@ public class FlameThrower : MonoBehaviour
                         map[Healer.FirstPieceI, Healer.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     Healer.HittedPiece++;
+                    IncreaseScore();
                 }                    
             }
             if (Ship == "LightBomber")
@@ -185,6 +200,7 @@ public class FlameThrower : MonoBehaviour
                         map[LightBomber.FirstPieceI, LightBomber.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     LightBomber.HittedPiece++;
+                    IncreaseScore();
                 }                       
             }
             if (Ship == "BombCatcher")
@@ -222,6 +238,7 @@ public class FlameThrower : MonoBehaviour
                         map[BombCatcher.FirstPieceI, BombCatcher.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     BombCatcher.HittedPiece++;
+                    IncreaseScore();
                 }                     
             }
             if (Ship == "Bomber")
@@ -259,6 +276,7 @@ public class FlameThrower : MonoBehaviour
                         map[Bomber.FirstPieceI, Bomber.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     Bomber.HittedPiece++;
+                    IncreaseScore();
                 }                     
             }
             if (Ship == "Boomer")
@@ -303,6 +321,7 @@ public class FlameThrower : MonoBehaviour
                         map[Boomer.FirstPieceI, Boomer.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     Boomer.HittedPiece++;
+                    IncreaseScore();
                 }                      
             }
             if (Ship == "FlameThrower")
@@ -354,6 +373,7 @@ public class FlameThrower : MonoBehaviour
                         map[FlameThrower.FirstPieceI, FlameThrower.FirstPieceJ].GetComponent<Image>().color = redColor;
                     }
                     FlameThrower.HittedPiece++;
+                    IncreaseScore();
                 }                   
             }
         }

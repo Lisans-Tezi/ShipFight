@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 87
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 42
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 43
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 261
     height: 490
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 309
     height: 675
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b8740000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5a5dffff0a5fffffec63ffff72a0ffff56a2ffff68b0fffffcb3ffffe0b4ffff00bdffff66beffffccc3ffffa0cfffff22d2ffff88d2ffff3addffff1adfffff1ae8ffff1cf0ffffecf4ffff5cf5fffff0f5fffff8faffff8cd40000f2d400004cd60000d2d8000090da0000c2da0000ecda000004dc0000820b0100da0d0100200e0100880e01006a12010086140100a0140100621501002c20010094200100f021010076240100362601006826010092260100aa27010052560100b85c0100d25c0100c4650100cc770100389701009e9d0100b89d0100a6a7010032a801003ca9010044a90100a4a9010060aa010000ab0100f6ab010086ad010040ae010046af010078af0100a2af0100bab001001eea0100bcec010024ed010080ee01003af0010006f10100c6f20100f8f2010022f30100fef301003af40100
+      m_SelectedIDs: 48510000
+      m_LastClickedID: 20808
+      m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.5910687, y: 5.102985, z: 155.2213}
+    m_Target: {x: 1.5738114, y: -1.9480145, z: 165.41098}
     speed: 2
-    m_Value: {x: 5.5910687, y: 5.102985, z: 155.2213}
+    m_Value: {x: 1.5738114, y: -1.9480145, z: 165.41098}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -703,9 +703,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 61.950516
+    m_Target: 70.878265
     speed: 2
-    m_Value: 61.950516
+    m_Value: 70.878265
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -771,22 +771,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/AIScripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/AIScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\ShipFight\Ship Fight\Ship Fight
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 104}
-    m_SelectedIDs: a2740000
-    m_LastClickedID: 29858
-    m_ExpandedIDs: 000000001c5500001e550000205500002255000000ca9a3b
+    m_SelectedIDs: 1e550000
+    m_LastClickedID: 21790
+    m_ExpandedIDs: 0000000006550000085500000a5500000c550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,7 +814,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c5500001e5500002055000022550000
+    m_ExpandedIDs: 0000000006550000085500000a5500000c550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -839,8 +839,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b8740000
-    m_LastClickedInstanceID: 29880
+    m_SelectedInstanceIDs: ba090000
+    m_LastClickedInstanceID: 2490
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000204f0000
     m_RenameOverlay:

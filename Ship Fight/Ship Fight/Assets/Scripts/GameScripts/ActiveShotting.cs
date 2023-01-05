@@ -100,7 +100,6 @@ public class ActiveShotting : MonoBehaviour
             moneymaker.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
             IncreaseScore();
-            
             IsFinished("MoneyMaker");
         }
         else if ((x == tank.FirstPieceI && y == tank.FirstPieceJ) ||
@@ -135,9 +134,20 @@ public class ActiveShotting : MonoBehaviour
                     if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
                         map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor)
                     {
-                        map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                        FailedShot();
-                        sidestep.PassiveSkill();
+                        if (sidestep.PassiveSkill(x - 1, y))
+                        {
+                            map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                            FailedShot();
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<Image>().color = redColor;
+                            sidestep.HittedPiece++;
+                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                            IncreaseScore();
+                            IsFinished("SideStep");
+                            sidestep.SideStepSkill = false;
+                        }
                     }
                 }
                 else if ((x + 1 <= 9) && (x + 1 != sidestep.FirstPieceI) && (x + 1 != sidestep.SecondPieceI) && (x + 1 != sidestep.ThirdPieceI))
@@ -145,9 +155,20 @@ public class ActiveShotting : MonoBehaviour
                     if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
                        map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor)
                     {
-                        map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                        FailedShot();
-                        sidestep.PassiveSkill();
+                        if (sidestep.PassiveSkill(x + 1, y))
+                        {
+                            map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                            FailedShot();
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<Image>().color = redColor;
+                            sidestep.HittedPiece++;
+                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                            IncreaseScore();
+                            IsFinished("SideStep");
+                            sidestep.SideStepSkill = false;
+                        }
                     }
                 }
                 else if ((y - 1 >= 0) && (y - 1 != sidestep.FirstPieceJ) && (y - 1 != sidestep.SecondPieceJ) && (y - 1 != sidestep.ThirdPieceJ))
@@ -155,9 +176,20 @@ public class ActiveShotting : MonoBehaviour
                     if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
                        map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor)
                     {
-                        map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
-                        FailedShot();
-                        sidestep.PassiveSkill();
+                        if (sidestep.PassiveSkill(x, y - 1))
+                        {
+                            map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
+                            FailedShot();
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<Image>().color = redColor;
+                            sidestep.HittedPiece++;
+                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                            IncreaseScore();
+                            IsFinished("SideStep");
+                            sidestep.SideStepSkill = false;
+                        }
                     }
                 }
                 else if ((y + 1 <= 9) && (y + 1 != sidestep.FirstPieceJ) && (y + 1 != sidestep.SecondPieceJ) && (y + 1 != sidestep.ThirdPieceJ))
@@ -165,9 +197,20 @@ public class ActiveShotting : MonoBehaviour
                     if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
                        map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor)
                     {
-                        map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
-                        FailedShot();
-                        sidestep.PassiveSkill();
+                        if (sidestep.PassiveSkill(x, y + 1))
+                        {
+                            map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
+                            FailedShot();
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<Image>().color = redColor;
+                            sidestep.HittedPiece++;
+                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                            IncreaseScore();
+                            IsFinished("SideStep");
+                            sidestep.SideStepSkill = false;
+                        }
                     }
                 }
                 else
@@ -177,7 +220,7 @@ public class ActiveShotting : MonoBehaviour
                     PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
                     IncreaseScore();
                     IsFinished("SideStep");
-                    sidestep.PassiveSkill();
+                    sidestep.SideStepSkill = false;
                 }
             }
             else
@@ -242,12 +285,15 @@ public class ActiveShotting : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = redColor;
             bombcatcher.HittedPiece++;
-
-            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
             if (bombcatcher.control == true)
             {
-                bombcatcher.PassiveSkill();
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                IncreaseScore();
+            }
+            else
+            {
+                PlayerPrefs.SetInt("ActiveHitPerTurn", 0);
+                bombcatcher.control = true;
                 IncreaseScore();
             }
             IsFinished("BombCatcher");
@@ -294,26 +340,33 @@ public class ActiveShotting : MonoBehaviour
         }
         else
         {
-            FailedShot();
+            if (PlayerPrefs.GetString("ShootingShip") == "Bomber" && bomber.control != true)
+            {
+                map = bomber.PassiveSkill(map);
+                bomber.control = true;
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                IncreaseScore();
+            }
+            else
+            {
+                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
+                gameObject.GetComponent<Image>().color = blueColor;
+                FailedShot();
+            }
         }
     }
 
     void FailedShot()
     {
-        GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
-        PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-        if (PlayerPrefs.GetInt("ActiveHitPerTurn") <= 0)
-        {
-            for (int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
-                    if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
-                        map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+                if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
+                {
+                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                }
 
-
-            GameObject.Find("GameManager").GetComponent<Control>().control();
-            Invoke("SkipRound", 1.5f);
-        }
-        gameObject.GetComponent<Image>().color = blueColor;
+        GameObject.Find("GameManager").GetComponent<Control>().control();
+        Invoke("SkipRound", 1.5f);
     }
 
     void IncreaseScore()

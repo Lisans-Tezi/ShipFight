@@ -49,8 +49,10 @@ public class AIAttackManager : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("AIAttackHitPerTurn") > 0)
             {
-                int x = Random.Range(0, 10);
-                int y = Random.Range(0, 10);
+                int x = Random.Range(0, 5);
+                int y = Random.Range(0, 5);
+
+                Debug.Log("AI map[" + x +"," + y + "]");
 
                 if (map[x, y].gameObject.GetComponent<Image>().color == Color.black)
                 {
@@ -151,51 +153,80 @@ public class AIAttackManager : MonoBehaviour
                 if (x - 1 >= 0 && (x - 1 != SideStep.FirstPieceI) && (x - 1 != SideStep.SecondPieceI) && (x - 1 != SideStep.ThirdPieceI))
                 {
                     if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                        map[x - 1, y].gameObject.GetComponent<Image>().color != Color.black)
                     {
                         map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.PassiveSkill();
+                        SideStep.SideStepSkill = false;
                         Invoke("SkipRound", 1.5f);
-                    }                       
+                    }
+                    else
+                    {
+                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                        SideStep.HittedPiece++;
+                        SideStep.SideStepSkill = false;
+                    }
                 }
                 else if (x + 1 <= 9 && (x + 1 != SideStep.FirstPieceI) && (x + 1 != SideStep.SecondPieceI) && (x + 1 != SideStep.ThirdPieceI))
                 {
                     if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor)
+                        map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                        map[x + 1, y].gameObject.GetComponent<Image>().color != Color.black)
                     {
                         map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.PassiveSkill();
+                        SideStep.SideStepSkill = false;
                         Invoke("SkipRound", 1.5f);
-                    }                        
+                    }
+                    else
+                    {
+                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                        SideStep.HittedPiece++;
+                        SideStep.SideStepSkill = false;
+                    }
                 }
                 else if (y - 1 >= 0 && (y - 1 != SideStep.FirstPieceJ) && (y - 1 != SideStep.SecondPieceJ) && (y - 1 != SideStep.ThirdPieceJ))
                 {
                     if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor)
+                        map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor &&
+                        map[x, y - 1].gameObject.GetComponent<Image>().color != Color.black)
                     {
                         map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.PassiveSkill();
+                        SideStep.SideStepSkill = false;
                         Invoke("SkipRound", 1.5f);
-                    }                        
+                    }
+                    else
+                    {
+                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                        SideStep.HittedPiece++;
+                        SideStep.SideStepSkill = false;
+                    }
                 }
                 else if (y + 1 <= 9 && (y + 1 != SideStep.FirstPieceJ) && (y + 1 != SideStep.SecondPieceJ) && (y + 1 != SideStep.ThirdPieceJ))
                 {
                     if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor)
+                        map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor &&
+                        map[x, y + 1].gameObject.GetComponent<Image>().color != Color.black)
                     {
                         map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
                         GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.PassiveSkill();
+                        SideStep.SideStepSkill = false;
                         Invoke("SkipRound", 1.5f);
-                    }                    
+                    }
+                    else
+                    {
+                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
+                        SideStep.HittedPiece++;
+                        SideStep.SideStepSkill = false;
+                    }
                 }
                 else
                 {
                     map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                    SideStep.PassiveSkill();
+                    SideStep.HittedPiece++;
+                    SideStep.SideStepSkill = false;
                 }
                 return true;
             }
