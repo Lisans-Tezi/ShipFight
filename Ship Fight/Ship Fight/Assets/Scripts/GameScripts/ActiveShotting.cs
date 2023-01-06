@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -99,7 +100,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             moneymaker.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x,y);
             IsFinished("MoneyMaker");
         }
         else if ((x == tank.FirstPieceI && y == tank.FirstPieceJ) ||
@@ -110,7 +111,7 @@ public class ActiveShotting : MonoBehaviour
             {
                 gameObject.GetComponent<Image>().color = Color.yellow;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x,y);
                 IsFinished("Tank");
 
             }
@@ -119,7 +120,7 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 tank.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x,y);
                 IsFinished("Tank");
             }
         }
@@ -144,7 +145,7 @@ public class ActiveShotting : MonoBehaviour
                             gameObject.GetComponent<Image>().color = redColor;
                             sidestep.HittedPiece++;
                             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore();
+                            IncreaseScore(x,y);
                             IsFinished("SideStep");
                             sidestep.SideStepSkill = false;
                         }
@@ -165,7 +166,7 @@ public class ActiveShotting : MonoBehaviour
                             gameObject.GetComponent<Image>().color = redColor;
                             sidestep.HittedPiece++;
                             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore();
+                            IncreaseScore(x,y);
                             IsFinished("SideStep");
                             sidestep.SideStepSkill = false;
                         }
@@ -186,7 +187,7 @@ public class ActiveShotting : MonoBehaviour
                             gameObject.GetComponent<Image>().color = redColor;
                             sidestep.HittedPiece++;
                             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore();
+                            IncreaseScore(x,y);
                             IsFinished("SideStep");
                             sidestep.SideStepSkill = false;
                         }
@@ -207,7 +208,7 @@ public class ActiveShotting : MonoBehaviour
                             gameObject.GetComponent<Image>().color = redColor;
                             sidestep.HittedPiece++;
                             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore();
+                            IncreaseScore(x, y);
                             IsFinished("SideStep");
                             sidestep.SideStepSkill = false;
                         }
@@ -218,7 +219,7 @@ public class ActiveShotting : MonoBehaviour
                     gameObject.GetComponent<Image>().color = redColor;
                     sidestep.HittedPiece++;
                     PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                    IncreaseScore();
+                    IncreaseScore(x, y);
                     IsFinished("SideStep");
                     sidestep.SideStepSkill = false;
                 }
@@ -228,7 +229,7 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 sidestep.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x, y);
                 IsFinished("SideStep");
             }
         }
@@ -250,7 +251,7 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 faker.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x,y);
                 IsFinished("Faker");
             }
         }
@@ -262,7 +263,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             healer.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x,y);
             IsFinished("Healer");
         }
         else if ((x == lightbomber.FirstPieceI && y == lightbomber.FirstPieceJ) ||
@@ -273,7 +274,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             lightbomber.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x, y);
             AImap = lightbomber.AIPassiveSkill(AImap);
             IsFinished("LightBomber");
         }
@@ -288,13 +289,13 @@ public class ActiveShotting : MonoBehaviour
             if (bombcatcher.control == true)
             {
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x, y);
             }
             else
             {
                 PlayerPrefs.SetInt("ActiveHitPerTurn", 0);
                 bombcatcher.control = true;
-                IncreaseScore();
+                IncreaseScore(x, y);
             }
             IsFinished("BombCatcher");
         }
@@ -307,7 +308,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             bomber.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x, y);
             IsFinished("Bomber");
         }
         else if ((x == boomer.FirstPieceI && y == boomer.FirstPieceJ) ||
@@ -320,7 +321,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             boomer.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x, y);
             boomer.PassiveSkill();
             IsFinished("Boomer");
         }
@@ -335,7 +336,7 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             flamethrower.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            IncreaseScore();
+            IncreaseScore(x, y);
             IsFinished("FlameThrower");
         }
         else
@@ -345,12 +346,13 @@ public class ActiveShotting : MonoBehaviour
                 map = bomber.PassiveSkill(map);
                 bomber.control = true;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore();
+                IncreaseScore(x, y);
             }
             else
             {
                 GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
                 gameObject.GetComponent<Image>().color = blueColor;
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
                 FailedShot();
             }
         }
@@ -358,24 +360,73 @@ public class ActiveShotting : MonoBehaviour
 
     void FailedShot()
     {
-        for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
-                if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
-                {
-                    map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
-                }
+        var Tank = GameObject.Find("Tank").GetComponent<Tank>();
 
-        GameObject.Find("GameManager").GetComponent<Control>().control();
-        Invoke("SkipRound", 1.5f);
+        if(PlayerPrefs.GetString("ShootingShip") == "MoneyMaker")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "Tank" && Tank.ActiveSkill)
+        {
+            PlayerPrefs.SetInt("ActiveHitPerTurn", 1);
+            Tank.ActiveSkill = false;
+        }
+        else if(PlayerPrefs.GetString("ShootingShip") == "SideStep")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "Healer")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "LightBomber")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "BombCatcher")
+        {
+            HitPerTurnControl();
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+                for (int j = 0; j < 10; j++)
+                    if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
+                    {
+                        map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                    }
+            GameObject.Find("GameManager").GetComponent<Control>().control();
+            Invoke("SkipRound", 1.5f);
+        }
+        int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
+        GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
     }
 
-    void IncreaseScore()
+    void IncreaseScore(int x, int y)
     {
         GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().SuccessfullShot();
         int point = Convert.ToInt32(GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text);
         point++;
         GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point.ToString();
 
+        var SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
+        if (PlayerPrefs.GetString("ShootingShip") == "SideStep" && SideStep.ActiveSkill)
+        {
+            PlayerPrefs.SetInt("ActiveHitPerTurn", SideStep.SideStepActiveSkill(x,y));
+            SideStep.ActiveSkill = false;
+            int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
+            GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
+        }
+        else
+        {
+            HitPerTurnControl();
+        }
+    }
+
+    void HitPerTurnControl()
+    {
+        int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
+        GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
         if (PlayerPrefs.GetInt("ActiveHitPerTurn") <= 0)
         {
             for (int i = 0; i < 10; i++)
@@ -496,6 +547,9 @@ public class ActiveShotting : MonoBehaviour
             p.GetComponent<PassiveAttribute>().isSelected = false;
         });
 
+        ShipActiveTurnDown();
+
+
         if (healer.FirstPieceI >= 0)
         {
             map = healer.PassiveSkill(map, whiteColor);
@@ -504,4 +558,47 @@ public class ActiveShotting : MonoBehaviour
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera();
     }
 
+    void ShipActiveTurnDown()
+    {
+        if(PlayerPrefs.GetInt("MoneyMakerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("MoneyMakerActiveTurn", PlayerPrefs.GetInt("MoneyMakerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("TankActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("TankActiveTurn", PlayerPrefs.GetInt("TankActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("SideStepActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("SideStepActiveTurn", PlayerPrefs.GetInt("SideStepActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("FakerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("FakerActiveTurn", PlayerPrefs.GetInt("FakerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("HealerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("HealerActiveTurn", PlayerPrefs.GetInt("HealerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("LightBomberActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("LightBomberActiveTurn", PlayerPrefs.GetInt("LightBomberActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BombCatcherActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BombCatcherActiveTurn", PlayerPrefs.GetInt("BombCatcherActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BomberActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BomberActiveTurn", PlayerPrefs.GetInt("BomberActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BoomerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BoomerActiveTurn", PlayerPrefs.GetInt("BoomerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("FlameThrowerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("FlameThrowerActiveTurn", PlayerPrefs.GetInt("FlameThrowerActiveTurn") - 1);
+        }
+    }
 }

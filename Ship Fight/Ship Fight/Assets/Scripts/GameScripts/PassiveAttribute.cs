@@ -201,6 +201,8 @@ public class PassiveAttribute : MonoBehaviour
                 gameObject.GetComponent<Button>().enabled = true;
                 Text.color = Color.red;
                 FindShootingShip();
+                int RemainingShotPoint = 1;
+                GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
                 PlayerPrefs.SetString("AttackType","Passive");
                 GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().ChoseTile();
             }

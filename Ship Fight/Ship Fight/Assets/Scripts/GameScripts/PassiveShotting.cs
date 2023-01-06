@@ -381,8 +381,9 @@ public class PassiveShotting : MonoBehaviour
                 if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
                 {   
                     map[i, j].gameObject.GetComponent<Image>().color = whiteColor;                     
-                }                     
-
+                }
+        int RemainingShotPoint = 0;
+        GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
         GameObject.Find("GameManager").GetComponent<Control>().control();
         Invoke("SkipRound", 1.5f);
     }
@@ -494,8 +495,11 @@ public class PassiveShotting : MonoBehaviour
         int point= Convert.ToInt32(GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text);
         point++;
         GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = point.ToString();
-        
-        if(PlayerPrefs.GetInt("HitPerTurn") <= 0)
+
+        int RemainingShotPoint = PlayerPrefs.GetInt("HitPerTurn");
+        GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
+
+        if (PlayerPrefs.GetInt("HitPerTurn") <= 0)
         {
             GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().ToManyShot();
             for (int i = 0; i < 10; i++)
@@ -518,11 +522,57 @@ public class PassiveShotting : MonoBehaviour
             p.GetComponent<PassiveAttribute>().isSelected = false;
         });
 
+        ShipActiveTurnDown();
+
         if (healer.FirstPieceI>=0)
         {
             map = healer.PassiveSkill(map, whiteColor);
         }           
         PlayerPrefs.SetInt("HitPerTurn", 3);
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera();
+    }
+
+    void ShipActiveTurnDown()
+    {
+        if (PlayerPrefs.GetInt("MoneyMakerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("MoneyMakerActiveTurn", PlayerPrefs.GetInt("MoneyMakerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("TankActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("TankActiveTurn", PlayerPrefs.GetInt("TankActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("SideStepActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("SideStepActiveTurn", PlayerPrefs.GetInt("SideStepActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("FakerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("FakerActiveTurn", PlayerPrefs.GetInt("FakerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("HealerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("HealerActiveTurn", PlayerPrefs.GetInt("HealerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("LightBomberActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("LightBomberActiveTurn", PlayerPrefs.GetInt("LightBomberActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BombCatcherActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BombCatcherActiveTurn", PlayerPrefs.GetInt("BombCatcherActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BomberActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BomberActiveTurn", PlayerPrefs.GetInt("BomberActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("BoomerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("BoomerActiveTurn", PlayerPrefs.GetInt("BoomerActiveTurn") - 1);
+        }
+        if (PlayerPrefs.GetInt("FlameThrowerActiveTurn") > 0)
+        {
+            PlayerPrefs.SetInt("FlameThrowerActiveTurn", PlayerPrefs.GetInt("FlameThrowerActiveTurn") - 1);
+        }
     }
 }

@@ -203,7 +203,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "MoneyMaker")
         {
             var MoneyMaker = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();
-            if (point >= MoneyMaker.ActiveAttributeCost)
+            if (point >= MoneyMaker.ActiveAttributeCost && (PlayerPrefs.GetInt("MoneyMakerActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -215,7 +215,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "Tank")
         {
             var Tank = GameObject.Find("Tank").GetComponent<Tank>();
-            if (point >= Tank.ActiveAttributeCost)
+            if (point >= Tank.ActiveAttributeCost && (PlayerPrefs.GetInt("TankActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -227,7 +227,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "SideStep")
         {
             var SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
-            if (point >= SideStep.ActiveAttributeCost)
+            if (point >= SideStep.ActiveAttributeCost && (PlayerPrefs.GetInt("SideStepActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -239,7 +239,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "Faker")
         {
             var Faker = GameObject.Find("Faker").GetComponent<Faker>();
-            if (point >= Faker.ActiveAttributeCost)
+            if (point >= Faker.ActiveAttributeCost && (PlayerPrefs.GetInt("FakerActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -251,7 +251,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "Healer")
         {
             var Healer = GameObject.Find("Healer").GetComponent<Healer>();
-            if (point >= Healer.ActiveAttributeCost)
+            if (point >= Healer.ActiveAttributeCost && (PlayerPrefs.GetInt("HealerActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -263,7 +263,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "LightBomber")
         {
             var LightBomber = GameObject.Find("LightBomber").GetComponent<LightBomber>();
-            if (point >= LightBomber.ActiveAttributeCost)
+            if (point >= LightBomber.ActiveAttributeCost && (PlayerPrefs.GetInt("LightBomberActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -275,7 +275,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "BombCatcher")
         {
             var BombCatcher = GameObject.Find("BombCatcher").GetComponent<BombCatcher>();
-            if (point >= BombCatcher.ActiveAttributeCost)
+            if (point >= BombCatcher.ActiveAttributeCost && (PlayerPrefs.GetInt("BombCatcherActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -287,7 +287,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "Bomber")
         {
             var Bomber = GameObject.Find("Bomber").GetComponent<Bomber>();
-            if (point >= Bomber.ActiveAttributeCost)
+            if (point >= Bomber.ActiveAttributeCost && (PlayerPrefs.GetInt("BomberActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -299,7 +299,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "Boomer")
         {
             var Boomer = GameObject.Find("Boomer").GetComponent<Boomer>();
-            if (point >= Boomer.ActiveAttributeCost)
+            if (point >= Boomer.ActiveAttributeCost && (PlayerPrefs.GetInt("BoomerActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -311,7 +311,7 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "FlameThrower")
         {
             var FlameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
-            if (point >= FlameThrower.ActiveAttributeCost)
+            if (point >= FlameThrower.ActiveAttributeCost && (PlayerPrefs.GetInt("FlameThrowerActiveTurn") == 0))
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -343,11 +343,37 @@ public class ActiveAttribute : MonoBehaviour
         if (PlayerPrefs.GetString("ShootingShip") == "MoneyMaker")
         {
             PlayerPrefs.SetInt("ActiveHitPerTurn", 2);
+            PlayerPrefs.SetInt("MoneyMakerActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "Tank")
+        {
+            var Tank = GameObject.Find("Tank").GetComponent<Tank>();
+            Tank.ActiveSkill = true;
+            PlayerPrefs.SetInt("TankActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "SideStep")
+        {
+            var SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
+            SideStep.ActiveSkill = true;
+            PlayerPrefs.SetInt("SideStepActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "Healer")
+        {
+            PlayerPrefs.SetInt("ActiveHitPerTurn", 3);
+            PlayerPrefs.SetInt("HealerActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "LightBomber")
         {
             PlayerPrefs.SetInt("ActiveHitPerTurn", 4);
+            PlayerPrefs.SetInt("LightBomberActiveTurn", 3);
         }
+        if (PlayerPrefs.GetString("ShootingShip") == "BombCatcher")
+        {
+            PlayerPrefs.SetInt("ActiveHitPerTurn", 5);
+            PlayerPrefs.SetInt("BombCatcherActiveTurn", 3);
+        }
+        int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
+        GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
     }
 
     void PointDrop()

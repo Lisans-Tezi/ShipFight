@@ -49,8 +49,8 @@ public class AIAttackManager : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("AIAttackHitPerTurn") > 0)
             {
-                int x = Random.Range(0, 5);
-                int y = Random.Range(0, 5);
+                int x = Random.Range(0, 10);
+                int y = Random.Range(0, 10);
 
                 Debug.Log("AI map[" + x +"," + y + "]");
 

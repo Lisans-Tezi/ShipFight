@@ -23,6 +23,8 @@ public class SideStep : MonoBehaviour
 
     public bool SideStepSkill=true;
 
+    public bool ActiveSkill = false;
+
     List<int> X = new List<int>();
     List<int> Y = new List<int>();
 
@@ -54,6 +56,125 @@ public class SideStep : MonoBehaviour
         SideStepSkill = false;
 
         return control;
+    }
+
+    public int SideStepActiveSkill(int i, int j)
+    {
+        var MoneyMaker = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIMoneyMaker;
+        var Tank = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AITank;
+        var SideStep = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AISideStep;
+        var Faker = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIFaker;
+        var Healer = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIHealer;
+        var LightBomber = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AILightBomber;
+        var BombCatcher = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIBombCatcher;
+        var Bomber = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIBomber;
+        var Boomer = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIBoomer;
+        var FlameThrower = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIFlameThrower;
+
+        if (MoneyMaker.FirstPieceI >= 0)
+        {
+            if ((i == MoneyMaker.FirstPieceI && j == MoneyMaker.FirstPieceJ) ||
+                (i == MoneyMaker.SecondPieceI && j == MoneyMaker.SecondPieceJ))
+            {
+                return MoneyMaker.Piece;
+            }
+        }
+        if (Tank.FirstPieceI >= 0)
+        {
+            if ((i == Tank.FirstPieceI && j == Tank.FirstPieceJ) ||
+                 (i == Tank.SecondPieceI && j == Tank.SecondPieceJ) ||
+                 (i == Tank.ThirdPieceI && j == Tank.ThirdPieceJ))
+            {
+                return Tank.Piece;
+            }
+        }
+        if (SideStep.FirstPieceI >= 0)
+        {
+            if ((i == SideStep.FirstPieceI && j == SideStep.FirstPieceJ) ||
+                 (i == SideStep.SecondPieceI && j == SideStep.SecondPieceJ) ||
+                 (i == SideStep.ThirdPieceI && j == SideStep.ThirdPieceJ))
+            {
+                return SideStep.Piece;
+            }
+        }
+        if (Faker.FirstPieceI >= 0)
+        {
+            if ((i == Faker.FirstPieceI && j == Faker.FirstPieceJ) ||
+                 (i == Faker.SecondPieceI && j == Faker.SecondPieceJ) ||
+                 (i == Faker.ThirdPieceI && j == Faker.ThirdPieceJ) ||
+                 (i == Faker.FourthPieceI && j == Faker.FourthPieceJ))
+            {
+                return Faker.Piece;
+            }
+        }
+        if (Healer.FirstPieceI >= 0)
+        {
+            if ((i == Healer.FirstPieceI && j == Healer.FirstPieceJ) ||
+                 (i == Healer.SecondPieceI && j == Healer.SecondPieceJ) ||
+                 (i == Healer.ThirdPieceI && j == Healer.ThirdPieceJ) ||
+                 (i == Healer.FourthPieceI && j == Healer.FourthPieceJ))
+            {
+                return Healer.Piece;
+            }
+        }
+        if (LightBomber.FirstPieceI >= 0)
+        {
+            if ((i == LightBomber.FirstPieceI && j == LightBomber.FirstPieceJ) ||
+                 (i == LightBomber.SecondPieceI && j == LightBomber.SecondPieceJ) ||
+                 (i == LightBomber.ThirdPieceI && j == LightBomber.ThirdPieceJ) ||
+                 (i == LightBomber.FourthPieceI && j == LightBomber.FourthPieceJ))
+            {
+                return LightBomber.Piece;
+            }
+        }
+        if (BombCatcher.FirstPieceI >= 0)
+        {
+            if ((i == BombCatcher.FirstPieceI && j == BombCatcher.FirstPieceJ) ||
+                  (i == BombCatcher.SecondPieceI && j == BombCatcher.SecondPieceJ) ||
+                  (i == BombCatcher.ThirdPieceI && j == BombCatcher.ThirdPieceJ) ||
+                  (i == BombCatcher.FourthPieceI && j == BombCatcher.FourthPieceJ) ||
+                  (i == BombCatcher.FifthPieceI && j == BombCatcher.FifthPieceJ))
+            {
+                return BombCatcher.Piece;
+            }
+        }
+        if (Bomber.FirstPieceI >= 0)
+        {
+            if ((i == Bomber.FirstPieceI && j == Bomber.FirstPieceJ) ||
+                  (i == Bomber.SecondPieceI && j == Bomber.SecondPieceJ) ||
+                  (i == Bomber.ThirdPieceI && j == Bomber.ThirdPieceJ) ||
+                  (i == Bomber.FourthPieceI && j == Bomber.FourthPieceJ) ||
+                  (i == Bomber.FifthPieceI && j == Bomber.FifthPieceJ))
+            {
+                return Bomber.Piece;
+            }
+        }
+        if (Boomer.FirstPieceI >= 0)
+        {
+            if ((i == Boomer.FirstPieceI && j == Boomer.FirstPieceJ) ||
+                 (i == Boomer.SecondPieceI && j == Boomer.SecondPieceJ) ||
+                 (i == Boomer.ThirdPieceI && j == Boomer.ThirdPieceJ) ||
+                 (i == Boomer.FourthPieceI && j == Boomer.FourthPieceJ) ||
+                 (i == Boomer.FifthPieceI && j == Boomer.FifthPieceJ) ||
+                 (i == Boomer.SixthPieceI && j == Boomer.SixthPieceJ))
+            {
+                return Boomer.Piece;
+            }
+        }
+        if (FlameThrower.FirstPieceI >= 0)
+        {
+            if ((i == FlameThrower.FirstPieceI && j == FlameThrower.FirstPieceJ) ||
+                  (i == FlameThrower.SecondPieceI && j == FlameThrower.SecondPieceJ) ||
+                  (i == FlameThrower.ThirdPieceI && j == FlameThrower.ThirdPieceJ) ||
+                  (i == FlameThrower.FourthPieceI && j == FlameThrower.FourthPieceJ) ||
+                  (i == FlameThrower.FifthPieceI && j == FlameThrower.FifthPieceJ) ||
+                  (i == FlameThrower.SixthPieceI && j == FlameThrower.SixthPieceJ) ||
+                  (i == FlameThrower.SeventhPieceI && j == FlameThrower.SeventhPieceJ))
+            {
+                return FlameThrower.Piece;
+            }
+        }
+        return 0;
     }
 
     void FillX(MoneyMaker MoneyMaker, Tank Tank, SideStep SideStep, Faker Faker, Healer Healer,
