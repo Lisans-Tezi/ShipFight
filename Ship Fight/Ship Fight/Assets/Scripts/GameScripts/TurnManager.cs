@@ -10,12 +10,12 @@ public class TurnManager : MonoBehaviour
     public TextMeshProUGUI defendTurnText;
     void Start()
     {
-        attackTurnText.text = "0";
-        defendTurnText.text = "0";
+        attackTurnText.text = "1";
+        defendTurnText.text = "1";
     }
     public void AddTurn()
     {
-        int turn = Convert.ToInt32(attackTurnText.text);
+        int turn = Convert.ToInt32(defendTurnText.text);
         turn++;
 
         attackTurnText.text = turn.ToString();

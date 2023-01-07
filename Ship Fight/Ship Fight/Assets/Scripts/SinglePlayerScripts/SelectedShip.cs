@@ -168,34 +168,26 @@ public class SelectedShip : MonoBehaviour
     Sprite FindShipImage()
     {
         if (gameObject.name == "FirstShip")
-            return ShipImages[0];
+            return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
+        //return ShipImages[0];
         else if (gameObject.name == "SecondShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[1];
         else if (gameObject.name == "ThirdShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[2];
         else if (gameObject.name == "FourthShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[3];
         else if (gameObject.name == "FifthShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[4];
         else if (gameObject.name == "SixthShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[5];
         else if (gameObject.name == "SeventhShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[6];
         else if (gameObject.name == "EighthShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[7];
         else if (gameObject.name == "NinethShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[8];
         else if (gameObject.name == "TenthShip")
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
-            //return ShipImages[9];
         else
             return gameObject.transform.GetChild(0).GetComponent<Image>().sprite;
     }

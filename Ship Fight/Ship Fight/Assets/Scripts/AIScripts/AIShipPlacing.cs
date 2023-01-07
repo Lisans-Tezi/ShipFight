@@ -179,7 +179,7 @@ public class AIShipPlacing : MonoBehaviour
     void Start()
     {
         int rnd = Random.Range(0, 4);
-        rnd = 3;
+        rnd = 2;
         Debug.Log("First,Second,Third,Fourth: " + (rnd + 1));
         if (PlayerPrefs.GetString("Map")=="Map1")
         {

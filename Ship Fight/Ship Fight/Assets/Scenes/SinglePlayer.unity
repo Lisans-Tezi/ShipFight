@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -657,6 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a80a67b58c04c4a888ad30290fb360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActiveSkill: 0
 --- !u!4 &41964000
 Transform:
   m_ObjectHideFlags: 0
@@ -9763,6 +9764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab751b16f37612544958ffb1492cb5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control: 0
 --- !u!4 &934150520
 Transform:
   m_ObjectHideFlags: 0
@@ -10795,6 +10797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d822a848f5bf504cbb23ef18600fe1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control: 0
 --- !u!4 &1016187153
 Transform:
   m_ObjectHideFlags: 0
@@ -13491,6 +13494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SideStepSkill: 0
+  ActiveSkill: 0
 --- !u!4 &1264400409
 Transform:
   m_ObjectHideFlags: 0
@@ -15912,7 +15916,7 @@ MonoBehaviour:
   Ship4: {fileID: 2021765565}
   Ship5: {fileID: 1412754528}
   ShipImages:
-  - {fileID: 21300000, guid: 1dfbd69a301a485448bf96d422affb0f, type: 3}
+  - {fileID: 21300000, guid: 1aa92db537249974daf8d9ef954ed009, type: 3}
   Map: {fileID: 1621867186}
   Text: {fileID: 511737616}
   Ships:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class AIAttackManager : MonoBehaviour
 {
@@ -22,7 +23,14 @@ public class AIAttackManager : MonoBehaviour
         
         PlayerPrefs.SetInt("AIAttackHitPerTurn",3);
         InvokeRepeating("Attack",2,2);
-    }       
+    }
+
+    void OnEnable()
+    {
+        int RemainingShotPoint = 1;
+        GameObject.Find("DefRemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
+    }
+
     void CreateAIMap()
     {
         int k = 0;
@@ -39,10 +47,19 @@ public class AIAttackManager : MonoBehaviour
         for (int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++)
             {
-                map[i, j] = Map.transform.GetChild(k).gameObject;                
+                map[i, j] = Map.transform.GetChild(k).gameObject;
                 k++;
             }
     }       
+
+    void AIAttackTurnDown()
+    {
+        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
+        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+        int RemainingShotPoint = PlayerPrefs.GetInt("AIAttackHitPerTurn");
+        GameObject.Find("DefRemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
+    }
+
     void Attack()
     {
         if (gameObject.activeInHierarchy)
@@ -56,15 +73,17 @@ public class AIAttackManager : MonoBehaviour
 
                 if (map[x, y].gameObject.GetComponent<Image>().color == Color.black)
                 {
+                    if(AttackMoneyMaker(x, y))
+                    {
+                        AIAttackTurnDown();
+                    }
                     if (AttackTank(x, y))
                     {
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }
                     else if (AttackSideStep(x, y))
                     {
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }
                     else if (AttackFaker(x,y))
                     {
@@ -73,36 +92,33 @@ public class AIAttackManager : MonoBehaviour
                     }
                     else if(AttackHealer(x,y))
                     {
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }
                     else if (AttackLightBomber(x,y))
                     {
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }
                     else if (AttackBombCatcher(x, y))
                     {
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }
                     else
                     {
                         map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                        PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                        AIAttackTurnDown();
                     }  
                 }
                 else if (map[x, y].gameObject.GetComponent<Image>().color == Color.yellow)
                 {
                     map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                    PlayerPrefs.SetInt("AIAttackHitPerTurn", PlayerPrefs.GetInt("AIAttackHitPerTurn") - 1);
-                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIHitted();
+                    AIAttackTurnDown();
                 }
                 else if (map[x, y].gameObject.GetComponent<Image>().color == whiteColor)
                 {
                     map[x, y].gameObject.GetComponent<Image>().color = blueColor;
-                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed(); 
+                    int RemainingShotPoint = 0;
+                    GameObject.Find("DefRemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
                     Invoke("SkipRound", 1.5f);
                 }
                 else
@@ -119,14 +135,30 @@ public class AIAttackManager : MonoBehaviour
                 if (control)
                 {
                     GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().Lose();
-                    Invoke("ReturnMenu",2);                        
-                }                       
+                    Invoke("ReturnMenu",2);
+                }
             }   
             else
             {
                 Invoke("SkipRound",1.5f);
             }
-        }                       
+        }
+    }
+    bool AttackMoneyMaker(int x, int y)
+    {
+        var MoneyMaker = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();
+        if ((x == MoneyMaker.FirstPieceI && y == MoneyMaker.FirstPieceJ) ||
+            (x == MoneyMaker.SecondPieceI && y == MoneyMaker.SecondPieceJ))
+        {
+            map[x, y].gameObject.GetComponent<Image>().color = redColor;
+            MoneyMaker.HittedPiece++;
+            return true;
+        }
+        if(MoneyMaker.HittedPiece == MoneyMaker.Piece)
+        {
+            GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().increase = 0;
+        }
+        return false;
     }
     bool AttackTank(int x, int y)
     {
@@ -312,6 +344,8 @@ public class AIAttackManager : MonoBehaviour
     }
     void SkipRound()
     {
+        GameObject.Find("DefTurnPoint").GetComponent<TurnManager>().AddTurn();
+
         var Healer = GameObject.Find("Healer").GetComponent<Healer>();
         if (Healer.FirstPieceI>=0)
         {

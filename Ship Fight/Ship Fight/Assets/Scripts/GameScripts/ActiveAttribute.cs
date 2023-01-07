@@ -24,7 +24,16 @@ public class ActiveAttribute : MonoBehaviour
     {
         gameObject.GetComponent<Button>().enabled = false;
         Create();
-
+        PlayerPrefs.SetInt("MoneyMakerActiveTurn", 0);
+        PlayerPrefs.SetInt("TankActiveTurn", 0);
+        PlayerPrefs.SetInt("SideStepActiveTurn", 0);
+        PlayerPrefs.SetInt("FakerActiveTurn", 0);
+        PlayerPrefs.SetInt("HealerActiveTurn", 0);
+        PlayerPrefs.SetInt("LightBomberActiveTurn", 0);
+        PlayerPrefs.SetInt("BombCatcherActiveTurn", 0);
+        PlayerPrefs.SetInt("BomberActiveTurn", 0);
+        PlayerPrefs.SetInt("BoomerActiveTurn", 0);
+        PlayerPrefs.SetInt("FlameThrowerActiveTurn", 0);
     }
 
     void Create()
@@ -191,9 +200,17 @@ public class ActiveAttribute : MonoBehaviour
     }
     void Update()
     {
-        if(PlayerPrefs.GetInt("HitPerTurn") < 3)
+        if(PlayerPrefs.GetString("AttackType") == "Passive")
         {
             gameObject.GetComponent<Button>().enabled = false;
+        }
+        else if(PlayerPrefs.GetString("AttackType") == "Active")
+        {
+            gameObject.GetComponent<Button>().enabled = false;
+        }
+        else
+        {
+            PointControl();
         }
     }
 
@@ -357,6 +374,10 @@ public class ActiveAttribute : MonoBehaviour
             SideStep.ActiveSkill = true;
             PlayerPrefs.SetInt("SideStepActiveTurn", 3);
         }
+        if (PlayerPrefs.GetString("ShootingShip") == "Faker")
+        {
+            PlayerPrefs.SetInt("FakerActiveTurn", 3);
+        }
         if (PlayerPrefs.GetString("ShootingShip") == "Healer")
         {
             PlayerPrefs.SetInt("ActiveHitPerTurn", 3);
@@ -371,6 +392,18 @@ public class ActiveAttribute : MonoBehaviour
         {
             PlayerPrefs.SetInt("ActiveHitPerTurn", 5);
             PlayerPrefs.SetInt("BombCatcherActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "Bomber")
+        {
+            PlayerPrefs.SetInt("BomberActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "Boomer")
+        {
+            PlayerPrefs.SetInt("BoomerActiveTurn", 3);
+        }
+        if (PlayerPrefs.GetString("ShootingShip") == "FlameThrower")
+        {
+            PlayerPrefs.SetInt("FlameThrowerActiveTurn", 3);
         }
         int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
         GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();

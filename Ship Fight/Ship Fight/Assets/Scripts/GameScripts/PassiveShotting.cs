@@ -149,6 +149,16 @@ public class PassiveShotting : MonoBehaviour
                             sidestep.SideStepSkill = false;
                         }
                     }
+                    else
+                    {
+                        gameObject.GetComponent<Image>().color = redColor;
+                        sidestep.HittedPiece++;
+                        map = flamethrower.PassiveSkill(map, "SideStep");
+                        PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                        IncreaseScore();
+                        IsFinished("SideStep");
+                        sidestep.SideStepSkill = false;
+                    }
                 }
                 else if ((x + 1 <= 9) && (x + 1 != sidestep.FirstPieceI) && (x + 1 != sidestep.SecondPieceI) && (x + 1 != sidestep.ThirdPieceI))
                 {
@@ -170,6 +180,16 @@ public class PassiveShotting : MonoBehaviour
                             IsFinished("SideStep");
                             sidestep.SideStepSkill = false;
                         }
+                    }
+                    else
+                    {
+                        gameObject.GetComponent<Image>().color = redColor;
+                        sidestep.HittedPiece++;
+                        map = flamethrower.PassiveSkill(map, "SideStep");
+                        PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                        IncreaseScore();
+                        IsFinished("SideStep");
+                        sidestep.SideStepSkill = false;
                     }
                 }
                 else if ((y - 1 >= 0) && (y - 1 != sidestep.FirstPieceJ) && (y - 1 != sidestep.SecondPieceJ) && (y - 1 != sidestep.ThirdPieceJ))
@@ -193,6 +213,16 @@ public class PassiveShotting : MonoBehaviour
                             sidestep.SideStepSkill = false;
                         }
                     }
+                    else
+                    {
+                        gameObject.GetComponent<Image>().color = redColor;
+                        sidestep.HittedPiece++;
+                        map = flamethrower.PassiveSkill(map, "SideStep");
+                        PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                        IncreaseScore();
+                        IsFinished("SideStep");
+                        sidestep.SideStepSkill = false;
+                    }
                 }
                 else if ((y + 1 <= 9) && (y + 1 != sidestep.FirstPieceJ) && (y + 1 != sidestep.SecondPieceJ) && (y + 1 != sidestep.ThirdPieceJ))
                 {
@@ -215,6 +245,16 @@ public class PassiveShotting : MonoBehaviour
                             sidestep.SideStepSkill = false;
                         }
                     }
+                    else
+                    {
+                        gameObject.GetComponent<Image>().color = redColor;
+                        sidestep.HittedPiece++;
+                        map = flamethrower.PassiveSkill(map, "SideStep");
+                        PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                        IncreaseScore();
+                        IsFinished("SideStep");
+                        sidestep.SideStepSkill = false;
+                    }
                 }
                 else
                 {
@@ -235,6 +275,7 @@ public class PassiveShotting : MonoBehaviour
                 PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
                 IncreaseScore();
                 IsFinished("SideStep");
+                sidestep.SideStepSkill = false;
             }               
         }
         else if ((x == faker.FirstPieceI && y == faker.FirstPieceJ) || 
@@ -244,11 +285,23 @@ public class PassiveShotting : MonoBehaviour
         {
             if (faker.FakerSkill == false)
             {
-                faker.PassiveSkill(faker);
-                faker.FakerSkill = true;
-                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
-                gameObject.GetComponent<Image>().color = blueColor;
-                FailedShot();
+                if(faker.PassiveSkill(faker, map))
+                {
+                    faker.FakerSkill = true;
+                    GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
+                    gameObject.GetComponent<Image>().color = blueColor;
+                    FailedShot();
+                }
+                else
+                {
+                    gameObject.GetComponent<Image>().color = redColor;
+                    faker.HittedPiece++;
+                    faker.FakerSkill = true;
+                    map = flamethrower.PassiveSkill(map, "Faker");
+                    PlayerPrefs.SetInt("HitPerTurn", PlayerPrefs.GetInt("HitPerTurn") - 1);
+                    IncreaseScore();
+                    IsFinished("Faker");
+                }
             }
             else
             {
@@ -394,9 +447,8 @@ public class PassiveShotting : MonoBehaviour
             if (moneymaker.HittedPiece == moneymaker.Piece)
             {
                 ImageActiveControl(0);
-                GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>().increase=0;
-            }                               
-        }                   
+            }
+        }
         else if (Name == "Tank")
         {
             if (tank.HittedPiece == tank.Piece)
@@ -455,6 +507,7 @@ public class PassiveShotting : MonoBehaviour
                             FifthShip.GetComponent<Image>().enabled = true;
                             FifthShip.GetComponent<Image>().sprite = Images[shipNumber];
                             GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().Win();
+                            CancelInvoke("SkipRound");
                             Invoke("ReturnMenu",2);
                         }
                         else
@@ -529,6 +582,7 @@ public class PassiveShotting : MonoBehaviour
             map = healer.PassiveSkill(map, whiteColor);
         }           
         PlayerPrefs.SetInt("HitPerTurn", 3);
+        PlayerPrefs.SetString("AttackType", "");
         GameObject.Find("GameManager").GetComponent<GameManager>().ChangeCamera();
     }
 
