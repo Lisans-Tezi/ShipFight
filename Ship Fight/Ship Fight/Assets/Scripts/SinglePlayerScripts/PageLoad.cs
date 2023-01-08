@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PageLoad : MonoBehaviour
@@ -49,10 +50,21 @@ public class PageLoad : MonoBehaviour
             }
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene("Scenes/Menu");
+            }
+        }
+    }
+
     void ChoseMap()
     {
-        int rnd = Random.Range(0,4);
-        rnd = 0;
+        int rnd = Random.Range(0,5);
+        //rnd = 4;
         Debug.Log("Map: " + rnd);
         if (rnd == 0)
             Map0();

@@ -37,6 +37,13 @@ public class FlameThrower : MonoBehaviour
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
 
+    public bool FlameThrowerActiveSkill = true;
+
+    private void Start()
+    {
+        FlameThrowerActiveSkill = true;
+    }
+
     void IncreaseScore()
     {
         int point = Convert.ToInt32(GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text);
@@ -378,5 +385,28 @@ public class FlameThrower : MonoBehaviour
             }
         }
         return map;
+    }
+
+    public void ActiveSkill(GameObject[,] map)
+    {
+        if (PlayerPrefs.GetString("ShootingShip") == "FlameThrower")
+        {
+            bool control = false;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[i, j].GetComponent<Image>().color == greenColor)
+                    {
+                        control = true;
+                    }
+                }
+            }
+
+            if (control)
+            {
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") + 1);
+            }
+        }
     }
 }

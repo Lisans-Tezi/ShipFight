@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -76,6 +77,17 @@ public class GameManager : MonoBehaviour
         ship5NameText.text = Ship5.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
 
 
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene("Scenes/Menu");
+            }
+        }
     }
 
     void Place(Image ship)

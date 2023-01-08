@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +31,12 @@ public class Bomber : MonoBehaviour
 
     public bool control = false;
     bool tank = false;
+
+    private void Start()
+    {
+        control = false;
+        tank = false;
+    }
 
     Color whiteColor = new Color32(255, 255, 255, 150);
     Color greenColor = new Color32(0, 255, 0, 200);
@@ -185,5 +193,33 @@ public class Bomber : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public GameObject[,] ActiveSkill(GameObject[,] map, int x)
+    {
+        if (PlayerPrefs.GetString("ShootingShip") == "Bomber")
+        {
+            bool control = false;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[x, j].GetComponent<Image>().color == greenColor)
+                    {
+                        control = true;
+                    }
+                    if(x != i && map[i, j].GetComponent<Image>().color == greenColor)
+                    {
+                        map[i, j].GetComponent<Image>().color = whiteColor;
+                    }
+                }
+            }
+
+            if (control)
+            {
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") + 1);
+            }
+        }
+        return map;
     }
 }

@@ -26,6 +26,12 @@ public class MoneyMaker : MonoBehaviour
     string point = "";
     int Point = 0;
     public int increase = 1;
+
+    private void Start()
+    {
+        increase = 1;
+    }
+
     public void PassiveSkill()
     {
         point = GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text;

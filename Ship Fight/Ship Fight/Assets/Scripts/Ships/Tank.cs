@@ -25,4 +25,9 @@ public class Tank : MonoBehaviour
     public int ActiveAttributeCost { get; set; }
 
     public bool ActiveSkill = false;
+
+    private void Start()
+    {
+        ActiveSkill = false;
+    }
 }

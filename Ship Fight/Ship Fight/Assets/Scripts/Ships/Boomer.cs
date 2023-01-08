@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boomer : MonoBehaviour
 {
@@ -28,11 +29,44 @@ public class Boomer : MonoBehaviour
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
 
+    Color whiteColor = new Color32(255, 255, 255, 150);
+    Color greenColor = new Color32(0, 255, 0, 200);
+    Color redColor = new Color32(255, 0, 0, 150);
+    Color blueColor = new Color32(0, 0, 255, 0);
+
     public void PassiveSkill()
     {
         if (HittedPiece==1)
         {
             GameObject.Find("ScorePoint").GetComponent<TextMeshProUGUI>().text = "0";
         }
+    }
+
+    public GameObject[,] ActiveSkill(GameObject[,] map, int y)
+    {
+        if (PlayerPrefs.GetString("ShootingShip") == "Boomer")
+        {
+            bool control = false;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (map[i, y].GetComponent<Image>().color == greenColor)
+                    {
+                        control = true;
+                    }
+                    if (y != j && map[i, j].GetComponent<Image>().color == greenColor)
+                    {
+                        map[i, j].GetComponent<Image>().color = whiteColor;
+                    }
+                }
+            }
+
+            if (control)
+            {
+                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") + 1);
+            }
+        }
+        return map;
     }
 }

@@ -56,6 +56,15 @@ public class ActiveShotting : MonoBehaviour
         bomber = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIBomber;
         boomer = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIBoomer;
         flamethrower = GameObject.Find("AIManager").GetComponent<AIShipPlacing>().AIFlameThrower;
+
+        var MoneyMaker = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();
+        var Tank = GameObject.Find("Tank").GetComponent<Tank>();
+        var SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
+        
+        var Healer = GameObject.Find("Healer").GetComponent<Healer>();
+        var LightBomber = GameObject.Find("LightBomber").GetComponent<LightBomber>();
+        var BombCatcher = GameObject.Find("BombCatcher").GetComponent<BombCatcher>();
+        
     }
 
 
@@ -81,7 +90,12 @@ public class ActiveShotting : MonoBehaviour
 
     public void Shot()
     {
-        if (PlayerPrefs.GetString("AttackType") == "Active" && (gameObject.GetComponent<Image>().color == greenColor || gameObject.GetComponent<Image>().color == Color.yellow))
+        if (PlayerPrefs.GetString("AttackType") == "Active" && 
+            gameObject.GetComponent<Image>().color == greenColor || (
+                (PlayerPrefs.GetString("ShootingShip") != "FlameThrower" &&
+                PlayerPrefs.GetString("ShootingShip") != "Boomer" &&
+                PlayerPrefs.GetString("ShootingShip") != "Bomber") &&
+            gameObject.GetComponent<Image>().color == Color.yellow))
         {
             string coordinat = gameObject.name;
             string[] xandy = coordinat.Split(":");
@@ -95,13 +109,21 @@ public class ActiveShotting : MonoBehaviour
 
     void DidMatched(int x, int y)
     {
+        var Faker = GameObject.Find("Faker").GetComponent<Faker>();
+        var Bomber = GameObject.Find("Bomber").GetComponent<Bomber>();
+        var Boomer = GameObject.Find("Boomer").GetComponent<Boomer>();
+        var FlameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
+
         if ((x == moneymaker.FirstPieceI && y == moneymaker.FirstPieceJ) ||
             (x == moneymaker.SecondPieceI && y == moneymaker.SecondPieceJ))
         {
             gameObject.GetComponent<Image>().color = redColor;
             moneymaker.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-            map = faker.ActiveSkill(map, "MoneyMaker");
+            map = Faker.ActiveSkill(map, "MoneyMaker");
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x,y);
             IsFinished("MoneyMaker");
         }
@@ -113,6 +135,9 @@ public class ActiveShotting : MonoBehaviour
             {
                 gameObject.GetComponent<Image>().color = Color.yellow;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                map = Bomber.ActiveSkill(map, x);
+                map = Boomer.ActiveSkill(map, y);
+                FlameThrower.ActiveSkill(map);
                 IncreaseScore(x,y);
                 IsFinished("Tank");
 
@@ -122,10 +147,14 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 tank.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                map = Bomber.ActiveSkill(map, x);
+                map = Boomer.ActiveSkill(map, y);
+                FlameThrower.ActiveSkill(map);
                 IncreaseScore(x,y);
                 IsFinished("Tank");
             }
-            map = faker.ActiveSkill(map, "Tank");
+            map = Faker.ActiveSkill(map, "Tank");
+            
             IsFinished("Tank");
         }
         else if ((x == sidestep.FirstPieceI && y == sidestep.FirstPieceJ) ||
@@ -134,143 +163,62 @@ public class ActiveShotting : MonoBehaviour
         {
             if (sidestep.SideStepSkill)
             {
-                if ((x - 1 >= 0) && (x - 1 != sidestep.FirstPieceI) && (x - 1 != sidestep.SecondPieceI) && (x - 1 != sidestep.ThirdPieceI))
+                if ((x - 1 >= 0) &&
+                    (x - 1 != sidestep.FirstPieceI) &&
+                    (x - 1 != sidestep.SecondPieceI) &&
+                    (x - 1 != sidestep.ThirdPieceI &&
+                    map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                    sidestep.PassiveSkill(x - 1, y)))
                 {
-                    if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor)
-                    {
-                        if (sidestep.PassiveSkill(x - 1, y))
-                        {
-                            map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            FailedShot();
-                        }
-                        else
-                        {
-                            gameObject.GetComponent<Image>().color = redColor;
-                            sidestep.HittedPiece++;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore(x,y);
-                            map = faker.ActiveSkill(map, "SideStep");
-                            IsFinished("SideStep");
-                            sidestep.SideStepSkill = false;
-                        }
-                    }
-                    else
-                    {
-                        gameObject.GetComponent<Image>().color = redColor;
-                        sidestep.HittedPiece++;
-                        PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                        IncreaseScore(x, y);
-                        map = faker.ActiveSkill(map, "SideStep");
-                        IsFinished("SideStep");
-                        sidestep.SideStepSkill = false;
-                    }
+                    map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                    PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    FailedShot();
                 }
-                else if ((x + 1 <= 9) && (x + 1 != sidestep.FirstPieceI) && (x + 1 != sidestep.SecondPieceI) && (x + 1 != sidestep.ThirdPieceI))
+                else if ((x + 1 <= 9) &&
+                    (x + 1 != sidestep.FirstPieceI) &&
+                    (x + 1 != sidestep.SecondPieceI) &&
+                    (x + 1 != sidestep.ThirdPieceI &&
+                    map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                    sidestep.PassiveSkill(x + 1, y)))
                 {
-                    if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                       map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor)
-                    {
-                        if (sidestep.PassiveSkill(x + 1, y))
-                        {
-                            map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            FailedShot();
-                        }
-                        else
-                        {
-                            gameObject.GetComponent<Image>().color = redColor;
-                            sidestep.HittedPiece++;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore(x,y);
-                            map = faker.ActiveSkill(map, "SideStep");
-                            IsFinished("SideStep");
-                            sidestep.SideStepSkill = false;
-                        }
-                    }
-                    else
-                    {
-                        gameObject.GetComponent<Image>().color = redColor;
-                        sidestep.HittedPiece++;
-                        PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                        IncreaseScore(x, y);
-                        map = faker.ActiveSkill(map, "SideStep");
-                        IsFinished("SideStep");
-                        sidestep.SideStepSkill = false;
-                    }
+                    map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                    PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    FailedShot();
                 }
-                else if ((y - 1 >= 0) && (y - 1 != sidestep.FirstPieceJ) && (y - 1 != sidestep.SecondPieceJ) && (y - 1 != sidestep.ThirdPieceJ))
+                else if ((y - 1 >= 0) &&
+                    (y - 1 != sidestep.FirstPieceI) &&
+                    (y - 1 != sidestep.SecondPieceI) &&
+                    (y - 1 != sidestep.ThirdPieceI &&
+                    map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor &&
+                    sidestep.PassiveSkill(x, y - 1)))
                 {
-                    if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
-                       map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor)
-                    {
-                        if (sidestep.PassiveSkill(x, y - 1))
-                        {
-                            map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor; 
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            FailedShot();
-                        }
-                        else
-                        {
-                            gameObject.GetComponent<Image>().color = redColor;
-                            sidestep.HittedPiece++;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore(x,y);
-                            map = faker.ActiveSkill(map, "SideStep");
-                            IsFinished("SideStep");
-                            sidestep.SideStepSkill = false;
-                        }
-                    }
-                    else
-                    {
-                        gameObject.GetComponent<Image>().color = redColor;
-                        sidestep.HittedPiece++;
-                        PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                        IncreaseScore(x, y);
-                        map = faker.ActiveSkill(map, "SideStep");
-                        IsFinished("SideStep");
-                        sidestep.SideStepSkill = false;
-                    }
+                    map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
+                    PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    FailedShot();
                 }
-                else if ((y + 1 <= 9) && (y + 1 != sidestep.FirstPieceJ) && (y + 1 != sidestep.SecondPieceJ) && (y + 1 != sidestep.ThirdPieceJ))
+                else if ((y + 1 <= 9) &&
+                    (y + 1 != sidestep.FirstPieceI) &&
+                    (y + 1 != sidestep.SecondPieceI) &&
+                    (y + 1 != sidestep.ThirdPieceI &&
+                    map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor &&
+                    sidestep.PassiveSkill(x, y + 1)))
                 {
-                    if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
-                       map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor)
-                    {
-                        if (sidestep.PassiveSkill(x, y + 1))
-                        {
-                            map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            FailedShot();
-                        }
-                        else
-                        {
-                            gameObject.GetComponent<Image>().color = redColor;
-                            sidestep.HittedPiece++;
-                            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                            IncreaseScore(x, y);
-                            map = faker.ActiveSkill(map, "SideStep");
-                            IsFinished("SideStep");
-                            sidestep.SideStepSkill = false;
-                        }
-                    }
-                    else
-                    {
-                        gameObject.GetComponent<Image>().color = redColor;
-                        sidestep.HittedPiece++;
-                        PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                        IncreaseScore(x, y);
-                        map = faker.ActiveSkill(map, "SideStep");
-                        IsFinished("SideStep");
-                        sidestep.SideStepSkill = false;
-                    }
+                    map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
+                    PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    FailedShot();
                 }
                 else
                 {
                     gameObject.GetComponent<Image>().color = redColor;
                     sidestep.HittedPiece++;
                     PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    map = Bomber.ActiveSkill(map, x);
+                    map = Boomer.ActiveSkill(map, y);
+                    FlameThrower.ActiveSkill(map);
                     IncreaseScore(x, y);
                     map = faker.ActiveSkill(map, "SideStep");
                     IsFinished("SideStep");
@@ -282,6 +230,9 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 sidestep.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                map = Bomber.ActiveSkill(map, x);
+                map = Boomer.ActiveSkill(map, y);
+                FlameThrower.ActiveSkill(map);
                 IncreaseScore(x, y);
                 map = faker.ActiveSkill(map, "SideStep");
                 IsFinished("SideStep");
@@ -307,6 +258,9 @@ public class ActiveShotting : MonoBehaviour
                     faker.HittedPiece++;
                     faker.FakerSkill = true;
                     PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                    map = Bomber.ActiveSkill(map, x);
+                    map = Boomer.ActiveSkill(map, y);
+                    FlameThrower.ActiveSkill(map);
                     IncreaseScore(x, y);
                     map = faker.ActiveSkill(map, "Faker");
                     IsFinished("Faker");
@@ -317,6 +271,9 @@ public class ActiveShotting : MonoBehaviour
                 gameObject.GetComponent<Image>().color = redColor;
                 faker.HittedPiece++;
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                map = Bomber.ActiveSkill(map, x);
+                map = Boomer.ActiveSkill(map, y);
+                FlameThrower.ActiveSkill(map);
                 IncreaseScore(x,y);
                 map = faker.ActiveSkill(map, "Faker");
                 IsFinished("Faker");
@@ -330,6 +287,9 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             healer.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x,y);
             map = faker.ActiveSkill(map, "Healer");
             IsFinished("Healer");
@@ -342,6 +302,9 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             lightbomber.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x, y);
             map = faker.ActiveSkill(map, "LightBomber");
             AImap = lightbomber.AIPassiveSkill(AImap);
@@ -358,6 +321,9 @@ public class ActiveShotting : MonoBehaviour
             if (bombcatcher.control == true)
             {
                 PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+                map = Bomber.ActiveSkill(map, x);
+                map = Boomer.ActiveSkill(map, y);
+                FlameThrower.ActiveSkill(map);
                 IncreaseScore(x, y);
                 map = faker.ActiveSkill(map, "BombCatcher");
                 IsFinished("BombCatcher");
@@ -380,6 +346,9 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             bomber.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x, y);
             map = faker.ActiveSkill(map, "Bomber");
             IsFinished("Bomber");
@@ -394,6 +363,9 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             boomer.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x, y);
             boomer.PassiveSkill(); 
             map = faker.ActiveSkill(map, "Boomer");
@@ -410,26 +382,22 @@ public class ActiveShotting : MonoBehaviour
             gameObject.GetComponent<Image>().color = redColor;
             flamethrower.HittedPiece++;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
             IncreaseScore(x, y);
             map = faker.ActiveSkill(map, "FlameThrower");
             IsFinished("FlameThrower");
         }
         else
         {
-            if (PlayerPrefs.GetString("ShootingShip") == "Bomber" && bomber.control != true)
-            {
-                map = bomber.PassiveSkill(map);
-                bomber.control = true;
-                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                IncreaseScore(x, y);
-            }
-            else
-            {
-                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
-                gameObject.GetComponent<Image>().color = blueColor;
-                PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
-                FailedShot();
-            }
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
+            gameObject.GetComponent<Image>().color = blueColor;
+            PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
+            map = Bomber.ActiveSkill(map, x);
+            map = Boomer.ActiveSkill(map, y);
+            FlameThrower.ActiveSkill(map);
+            FailedShot();
         }
     }
 
@@ -459,6 +427,18 @@ public class ActiveShotting : MonoBehaviour
             HitPerTurnControl();
         }
         else if (PlayerPrefs.GetString("ShootingShip") == "BombCatcher")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "Bomber")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "Boomer")
+        {
+            HitPerTurnControl();
+        }
+        else if (PlayerPrefs.GetString("ShootingShip") == "FlameThrower")
         {
             HitPerTurnControl();
         }
@@ -582,6 +562,12 @@ public class ActiveShotting : MonoBehaviour
                             FifthShip.GetComponent<Image>().enabled = true;
                             FifthShip.GetComponent<Image>().sprite = Images[shipNumber];
                             GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().Win();
+                            for (int i = 0; i < 10; i++)
+                                for (int j = 0; j < 10; j++)
+                                    if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
+                                    {
+                                        map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                                    }
                             CancelInvoke("SkipRound");
                             Invoke("ReturnMenu", 2);
                         }

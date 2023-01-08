@@ -13,6 +13,7 @@ public class AIAttackManager : MonoBehaviour
     GameObject[,] AImap = new GameObject[10, 10];
 
     Color whiteColor = new Color32(255, 255, 255, 150);
+    Color greenColor = new Color32(0, 255, 0, 200);
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
 
@@ -135,6 +136,13 @@ public class AIAttackManager : MonoBehaviour
                 if (control)
                 {
                     GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().Lose();
+                    for (int i = 0; i < 10; i++)
+                        for (int j = 0; j < 10; j++)
+                            if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
+                            {
+                                map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
+                            }
+                    CancelInvoke("SkipRound");
                     Invoke("ReturnMenu",2);
                 }
             }   
@@ -182,77 +190,57 @@ public class AIAttackManager : MonoBehaviour
         {
             if (SideStep.SideStepSkill)
             {
-                if (x - 1 >= 0 && (x - 1 != SideStep.FirstPieceI) && (x - 1 != SideStep.SecondPieceI) && (x - 1 != SideStep.ThirdPieceI))
+                if (x - 1 >= 0 && 
+                    (x - 1 != SideStep.FirstPieceI) && 
+                    (x - 1 != SideStep.SecondPieceI) && 
+                    (x - 1 != SideStep.ThirdPieceI) &&
+                    map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                    map[x - 1, y].gameObject.GetComponent<Image>().color != Color.black)
                 {
-                    if (map[x - 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x - 1, y].gameObject.GetComponent<Image>().color != blueColor &&
-                        map[x - 1, y].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.SideStepSkill = false;
-                        Invoke("SkipRound", 1.5f);
-                    }
-                    else
-                    {
-                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                        SideStep.HittedPiece++;
-                        SideStep.SideStepSkill = false;
-                    }
+                    map[x - 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                    SideStep.SideStepSkill = false;
+                    Invoke("SkipRound", 1.5f);
                 }
-                else if (x + 1 <= 9 && (x + 1 != SideStep.FirstPieceI) && (x + 1 != SideStep.SecondPieceI) && (x + 1 != SideStep.ThirdPieceI))
+                else if (x + 1 <= 9 && 
+                    (x + 1 != SideStep.FirstPieceI) && 
+                    (x + 1 != SideStep.SecondPieceI) && 
+                    (x + 1 != SideStep.ThirdPieceI) &&
+                    map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor &&
+                    map[x + 1, y].gameObject.GetComponent<Image>().color != Color.black)
                 {
-                    if (map[x + 1, y].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x + 1, y].gameObject.GetComponent<Image>().color != blueColor &&
-                        map[x + 1, y].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.SideStepSkill = false;
-                        Invoke("SkipRound", 1.5f);
-                    }
-                    else
-                    {
-                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                        SideStep.HittedPiece++;
-                        SideStep.SideStepSkill = false;
-                    }
+                    map[x + 1, y].gameObject.GetComponent<Image>().color = blueColor;
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                    SideStep.SideStepSkill = false;
+                    Invoke("SkipRound", 1.5f);
                 }
-                else if (y - 1 >= 0 && (y - 1 != SideStep.FirstPieceJ) && (y - 1 != SideStep.SecondPieceJ) && (y - 1 != SideStep.ThirdPieceJ))
+                else if (y - 1 >= 0 && 
+                    (y - 1 != SideStep.FirstPieceJ) && 
+                    (y - 1 != SideStep.SecondPieceJ) && 
+                    (y - 1 != SideStep.ThirdPieceJ) &&
+                    map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor &&
+                    map[x, y - 1].gameObject.GetComponent<Image>().color != Color.black)
                 {
-                    if (map[x, y - 1].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x, y - 1].gameObject.GetComponent<Image>().color != blueColor &&
-                        map[x, y - 1].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.SideStepSkill = false;
-                        Invoke("SkipRound", 1.5f);
-                    }
-                    else
-                    {
-                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                        SideStep.HittedPiece++;
-                        SideStep.SideStepSkill = false;
-                    }
+                    map[x, y - 1].gameObject.GetComponent<Image>().color = blueColor;
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                    SideStep.SideStepSkill = false;
+                    Invoke("SkipRound", 1.5f);
                 }
-                else if (y + 1 <= 9 && (y + 1 != SideStep.FirstPieceJ) && (y + 1 != SideStep.SecondPieceJ) && (y + 1 != SideStep.ThirdPieceJ))
+                else if (y + 1 <= 9 && 
+                    (y + 1 != SideStep.FirstPieceJ) && 
+                    (y + 1 != SideStep.SecondPieceJ) && 
+                    (y + 1 != SideStep.ThirdPieceJ) &&
+                    map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
+                    map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor &&
+                    map[x, y + 1].gameObject.GetComponent<Image>().color != Color.black)
                 {
-                    if (map[x, y + 1].gameObject.GetComponent<Image>().color != redColor &&
-                        map[x, y + 1].gameObject.GetComponent<Image>().color != blueColor &&
-                        map[x, y + 1].gameObject.GetComponent<Image>().color != Color.black)
-                    {
-                        map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
-                        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
-                        SideStep.SideStepSkill = false;
-                        Invoke("SkipRound", 1.5f);
-                    }
-                    else
-                    {
-                        map[x, y].gameObject.GetComponent<Image>().color = redColor;
-                        SideStep.HittedPiece++;
-                        SideStep.SideStepSkill = false;
-                    }
+                    map[x, y + 1].gameObject.GetComponent<Image>().color = blueColor;
+                    GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIMissed();
+                    SideStep.SideStepSkill = false;
+                    Invoke("SkipRound", 1.5f);
                 }
                 else
                 {

@@ -25,6 +25,12 @@ public class SideStep : MonoBehaviour
 
     public bool ActiveSkill = false;
 
+    private void Start()
+    {
+        SideStepSkill = true;
+        ActiveSkill = false;
+    }
+
     List<int> X = new List<int>();
     List<int> Y = new List<int>();
 

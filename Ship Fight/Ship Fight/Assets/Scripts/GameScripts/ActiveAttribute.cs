@@ -328,7 +328,9 @@ public class ActiveAttribute : MonoBehaviour
         if (shipName.text == "FlameThrower")
         {
             var FlameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
-            if (point >= FlameThrower.ActiveAttributeCost && (PlayerPrefs.GetInt("FlameThrowerActiveTurn") == 0))
+            if (point >= FlameThrower.ActiveAttributeCost && 
+                PlayerPrefs.GetInt("FlameThrowerActiveTurn") == 0 &&
+                FlameThrower.FlameThrowerActiveSkill)
             {
                 gameObject.GetComponent<Button>().enabled = true;
             }
@@ -403,18 +405,115 @@ public class ActiveAttribute : MonoBehaviour
         }
         if (PlayerPrefs.GetString("ShootingShip") == "FlameThrower")
         {
+            var FlameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
+            FlameThrower.FlameThrowerActiveSkill = false;
             PlayerPrefs.SetInt("FlameThrowerActiveTurn", 3);
+            MapEdgeColor();
         }
         int RemainingShotPoint = PlayerPrefs.GetInt("ActiveHitPerTurn");
         GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
     }
 
-    void PointDrop()
+    void MapEdgeColor()
     {
         for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
-                if (map[i, j].gameObject.GetComponent<Image>().color == whiteColor)
-                    map[i, j].gameObject.GetComponent<Image>().color = greenColor;
+        {
+            if (map[0, i].GetComponent<Image>().color == whiteColor)
+            {
+                map[0, i].GetComponent<Image>().color = greenColor;
+            }
+            if (map[9, i].GetComponent<Image>().color == whiteColor)
+            {
+                map[9, i].GetComponent<Image>().color = greenColor;
+            }
+            if (map[i, 0].GetComponent<Image>().color == whiteColor)
+            {
+                map[i, 0].GetComponent<Image>().color = greenColor;
+            }
+            if (map[i, 9].GetComponent<Image>().color == whiteColor)
+            {
+                map[i, 9].GetComponent<Image>().color = greenColor;
+            }
+        }
+        if(PlayerPrefs.GetString("Map") == "Map2")
+        {
+            if (map[1, 2].GetComponent<Image>().color == whiteColor)
+                map[1, 2].GetComponent<Image>().color = greenColor;
+            if (map[2, 3].GetComponent<Image>().color == whiteColor)
+                map[2, 3].GetComponent<Image>().color = greenColor;
+            if (map[3, 4].GetComponent<Image>().color == whiteColor)
+                map[3, 4].GetComponent<Image>().color = greenColor;
+            if (map[3, 5].GetComponent<Image>().color == whiteColor)
+                map[3, 5].GetComponent<Image>().color = greenColor;
+            if (map[2, 6].GetComponent<Image>().color == whiteColor)
+                map[2, 6].GetComponent<Image>().color = greenColor;
+            if (map[1, 7].GetComponent<Image>().color == whiteColor)
+                map[1, 7].GetComponent<Image>().color = greenColor;
+
+            if (map[6, 2].GetComponent<Image>().color == whiteColor)
+                map[6, 2].GetComponent<Image>().color = greenColor;
+            if (map[7, 3].GetComponent<Image>().color == whiteColor)
+                map[7, 3].GetComponent<Image>().color = greenColor;
+            if (map[8, 4].GetComponent<Image>().color == whiteColor)
+                map[8, 4].GetComponent<Image>().color = greenColor;
+            if (map[8, 5].GetComponent<Image>().color == whiteColor)
+                map[8, 5].GetComponent<Image>().color = greenColor;
+            if (map[7, 6].GetComponent<Image>().color == whiteColor)
+                map[7, 6].GetComponent<Image>().color = greenColor;
+            if (map[6, 7].GetComponent<Image>().color == whiteColor)
+                map[6, 7].GetComponent<Image>().color = greenColor;
+        }
+        if(PlayerPrefs.GetString("Map") == "Map3")
+        {
+            if (map[1, 1].GetComponent<Image>().color == whiteColor)
+                map[1, 1].GetComponent<Image>().color = greenColor;
+            if (map[2, 5].GetComponent<Image>().color == whiteColor)
+                map[2, 5].GetComponent<Image>().color = greenColor;
+            if (map[3, 5].GetComponent<Image>().color == whiteColor)
+                map[3, 5].GetComponent<Image>().color = greenColor;
+            if (map[4, 1].GetComponent<Image>().color == whiteColor)
+                map[4, 1].GetComponent<Image>().color = greenColor;
+            if (map[4, 7].GetComponent<Image>().color == whiteColor)
+                map[4, 7].GetComponent<Image>().color = greenColor;
+            if (map[5, 2].GetComponent<Image>().color == whiteColor)
+                map[5, 2].GetComponent<Image>().color = greenColor;
+            if (map[5, 8].GetComponent<Image>().color == whiteColor)
+                map[5, 8].GetComponent<Image>().color = greenColor;
+            if (map[6, 4].GetComponent<Image>().color == whiteColor)
+                map[6, 4].GetComponent<Image>().color = greenColor;
+            if (map[7, 4].GetComponent<Image>().color == whiteColor)
+                map[7, 4].GetComponent<Image>().color = greenColor;
+            if (map[8, 8].GetComponent<Image>().color == whiteColor)
+                map[8, 8].GetComponent<Image>().color = greenColor;
+        }
+        if (PlayerPrefs.GetString("Map") == "Map4")
+        {
+            if (map[2, 1].GetComponent<Image>().color == whiteColor)
+                map[2, 1].GetComponent<Image>().color = greenColor;
+            if (map[1, 2].GetComponent<Image>().color == whiteColor)
+                map[1, 2].GetComponent<Image>().color = greenColor;
+            if (map[1, 7].GetComponent<Image>().color == whiteColor)
+                map[1, 7].GetComponent<Image>().color = greenColor;
+            if (map[2, 8].GetComponent<Image>().color == whiteColor)
+                map[2, 8].GetComponent<Image>().color = greenColor;
+            if (map[7, 1].GetComponent<Image>().color == whiteColor)
+                map[7, 1].GetComponent<Image>().color = greenColor;
+            if (map[8, 2].GetComponent<Image>().color == whiteColor)
+                map[8, 2].GetComponent<Image>().color = greenColor;
+            if (map[7, 8].GetComponent<Image>().color == whiteColor)
+                map[7, 8].GetComponent<Image>().color = greenColor;
+            if (map[8, 7].GetComponent<Image>().color == whiteColor)
+                map[8, 7].GetComponent<Image>().color = greenColor;
+        }
+    }
+
+    void PointDrop()
+    {
+        if(PlayerPrefs.GetString("ShootingShip") != "FlameThrower")
+            for (int i = 0; i < 10; i++)
+                for (int j = 0; j < 10; j++)
+                    if (map[i, j].gameObject.GetComponent<Image>().color == whiteColor)
+                        map[i, j].gameObject.GetComponent<Image>().color = greenColor;
         if (shipName.text == "MoneyMaker")
         {
             var MoneyMaker = GameObject.Find("MoneyMaker").GetComponent<MoneyMaker>();

@@ -25,8 +25,16 @@ public class BombCatcher : MonoBehaviour
     public string ActiveAttribute { get; set; }
     public int ActiveAttributeCost { get; set; }
 
+
     public bool control = false;
     bool AIcontrol = false;
+
+    private void Start()
+    {
+        bool control = false;
+        AIcontrol = false;
+    }
+
     public void PassiveSkill()
     {
         if (!control)

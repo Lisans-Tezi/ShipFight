@@ -28,6 +28,11 @@ public class Faker : MonoBehaviour
 
     public bool FakerSkill=false;
 
+    private void Start()
+    {
+        FakerSkill = false;
+    }
+
     Color whiteColor = new Color32(255, 255, 255, 150);
     Color greenColor = new Color32(0, 255, 0, 200);
     Color redColor = new Color32(255, 0, 0, 150);

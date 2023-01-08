@@ -179,7 +179,7 @@ public class AIShipPlacing : MonoBehaviour
     void Start()
     {
         int rnd = Random.Range(0, 4);
-        rnd = 2;
+        //rnd = 1;
         Debug.Log("First,Second,Third,Fourth: " + (rnd + 1));
         if (PlayerPrefs.GetString("Map")=="Map1")
         {
@@ -283,7 +283,7 @@ public class AIShipPlacing : MonoBehaviour
         MoneyMaker(7, 4, 7, 5);
         SideStep(2, 2, 2, 3, 3, 2);
         Healer(5, 2, 6, 2, 7, 2, 7, 3);
-        Bomber(5, 7, 6, 7, 8, 7, 8, 6, 8, 9);
+        Bomber(6, 8, 7, 8, 8, 7, 8, 8, 8, 9);
         FlameThrower(0, 7, 1, 7, 2, 7, 0, 8, 0, 9, 1, 9, 2, 9);
     }
     void AIThirdMap1()

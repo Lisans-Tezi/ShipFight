@@ -30,6 +30,12 @@ public class LightBomber : MonoBehaviour
     Color blueColor = new Color32(0, 0, 255, 0);
 
     bool tank = false;
+
+    private void Start()
+    {
+        tank = false;
+    }
+
     public GameObject[,] AIPassiveSkill(GameObject[,] map)
     {
         bool control=false;
