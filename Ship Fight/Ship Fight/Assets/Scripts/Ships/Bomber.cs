@@ -30,7 +30,7 @@ public class Bomber : MonoBehaviour
     public int ActiveAttributeCost { get; set; }
 
     public bool control = false;
-    bool tank = false;
+    public bool tank = false;
 
     private void Start()
     {

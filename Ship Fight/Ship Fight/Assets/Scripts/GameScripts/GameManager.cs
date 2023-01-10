@@ -64,6 +64,19 @@ public class GameManager : MonoBehaviour
         boomer = GameObject.Find("Boomer").GetComponent<Boomer>();
         flameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
 
+        moneyMaker.increase = 1;
+        tank.ActiveSkill = false;
+        sideStep.SideStepSkill = true;
+        sideStep.ActiveSkill = false;
+        faker.FakerSkill = false;
+        lightBomber.tank = false;
+        bombCatcher.control = false;
+        bombCatcher.AIcontrol = false;
+        bomber.control = false;
+        bomber.tank = false;
+        flameThrower.FlameThrowerActiveSkill = true;
+
+
         Place(Ship1);
         Place(Ship2);
         Place(Ship3);

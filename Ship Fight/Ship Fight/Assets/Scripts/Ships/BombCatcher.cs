@@ -27,11 +27,11 @@ public class BombCatcher : MonoBehaviour
 
 
     public bool control = false;
-    bool AIcontrol = false;
+    public bool AIcontrol = false;
 
     private void Start()
     {
-        bool control = false;
+        control = false;
         AIcontrol = false;
     }
 

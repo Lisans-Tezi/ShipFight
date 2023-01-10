@@ -29,7 +29,7 @@ public class LightBomber : MonoBehaviour
     Color redColor = new Color32(255, 0, 0, 150);
     Color blueColor = new Color32(0, 0, 255, 0);
 
-    bool tank = false;
+    public bool tank = false;
 
     private void Start()
     {
