@@ -1,365 +1,533 @@
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 0, "tid": 1, "ts": 1673437335532618, "dur": 977981, "ph": "X", "name": "Build Player", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1673437335532648, "dur": 32992, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1673437335565645, "dur": 942663, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1673437336508310, "dur": 2287, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1673437336511115, "dur": 18, "ph": "X", "name": "", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437827837654, "dur": 2377374, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437827837868, "dur": 12385, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437827850257, "dur": 32565, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437827882824, "dur": 716155, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437828598980, "dur": 1602457, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437830201439, "dur": 13588, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437830215721, "dur": 12, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1673437828410071, "dur": 175174, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828411013, "dur": 38605, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828556845, "dur": 6761, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828563608, "dur": 21625, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828564293, "dur": 20332, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828589340, "dur": 1159, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1673437828588557, "dur": 1963, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437830215855, "dur": 160, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1673437335623386, "dur":2114, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437335625512, "dur":708, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1673437335626261, "dur":25, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1673437335626286, "dur":400, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1673437335626767, "dur":867, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437335627635, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281236, "dur":106, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281342, "dur":28, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281370, "dur":26, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281396, "dur":18, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281414, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281417, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281427, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281430, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281438, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281454, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336281481, "dur":1582, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1673437335627169, "dur":515, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335627687, "dur":6913, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634617, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634622, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634656, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634659, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634707, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634758, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634806, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634854, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634901, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":1, "ts":1673437335634974, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635012, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635055, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635092, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635140, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635223, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635264, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635305, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635323, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635360, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635387, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635425, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635440, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635481, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635496, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635541, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635557, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635596, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635612, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635648, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635668, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635709, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635724, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635762, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635778, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635816, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635833, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635872, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635900, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635934, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635952, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335635987, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636007, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636042, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636057, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636094, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636109, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636146, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636161, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636199, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335636213, "dur":7764, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335643980, "dur":850, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335644830, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335644897, "dur":76262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335721159, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335721239, "dur":45104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335766344, "dur":1598, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335767945, "dur":5525, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335773471, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335773555, "dur":108754, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":1, "ts":1673437335882310, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335882425, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335882463, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335882474, "dur":2387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335884886, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":1, "ts":1673437335884913, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335884928, "dur":4177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":1, "ts":1673437335889128, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335889152, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335889161, "dur":4114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335893303, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335893330, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335893342, "dur":2027, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335895397, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1673437335895517, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335895569, "dur":2890, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":1, "ts":1673437335898460, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335898569, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335898604, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335898617, "dur":3569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335902214, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/resources.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335902238, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335902250, "dur":2531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/resources.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335904804, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level2.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335904833, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335904847, "dur":1403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level2.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335906274, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level2" }}
-,{ "pid":12345, "tid":1, "ts":1673437335906299, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335906309, "dur":1424, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level2" }}
-,{ "pid":12345, "tid":1, "ts":1673437335907756, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level1.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335907777, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335907788, "dur":1126, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level1.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335908931, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level0.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335908957, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335908968, "dur":1448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level0.resS" }}
-,{ "pid":12345, "tid":1, "ts":1673437335910433, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335910464, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335910473, "dur":1042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":1, "ts":1673437335911532, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1673437335911631, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1673437335911708, "dur":369528, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335627240, "dur":507, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335627747, "dur":6879, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634626, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634758, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634807, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634855, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634901, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634951, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335634995, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635061, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635095, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635141, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635229, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635244, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635283, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635303, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635342, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635362, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635408, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635422, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635459, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635473, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635508, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635546, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635585, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635601, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635688, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635708, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635756, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635773, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635814, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635828, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635862, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635884, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635922, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335635935, "dur":326, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636262, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636279, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636314, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636326, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636375, "dur":339, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636715, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636790, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636810, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636862, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636881, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636928, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636945, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636979, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335636992, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637099, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637123, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637164, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637176, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637210, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637224, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637256, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637268, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637299, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637311, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637343, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637356, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637388, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637401, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335637433, "dur":90176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335727610, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335727688, "dur":63756, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335791444, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335791530, "dur":6195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335797725, "dur":283, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335798010, "dur":24104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335822115, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335822197, "dur":37701, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335859899, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335859966, "dur":1077, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861044, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861120, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861141, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861183, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861199, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861239, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861254, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861291, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861308, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861347, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861361, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861395, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861410, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861446, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861459, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861493, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861506, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861539, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861554, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861592, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861607, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861645, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861660, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861698, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861712, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861750, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861772, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861813, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861827, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861865, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861885, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861921, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861935, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861972, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335861987, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862021, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862034, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862069, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862089, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862124, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862138, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862176, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862189, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862226, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862249, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437335862282, "dur":418850, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1673437336281133, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1673437336281188, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":2, "ts":1673437336281189, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335627225, "dur":510, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335627735, "dur":6965, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634700, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634776, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634811, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634857, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634891, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634932, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335634971, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635021, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635060, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635099, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635138, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635229, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635270, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635286, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635326, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635345, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635386, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635406, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635443, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635458, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635496, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635511, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635546, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635560, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635595, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635613, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635652, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635680, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635719, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635735, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635771, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635786, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635820, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635833, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635873, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635887, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635930, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635949, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335635987, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636004, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636042, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636057, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636095, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636110, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636145, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636161, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636198, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636213, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636252, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636269, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636305, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335636326, "dur":1268, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335637595, "dur":302230, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":3, "ts":1673437335939825, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1673437335939893, "dur":341349, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335627288, "dur":471, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335627759, "dur":6845, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634617, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634708, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634760, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634810, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634846, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634892, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634929, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":4, "ts":1673437335634975, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635016, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635060, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635099, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635182, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635222, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight.exe" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635241, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635280, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635300, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635339, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635358, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635399, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635418, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635456, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635477, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635515, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635530, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335635568, "dur":189390, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335824958, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335825037, "dur":842, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335825879, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335825953, "dur":36541, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":4, "ts":1673437335862494, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335862544, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":4, "ts":1673437335862639, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335862686, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":4, "ts":1673437335862719, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335863525, "dur":6166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":4, "ts":1673437335869715, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":4, "ts":1673437335869738, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335869749, "dur":1135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":4, "ts":1673437335870903, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1673437335870926, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335870936, "dur":37885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1673437335908840, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level1" }}
-,{ "pid":12345, "tid":4, "ts":1673437335908871, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335908883, "dur":1483, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level1" }}
-,{ "pid":12345, "tid":4, "ts":1673437335910388, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level0" }}
-,{ "pid":12345, "tid":4, "ts":1673437335910411, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335910421, "dur":1050, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/level0" }}
-,{ "pid":12345, "tid":4, "ts":1673437335911491, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1673437335911513, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1673437335911521, "dur":972, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/sekov/OneDrive/Masast/ShipFightDebug/Ship Fight_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1673437335912511, "dur":368738, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1673437336284704, "dur":2578, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1673437336511245, "dur": 634, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1673437336511091, "dur": 814, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+,{ "pid":12345, "tid":0, "ts":1673437828632201, "dur":1037, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437828633244, "dur":63, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1673437828633320, "dur":20, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1673437828633340, "dur":353, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1673437828633737, "dur":552, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437828634290, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172296, "dur":152, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172448, "dur":25, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172473, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172476, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172488, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172491, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172498, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172501, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172509, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172512, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172520, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172523, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172531, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172534, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172540, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172544, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172551, "dur":1, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172567, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830172577, "dur":1156, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1673437828634032, "dur":264, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828634298, "dur":2502, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828636815, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1673437828636820, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828636849, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1673437828636857, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828637771, "dur":6574, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1673437828644349, "dur":267820, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1673437828912173, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828912202, "dur":1467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1673437828913692, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828913718, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828913726, "dur":32573, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828946327, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828946357, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828946367, "dur":21192, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828967579, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828967603, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828967610, "dur":22173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828989803, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437828989828, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437828989836, "dur":71991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829061847, "dur":139733, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829201584, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829201594, "dur":1291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829202907, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829202925, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829202932, "dur":44214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829247167, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829247193, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829247200, "dur":19904, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829267125, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829267142, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829267150, "dur":27488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829294661, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829294679, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829294687, "dur":114880, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829409588, "dur":35885, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829445477, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829445486, "dur":1347, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829446852, "dur":24304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829471160, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829471167, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829472292, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829472308, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829472315, "dur":94636, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829566970, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829566987, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829566996, "dur":35972, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829602987, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829603004, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829603011, "dur":117655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829720686, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829720704, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829720711, "dur":126615, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829847345, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829847360, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829847386, "dur":66220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":1, "ts":1673437829913624, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1673437829913640, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1673437829913648, "dur":1662, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1673437829915325, "dur":256976, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828634031, "dur":270, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828634301, "dur":2543, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828636844, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1673437828636876, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828641425, "dur":16321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1673437828657766, "dur":96206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1673437828753975, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828753984, "dur":859, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1673437828754861, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1673437828754919, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828754925, "dur":16009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1673437828770958, "dur":53702, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828824663, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828824922, "dur":1238, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828826177, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight.exe" }}
+,{ "pid":12345, "tid":2, "ts":1673437828826198, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828826202, "dur":21420, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight.exe" }}
+,{ "pid":12345, "tid":2, "ts":1673437828847642, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828847667, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828847955, "dur":43106, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828891079, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828891103, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828891150, "dur":18600, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828909767, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828909794, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828909802, "dur":55144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828964967, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437828964985, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437828964993, "dur":40079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829005095, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829005113, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829005121, "dur":64668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829069808, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829069823, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829069831, "dur":27179, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829097029, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829097048, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829097055, "dur":47038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829144113, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829144135, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829144143, "dur":30607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829174770, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829174793, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829174801, "dur":20751, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829195571, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829195588, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829195602, "dur":44276, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829239901, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829239919, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829239927, "dur":119658, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829359626, "dur":71493, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829431124, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829431133, "dur":1283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829432435, "dur":720, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829433159, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829433168, "dur":1085, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829434274, "dur":25642, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829459920, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829459928, "dur":1707, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829461655, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829461672, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829461679, "dur":90556, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829552254, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829552270, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829552278, "dur":118407, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829670708, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829670731, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437829670743, "dur":186579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437829857342, "dur":313986, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437830171332, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1673437830171339, "dur":917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":2, "ts":1673437830172270, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":2, "ts":1673437830172270, "dur":1, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828634036, "dur":271, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828634307, "dur":2497, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828636815, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1673437828636882, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828641296, "dur":20617, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1673437828661929, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1673437828661955, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828662339, "dur":73574, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1673437828735930, "dur":43282, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1673437828779215, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437828779223, "dur":913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1673437828780151, "dur":1270920, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1673437830051074, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1673437830051080, "dur":16154, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1673437830067257, "dur":105049, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828634043, "dur":270, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828634313, "dur":2492, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828636815, "dur":14908, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1673437828651727, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828651742, "dur":821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1673437828652578, "dur":49862, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1673437828702443, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828735188, "dur":29450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1673437828764668, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1673437828764703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828764713, "dur":26259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1673437828790993, "dur":99390, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1673437828890388, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828890395, "dur":1804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1673437828892223, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437828892252, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828892262, "dur":17350, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437828909631, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437828909656, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828909664, "dur":36667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437828946345, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437828946364, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437828946368, "dur":94775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829041161, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829041176, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829041182, "dur":111070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829152271, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829152287, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829152295, "dur":17484, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829169798, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829169820, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829169828, "dur":21806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829191653, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829191669, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829191676, "dur":42584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829234282, "dur":210, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829234496, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829234503, "dur":37511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829272033, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829272050, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829272058, "dur":27200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829299277, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829299299, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829299307, "dur":19246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829318574, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829318596, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829318603, "dur":30772, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829349395, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829349413, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829349420, "dur":35780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829385222, "dur":27636, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829412862, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829412872, "dur":1055, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829413943, "dur":709, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829414656, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829414665, "dur":984, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829415667, "dur":46690, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829462361, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829462368, "dur":1188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829463575, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829463591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829463599, "dur":224434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829688053, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829688072, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829688081, "dur":47424, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829735523, "dur":128347, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829863874, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829863880, "dur":1583, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1673437829865483, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829865501, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829865506, "dur":1129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829866655, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829866712, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829866718, "dur":17612, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829884351, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829884368, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829884375, "dur":1840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829886234, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/resources.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829886464, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829886471, "dur":1393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/resources.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829887881, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level2.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829887897, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829887904, "dur":3159, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level2.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829891083, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level2" }}
+,{ "pid":12345, "tid":4, "ts":1673437829891098, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829891105, "dur":1699, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level2" }}
+,{ "pid":12345, "tid":4, "ts":1673437829892822, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level1.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829892839, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829892845, "dur":1067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level1.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829893928, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1673437829893943, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829893949, "dur":2444, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1673437829896413, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829896428, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829896441, "dur":4735, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1673437829901195, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1673437829901234, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829901241, "dur":2132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1673437829903391, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829903410, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829903416, "dur":10390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1673437829913821, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1673437829913978, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1673437829913986, "dur":1119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1673437829915122, "dur":257171, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828634070, "dur":249, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828634319, "dur":2482, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828636815, "dur":26852, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1673437828663689, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828663940, "dur":827, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1673437828664780, "dur":18272, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1673437828683056, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828735104, "dur":930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1673437828736050, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1673437828736078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828736085, "dur":174845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1673437828910951, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437828910976, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828910983, "dur":39832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437828950835, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437828950859, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828950866, "dur":35721, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437828986608, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437828986648, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437828986656, "dur":26905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829013580, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829013597, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829013604, "dur":27512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829041135, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829041158, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829041166, "dur":43124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829084307, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829084447, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829084454, "dur":93673, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829178146, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829178164, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829178173, "dur":19551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829197745, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829197764, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829197791, "dur":23309, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829221120, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829221138, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829221146, "dur":30026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829251444, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829251466, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829251472, "dur":27279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829278770, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829278787, "dur":9, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829278803, "dur":24229, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829303054, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829303081, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829303088, "dur":21076, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829324183, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829324217, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829324225, "dur":38045, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829362289, "dur":319543, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829681836, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829681846, "dur":1348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829683213, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829683235, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1673437829683243, "dur":232016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1673437829915273, "dur":257019, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437828634101, "dur":222, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437828634323, "dur":2480, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437828636816, "dur":60833, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1673437828697653, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437828697668, "dur":38018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1673437828735706, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1673437828735741, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437828735752, "dur":35273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1673437828771044, "dur":740704, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829511753, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437829511845, "dur":5628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829517495, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829517516, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437829517525, "dur":198176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829715719, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829715737, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437829715746, "dur":136178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829853697, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437829853729, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1673437829853737, "dur":219806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1673437830073563, "dur":98739, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828634130, "dur":198, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828634328, "dur":2475, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828636815, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1673437828636860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828640924, "dur":17239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1673437828658181, "dur":76877, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1673437828735063, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828735136, "dur":182205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1673437828917364, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437828917390, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828917398, "dur":36655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437828954072, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437828954107, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437828954115, "dur":48278, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829002422, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829002442, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829002450, "dur":30540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829033010, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829033033, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829033041, "dur":38190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829071251, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829071275, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829071282, "dur":34609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829105911, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829105932, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829105940, "dur":23874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829129835, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829129852, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829129859, "dur":41949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829171829, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829171847, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829171854, "dur":37832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829209702, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829209723, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829209729, "dur":20246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829229994, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829230011, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829230019, "dur":21360, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829251395, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829251410, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829251418, "dur":20619, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829272052, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829272073, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829272079, "dur":23129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829295224, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829295264, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829295271, "dur":19612, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829314904, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829314922, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829314929, "dur":41890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829356844, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829356862, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829356870, "dur":23311, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829380200, "dur":653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829380856, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829380864, "dur":972, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829381853, "dur":41320, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829423178, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829423186, "dur":1143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829424346, "dur":19283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829443634, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829443667, "dur":1152, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829444837, "dur":23915, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829468757, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829468766, "dur":1135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829469920, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829469937, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829469947, "dur":57021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829526988, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829527005, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829527012, "dur":126508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829653539, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829653556, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829653567, "dur":46796, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829700382, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829700398, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829700406, "dur":150637, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829851063, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437829851081, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1673437829851089, "dur":275999, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":7, "ts":1673437830127109, "dur":45188, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437828634157, "dur":177, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437828634334, "dur":2472, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437828636814, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1673437828636860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437828638351, "dur":193968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1673437828832336, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1673437828832360, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437828832587, "dur":250531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1673437829083140, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829083159, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829083167, "dur":50387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829133576, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829133600, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829133608, "dur":32500, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829166128, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829166146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829166154, "dur":22283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829188459, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829188489, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829188496, "dur":21007, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829209527, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829209545, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829209553, "dur":32865, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829242437, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829242455, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829242463, "dur":20840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829263323, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829263340, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829263347, "dur":56831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829320196, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829320213, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829320222, "dur":23393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829343641, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829343659, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829343667, "dur":115377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829459063, "dur":19605, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829478672, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829478681, "dur":1138, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829479836, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829479851, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829479857, "dur":199051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829678927, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829678943, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829678950, "dur":183720, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":8, "ts":1673437829862692, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829862901, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829863397, "dur":1203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829864620, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":8, "ts":1673437829864638, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829864692, "dur":2176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":8, "ts":1673437829866887, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":8, "ts":1673437829866905, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829866912, "dur":1044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":8, "ts":1673437829867975, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":8, "ts":1673437829867991, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829867999, "dur":2317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":8, "ts":1673437829870338, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1673437829870353, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829870361, "dur":3197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1673437829873590, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1673437829873611, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829873620, "dur":1511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":8, "ts":1673437829875151, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829875316, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829875323, "dur":1170, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829876511, "dur":47816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829924331, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1673437829924341, "dur":1502, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/marsl/OneDrive/Masast/Ship Fight/Ship Fight_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1673437829925860, "dur":246447, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1673437830174985, "dur":2256, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1673437830216050, "dur": 635, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1673437830215711, "dur": 991, "ph": "X", "name": "Write chrome-trace events", "args": {} },
