@@ -25,6 +25,11 @@ public class PassiveAttribute : MonoBehaviour
         Create();
     }
 
+    void OnEnable()
+    {
+        GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().ChoseShip();
+    }
+
     void Create()
     {
         int k = 0;
@@ -205,7 +210,6 @@ public class PassiveAttribute : MonoBehaviour
                 int RemainingShotPoint = 1;
                 GameObject.Find("RemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
                 PlayerPrefs.SetString("AttackType","Passive");
-                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().ChoseTile();
             }
             else
             {
@@ -226,24 +230,54 @@ public class PassiveAttribute : MonoBehaviour
     void FindShootingShip()
     {
         if (ShipNameText.text == "MoneyMaker")
+        {
             PlayerPrefs.SetString("ShootingShip", "MoneyMaker");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "MoneyMaker passive ability is to add 1 battle point at the end of each turn if the ship has not completely exploded.";
+        }
         else if (ShipNameText.text == "Tank")
+        {
             PlayerPrefs.SetString("ShootingShip", "Tank");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Tank passive ability is that its parts do not explode on one hit. When a piece of it is hit, it first turns yellow. If hit once again, it will turn red.";
+        }
         else if (ShipNameText.text == "SideStep")
+        {
             PlayerPrefs.SetString("ShootingShip", "SideStep");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "The first time the SideStep passive is hit, if the appropriate location is available, the ship will bounce the shot 1 unit aside and the shot will fail. If there is no suitable position, the shot does not bounce and the shot is successful.";
+        }
         else if (ShipNameText.text == "Faker")
+        {
             PlayerPrefs.SetString("ShootingShip", "Faker");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Faker passive skill when the ship is hit for the first time, if there is a suitable position, the ship will move 1 unit and the shot will fail. If there is no suitable position, the ship cannot move and the shot is successful.";
+        }
         else if (ShipNameText.text == "Healer")
+        {
             PlayerPrefs.SetString("ShootingShip", "Healer");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Healer passive ability heals itself by 1 piece at the end of each turn if the ship is hit and does not explode completely.";
+        }
         else if (ShipNameText.text == "LightBomber")
+        {
             PlayerPrefs.SetString("ShootingShip", "LightBomber");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "LightBomber passive ability detonates 1 piece of a ship that has not taken any damage from enemy ships at the end of the turn if the LightBomber detonates completely. If the opponent has no ships that have not been hit, the shot will not take place.";
+        }
         else if (ShipNameText.text == "BombCatcher")
+        {
             PlayerPrefs.SetString("ShootingShip", "BombCatcher");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "BombCatcher passive ability finishes the opponent's shot the first time the Bomb Catcher is hit.";
+        }
         else if (ShipNameText.text == "Bomber")
+        {
             PlayerPrefs.SetString("ShootingShip", "Bomber");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "If the first shot with the Bomber passive is inaccurate, detonates 1 piece of an opponent's ship that has never been hit. If the opponent has no ships that have not been hit, the shot will be void.";
+        }
         else if (ShipNameText.text == "Boomer")
+        {
             PlayerPrefs.SetString("ShootingShip", "Boomer");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Boomer passive ability The first time Boomer is hit, the shooter's score is reset.";
+        }
         else if (ShipNameText.text == "FlameThrower")
+        {
             PlayerPrefs.SetString("ShootingShip", "FlameThrower");
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "FlameThrower passive skill explodes an additional piece of the hit ship if the shot is accurate. If the ship completely explodes, there will be no extra hits.";
+        }
     }
 }

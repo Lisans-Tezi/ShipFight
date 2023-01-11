@@ -391,7 +391,6 @@ public class ActiveShotting : MonoBehaviour
         }
         else
         {
-            GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
             gameObject.GetComponent<Image>().color = blueColor;
             PlayerPrefs.SetInt("ActiveHitPerTurn", PlayerPrefs.GetInt("ActiveHitPerTurn") - 1);
             map = Bomber.ActiveSkill(map, x);
@@ -405,7 +404,8 @@ public class ActiveShotting : MonoBehaviour
     {
         var Tank = GameObject.Find("Tank").GetComponent<Tank>();
 
-        if(PlayerPrefs.GetString("ShootingShip") == "MoneyMaker")
+        GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "";
+        if (PlayerPrefs.GetString("ShootingShip") == "MoneyMaker")
         {
             HitPerTurnControl();
         }
@@ -573,6 +573,7 @@ public class ActiveShotting : MonoBehaviour
                         }
                         else
                         {
+                            GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                             FourthShip.GetComponent<Image>().enabled = true;
                             FourthShip.GetComponent<Image>().sprite = Images[shipNumber];
 
@@ -580,6 +581,7 @@ public class ActiveShotting : MonoBehaviour
                     }
                     else
                     {
+                        GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                         ThirdShip.GetComponent<Image>().enabled = true;
                         ThirdShip.GetComponent<Image>().sprite = Images[shipNumber];
 
@@ -587,12 +589,14 @@ public class ActiveShotting : MonoBehaviour
                 }
                 else
                 {
+                    GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                     SecondShip.GetComponent<Image>().enabled = true;
                     SecondShip.GetComponent<Image>().sprite = Images[shipNumber];
                 }
             }
             else
             {
+                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                 FirstShip.GetComponent<Image>().enabled = true;
                 FirstShip.GetComponent<Image>().sprite = Images[shipNumber];
             }

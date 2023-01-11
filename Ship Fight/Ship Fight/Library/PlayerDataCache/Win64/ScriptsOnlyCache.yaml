@@ -9,9 +9,7 @@ ScriptsOnlyBuild:
     - Bomber
     - Boomer
     - Control
-    - CreditsBtn
     - DefendScreenManager
-    - ExitBtn
     - Faker
     - FlameThrower
     - GameController
@@ -19,19 +17,17 @@ ScriptsOnlyBuild:
     - Healer
     - LightBomber
     - MapReadyButton
+    - MenuManager
     - MoneyMaker
-    - MultiPlayerBtn
-    - Music
+    - MusicManager
     - PageLoad
     - PassiveAttribute
     - PassiveShotting
     - PlacingShip
     - SelectedShip
-    - SettingsBtn
     - ShipReady
     - SideStep
-    - SinglePlayerBtn
-    - Sound
+    - SoundManager
     - Tank
     - TextManager
     - TurnManager
@@ -50,13 +46,14 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
   serializedClasses:
@@ -86,89 +83,52 @@ ScriptsOnlyBuild:
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
-    - UnityEngine.EventSystems.EventTrigger/Entry
-    - UnityEngine.EventSystems.EventTrigger/TriggerEvent
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
   - assembly: Assembly-CSharp
-    fullTypeName: Sound
-    methodName: SoundSettings
+    fullTypeName: SoundManager
+    methodName: SoundVolumeChanged
   - assembly: Assembly-CSharp
-    fullTypeName: SinglePlayerBtn
-    methodName: PlayerSingle
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
+    fullTypeName: MenuManager
+    methodName: PlayGameBtn
   - assembly: Assembly-CSharp
-    fullTypeName: ExitBtn
+    fullTypeName: SoundManager
+    methodName: SoundPlay
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuManager
     methodName: ExitGame
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
   - assembly: Assembly-CSharp
-    fullTypeName: CreditsBtn
-    methodName: ShowCast
+    fullTypeName: SoundManager
+    methodName: SoundPlay
   - assembly: Assembly-CSharp
-    fullTypeName: CreditsBtn
-    methodName: HideCast
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
+    fullTypeName: MenuManager
+    methodName: CreditsBtn
   - assembly: Assembly-CSharp
-    fullTypeName: Music
-    methodName: MusicSettings
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
+    fullTypeName: SoundManager
+    methodName: SoundPlay
   - assembly: Assembly-CSharp
-    fullTypeName: SettingsBtn
-    methodName: ShowSettings
+    fullTypeName: MusicManager
+    methodName: MusicVolumeChanged
   - assembly: Assembly-CSharp
-    fullTypeName: SettingsBtn
-    methodName: HideSettings
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
+    fullTypeName: MenuManager
+    methodName: SettingsBtn
   - assembly: Assembly-CSharp
-    fullTypeName: MultiPlayerBtn
-    methodName: ShowOptions
+    fullTypeName: SoundManager
+    methodName: SoundPlay
   - assembly: Assembly-CSharp
-    fullTypeName: MultiPlayerBtn
-    methodName: HideOptions
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
+    fullTypeName: MenuManager
+    methodName: HowToPlayBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: SoundManager
+    methodName: SoundPlay
   - assembly: Assembly-CSharp
     fullTypeName: PlacingShip
     methodName: ShipPlacing
@@ -1166,57 +1126,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2290}
     - Class: 114
+      Script: {instanceID: 2482}
+    - Class: 114
       Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2636}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2680}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2804}
+      Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 2886}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 3146}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 3276}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3520}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3560}
     - Class: 114
-      Script: {instanceID: 3564}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 3702}
-    - Class: 114
-      Script: {instanceID: 3928}
+      Script: {instanceID: 3926}
     - Class: 114
       Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4344}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 4436}
+      Script: {instanceID: 4432}
     - Class: 114
-      Script: {instanceID: 4492}
+      Script: {instanceID: 4484}
     - Class: 114
-      Script: {instanceID: 4672}
+      Script: {instanceID: 4664}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4858}
     - Class: 114
-      Script: {instanceID: 4950}
+      Script: {instanceID: 4942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1269,41 +1229,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2148}
     - Class: 114
-      Script: {instanceID: 2390}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 2804}
+      Script: {instanceID: 3020}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3024}
+      Script: {instanceID: 3732}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 3706}
+      Script: {instanceID: 4020}
     - Class: 114
       Script: {instanceID: 4056}
     - Class: 114
+      Script: {instanceID: 4072}
+    - Class: 114
       Script: {instanceID: 4172}
     - Class: 114
-      Script: {instanceID: 4180}
+      Script: {instanceID: 4462}
     - Class: 114
-      Script: {instanceID: 4414}
-    - Class: 114
-      Script: {instanceID: 4458}
-    - Class: 114
-      Script: {instanceID: 4468}
-    - Class: 114
-      Script: {instanceID: 4474}
-    - Class: 114
-      Script: {instanceID: 4674}
+      Script: {instanceID: 4832}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1354,43 +1308,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2362}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2636}
+      Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2804}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2886}
+      Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3276}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3520}
     - Class: 114
-      Script: {instanceID: 3928}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 4344}
+      Script: {instanceID: 3926}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 4888}
+      Script: {instanceID: 4858}
     - Class: 114
-      Script: {instanceID: 4908}
+      Script: {instanceID: 4880}
+    - Class: 114
+      Script: {instanceID: 4900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1428,7 +1384,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 956c0274ebedb991ab834fb2b673e89c
+      Hash: 7356cd5832c19bb45c8dc95ec33cd5b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BombCatcher
@@ -1578,22 +1534,10 @@ ScriptsOnlyBuild:
     className: ShipReady
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SinglePlayerBtn
-  - hash:
-      serializedVersion: 2
       Hash: 4f60ff347d4efee4ef8cc7f627735018
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark02
-  - hash:
-      serializedVersion: 2
-      Hash: 4b6953a19bc483a905b51ee06441aa99
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SettingsBtn
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -1818,7 +1762,7 @@ ScriptsOnlyBuild:
     className: TMP_FrameRateCounter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1b84f4b7c00d554976341f8e2565d650
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LightBomber
@@ -1950,6 +1894,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: ed6491eb350bfcdc1e0f80b8a5e2112b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -2002,6 +1952,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Healer
+  - hash:
+      serializedVersion: 2
+      Hash: b25dc28254208a63ebf66a9077bcab26
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -2058,19 +2014,13 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 019284052aebef701993fe2a0b2dfb89
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MultiPlayerBtn
-  - hash:
-      serializedVersion: 2
       Hash: 3375c3d749f8f4cad889721b431bdc27
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: 956c0274ebedb991ab834fb2b673e89c
+      Hash: c8cbd3788e6bdc403c86b06e0361a03f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bomber
@@ -2090,12 +2040,6 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExitBtn
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro
     className: TMP_PhoneNumberValidator
   - hash:
@@ -2106,22 +2050,10 @@ ScriptsOnlyBuild:
     className: DefendScreenManager
   - hash:
       serializedVersion: 2
-      Hash: 0608f570cd9b171f4cfcbcb00ac552ad
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Music
-  - hash:
-      serializedVersion: 2
       Hash: 75de60bccbd35c2e82026d4a60733734
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 0b5178e63b19f4cf7f5a962e821301c6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Sound
   - hash:
       serializedVersion: 2
       Hash: e80c1450883443c68d6c2dade213536f
@@ -2184,12 +2116,6 @@ ScriptsOnlyBuild:
     className: TurnManager
   - hash:
       serializedVersion: 2
-      Hash: 2dd77b4164cba184576582fb7cba18ac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CreditsBtn
-  - hash:
-      serializedVersion: 2
       Hash: b6514f552bd2ee9e736a5678aa7f7de3
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -2206,6 +2132,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 6ed0fd54a75d6d21a2109fed4afb28ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicManager
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d

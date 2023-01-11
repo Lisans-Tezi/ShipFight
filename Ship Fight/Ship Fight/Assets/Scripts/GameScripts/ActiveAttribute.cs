@@ -361,50 +361,60 @@ public class ActiveAttribute : MonoBehaviour
         PlayerPrefs.SetInt("ActiveHitPerTurn", 1);
         if (PlayerPrefs.GetString("ShootingShip") == "MoneyMaker")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "MoneyMaker active feature grants 2 shot.  The cost of the skill is 2 points.";
             PlayerPrefs.SetInt("ActiveHitPerTurn", 2);
             PlayerPrefs.SetInt("MoneyMakerActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "Tank")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Tank active feature grants 1 shot. If this shot is accurate, the turn passes to the opponent. If this shot is inaccurate, it gains 1 more shot. The cost of the skill is 3 points.";
             var Tank = GameObject.Find("Tank").GetComponent<Tank>();
             Tank.ActiveSkill = true;
             PlayerPrefs.SetInt("TankActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "SideStep")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "SideStep active feature grants 1 shot. If this shot is accurate, it gains the right to shoot as much as the initial piece size of the hit ship. For example, if you hit the Boomer ship with the SideStepin active feature, you will gain 6 more shots. The cost of the skill is 4 points.";
             var SideStep = GameObject.Find("SideStep").GetComponent<SideStep>();
             SideStep.ActiveSkill = true;
             PlayerPrefs.SetInt("SideStepActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "Faker")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Faker active feature grants 1 shot. If the shot is successful, it completely polishes the opposing ship. The cost of the skill is 5 points.";
             PlayerPrefs.SetInt("FakerActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "Healer")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Healer active feature grants 3 shot. The cost of the skill is 6 points.";
             PlayerPrefs.SetInt("ActiveHitPerTurn", 3);
             PlayerPrefs.SetInt("HealerActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "LightBomber")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "LightBomber active feature grants 4 shot. The cost of the skill is 7 points.";
             PlayerPrefs.SetInt("ActiveHitPerTurn", 4);
             PlayerPrefs.SetInt("LightBomberActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "BombCatcher")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "BombCatcher active feature grants 5 shot. The cost of the skill is 8 points.";
             PlayerPrefs.SetInt("ActiveHitPerTurn", 5);
             PlayerPrefs.SetInt("BombCatcherActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "Bomber")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Bomber active ability detonates a selected line completely. If there is a tank ship in the selected row and the ship is yellow, that piece cannot be hit. The cost of the skill is 9 points.";
             PlayerPrefs.SetInt("BomberActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "Boomer")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "Boomer active ability completely detonates a selected column. If there is a tank ship in the selected column and the ship is yellow, that piece cannot be hit. The cost of the skill is 10 points.";
             PlayerPrefs.SetInt("BoomerActiveTurn", 3);
         }
         if (PlayerPrefs.GetString("ShootingShip") == "FlameThrower")
         {
+            GameObject.Find("AttackInfoPanelText").GetComponent<TextMeshProUGUI>().text = "The FlameThrower active ability detonates all the starting edges of the map. If there is a tank ship on the starting edges of the map and the ship is yellow, that piece cannot be hit. It can only be used once. The cost of the skill is 11 points.";
             var FlameThrower = GameObject.Find("FlameThrower").GetComponent<FlameThrower>();
             FlameThrower.FlameThrowerActiveSkill = false;
             PlayerPrefs.SetInt("FlameThrowerActiveTurn", 3);

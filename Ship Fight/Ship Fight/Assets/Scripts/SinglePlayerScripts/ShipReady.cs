@@ -239,6 +239,7 @@ public class ShipReady : MonoBehaviour
                     map[i, j].gameObject.GetComponent<Image>().color = whiteColor;
             }
 
+        GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>().text = "";
         PlayerPrefs.SetInt("PlacedShipCount", PlayerPrefs.GetInt("PlacedShipCount") + 1);
         gameObject.GetComponent<Button>().enabled = false;
 

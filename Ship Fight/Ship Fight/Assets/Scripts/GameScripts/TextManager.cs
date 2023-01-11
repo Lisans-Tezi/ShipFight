@@ -16,7 +16,11 @@ public class TextManager : MonoBehaviour
     }
     public void ChoseShip()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = "Chose a Ship";
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Choose the ship and attack type to attack.";
+    }
+    public void BlownUp(string name)
+    {
+        gameObject.GetComponent<TextMeshProUGUI>().text = "You completely blown up the " + name + " ship.";
     }
     public void ChoseTile()
     {

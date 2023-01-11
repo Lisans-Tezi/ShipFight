@@ -28,6 +28,7 @@ public class AIAttackManager : MonoBehaviour
 
     void OnEnable()
     {
+        GameObject.Find("DefendInfoPanelText").GetComponent<TextManager>().AIAttacking();
         int RemainingShotPoint = 1;
         GameObject.Find("DefRemainingShotPoint").GetComponent<TextMeshProUGUI>().text = RemainingShotPoint.ToString();
     }

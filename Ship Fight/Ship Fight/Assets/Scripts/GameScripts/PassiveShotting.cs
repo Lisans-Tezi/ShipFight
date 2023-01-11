@@ -336,14 +336,14 @@ public class PassiveShotting : MonoBehaviour
             }
             else
             {
-                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
                 gameObject.GetComponent<Image>().color = blueColor;
                 FailedShot();
-            }                  
+            }
         } 
     }
     void FailedShot()
     {
+        GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().FailedShot();
         for (int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++)
                 if (map[i, j].gameObject.GetComponent<Image>().color == greenColor)
@@ -433,6 +433,7 @@ public class PassiveShotting : MonoBehaviour
                         }
                         else
                         {
+                            GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                             FourthShip.GetComponent<Image>().enabled = true;
                             FourthShip.GetComponent<Image>().sprite = Images[shipNumber];
 
@@ -440,19 +441,21 @@ public class PassiveShotting : MonoBehaviour
                     }
                     else
                     {
+                        GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                         ThirdShip.GetComponent<Image>().enabled = true;
                         ThirdShip.GetComponent<Image>().sprite = Images[shipNumber];
-
                     }
                 }
                 else
                 {
+                    GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                     SecondShip.GetComponent<Image>().enabled = true;
                     SecondShip.GetComponent<Image>().sprite = Images[shipNumber];
                 }
             }
             else
             {
+                GameObject.Find("AttackInfoPanelText").GetComponent<TextManager>().BlownUp(Name);
                 FirstShip.GetComponent<Image>().enabled = true;
                 FirstShip.GetComponent<Image>().sprite = Images[shipNumber];
             }
